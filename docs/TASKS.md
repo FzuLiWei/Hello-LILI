@@ -13,12 +13,12 @@ Status:
 - Requirements captured in `docs/SPEC.md`.
 - Mobile-first static homepage has been implemented for the 0-18 month parent assistant mode.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
+- Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 
 Current tasks:
 
-- Use Netlify CLI or Netlify GitHub import to deploy the static site, because the Codex Netlify connector OAuth callback is blocked by the current Windows `codex://` protocol issue.
-- Review the visual styles in `style_preview.html` and select the final UI theme.
-- Apply the chosen theme and responsive variables to `styles.css`.
+- Apply the newly documented "Gamified Toy Box" (游戏化玩偶盒) visual design style to the core pages (`index.html` and `styles.css`).
+- Verify visual aesthetics and interactive mechanical feedback on both mobile and desktop views.
 - Keep the current implementation static until the core flow is validated.
 
 # Next Milestone

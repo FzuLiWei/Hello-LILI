@@ -30,9 +30,10 @@ The product is currently defined as:
 - Verified desktop load, basic interaction, console errors, and mobile responsive layout.
 - Reworked homepage after product review into a simpler mobile-first flow.
 - Added selectable browser English voices and speech-rate options for temporary TTS.
-- Created `style_preview.html` containing three distinct visual themes (Forest & Oat, Warm Macaron, Modern Minimalist) and an ambient "Bedtime Mode" toggle for visual testing.
+- Created `style_preview.html` containing four distinct visual themes (Forest & Oat, Warm Macaron, Modern Minimalist, Gamified Toy Box) and an ambient "Bedtime Mode" toggle for visual testing.
 - Synced the current local project to GitHub repository `FzuLiWei/Hello-LILI` on `main`.
 - Confirmed the Codex Netlify connector OAuth callback remains blocked on this Windows setup; switching deployment path to Netlify CLI or Netlify GitHub import.
+- Documented the "Gamified Toy Box" (Neo-Brutalism + Playful Neoteny) visual style guidelines into `docs/SPEC.md` as the unified standard for all future product screens.
 
 ## Known Issues
 
@@ -47,10 +48,8 @@ The product is currently defined as:
 
 ## Next Step
 
-Gather user feedback on the three visual design styles:
+Apply the newly documented "Gamified Toy Box" (游戏化玩偶盒) visual design style to the core product page:
 
-1. Open `style_preview.html` and compare "Forest & Oat", "Warm Macaron", and "Modern Minimalist".
-2. Test the dynamic "Bedtime Mode" under different themes.
-3. Choose the final design style and apply it to the main `styles.css` and `index.html`.
-
-Also deploy through Netlify CLI authorization or Netlify GitHub import using the synced `FzuLiWei/Hello-LILI` repository.
+1. Update `index.html` structure to match the layout and new progress indicator of Style 4.
+2. Update `styles.css` with the 3px borders, hard shadows, and `:active` mechanical feedback variables and keyframes.
+3. Keep browser `localStorage` integration and speech rate controls functional in the new design.

@@ -384,13 +384,36 @@ Acceptance criteria:
 - Non-anxious
 - Developmentally appropriate
 
-### UI Direction
+### UI Direction (Gamified Toy Box / 游戏化玩偶盒风格)
 
-- Early versions should feel like a mobile parent companion, not a desktop dashboard or children's game.
-- Daily actions should be visible immediately on the first screen.
-- The interface should be simple enough for tired parents to use quickly.
-- Avoid decorative complexity that distracts from daily execution.
-- For 0-18 months, the first screen should answer: what do I say, how do I do it offline, and what do I record?
+本项目视觉风格采用 **新粗野主义（Neo-Brutalism）** 与 **幼态趣味设计（Playful Neoteny）** 的深度结合，定义为**“游戏化玩偶盒 (Gamified Toy Box)”**风格。未来开发所有新界面时，必须严格遵循该设计系统规范：
+
+#### 1. 核心视觉原则 (Core Visual Guidelines)
+- **硬阴影 (Hard Shadows)**：禁止使用轻薄、弥散的软灰色投影。所有卡片、卡牌和交互按钮必须使用无模糊的纯黑偏置投影（通常为 `4px 4px 0px #000000`），在睡前温和模式下则为相应的琥珀金色偏置投影。
+- **粗重描边 (Chunky Borders)**：使用 `2px` 至 `3px` 的纯黑描边（`#000000`）来隔离各 UI 块，凸显街机界面或潮玩纸盒的物理实体感。
+- **极致圆角与玩具感 (Playful Neoteny)**：采用大圆角（外框 `28px`，卡片 `18px`，按钮 `16px`），将粗狂的描边与极圆润的外轮廓结合，消除冷冰冰的数据感，使其具有像掌上游戏机或实体潮玩一样的安全感与包裹感。
+- **卡片式拼图布局 (Bento Box)**：整体布局采用大小不一的便当盒式卡片进行紧密拼接，形成游戏 HUD（抬头显示器）仪表面板的视觉隐喻。
+
+#### 2. 配色规范 (Color Tokens)
+- **正常模式 (Day Mode)**：
+  - 手机底色 (Gameboy Yellow)：`#ffeba6` / `hsl(47, 100%, 82%)`
+  - 页面背景 (Slate Blue-Gray)：`#e2e8f0`
+  - 主品牌色 (Console Pink)：`#ff7b93`
+  - 辅助强调色 (Arcade Blue)：`#5d8cfc`
+  - 打卡激活色 (Vibrant Mint)：`#a8e6cf`
+- **睡前温和模式 (Bedtime Mode)**：
+  为了适应暗光环境下陪伴婴儿，不采用纯黑/蓝黑色，而采用温馨的暖茶色：
+  - 手机底色：`#1e1611`（温暖的深茶色）
+  - 卡片背景：`#2c201a`
+  - 描边线色：`#f0e6df`（温暖的燕麦白粗线）
+  - 偏置硬投影：`#cc9f3d`（琥珀金黄色）
+
+#### 3. 拟真物理交互 (Mechanical Feedback)
+- **机械位移反馈**：按钮或打卡卡片在处于 `:active`（按压点击）状态时，硬阴影瞬间消融为 0，并且整个元素向右下方平移 `3px 3px`，正好填补原本阴影所在的空间。
+- **养成系指示**：使用滚动的糖果斜条纹动画（Candy Stripe）来表达加载中、习惯属性进度条填充等状态。
+
+#### 4. 界面功能与低焦虑指引
+- 纯家长端助理模式下，第一屏必须直观呈现今日核心短句、照着做流程和记录槽，操作需支持单手快速点按，禁止包含任何可能造成家长打卡焦虑或面向婴儿过度闪烁的浮夸动效。
 
 ### Privacy
 

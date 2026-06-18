@@ -15,11 +15,13 @@
                       radial-gradient(circle at 100% 12%, rgba(205, 231, 255, 0.5), transparent 24rem);
         --bg-phone: #fffaf3;
         --bg-card: #ffffff;
-        
+
         --text-main: #17211f;
         --text-muted: #6a726e;
+
+        --border-width: 1px;
         --border-line: #e6ded1;
-        
+
         --color-mint-light: #dff4e7;
         --color-mint-strong: #0f766e;
         --color-primary: #174c43;
@@ -35,10 +37,10 @@
         --color-phrase-text: #251a14;
         --color-routine-bg: #fffdf8;
         --color-btn-done: #19241f;
-        
+
         --font-headings: 'Outfit', 'Quicksand', sans-serif;
         --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-        
+
         --radius-large: 24px;
         --radius-medium: 16px;
         --shadow-app: 0 20px 60px rgba(45, 52, 44, 0.12);
@@ -55,6 +57,7 @@
         --bg-card: #ffffff;
         --text-main: #17211f;
         --text-muted: #6a726e;
+        --border-width: 1px;
         --border-line: #e6ded1;
         --color-mint-light: #dff4e7;
         --color-mint-strong: #0f766e;
@@ -86,11 +89,12 @@
                       radial-gradient(circle at 100% 12%, rgba(186, 255, 201, 0.3), transparent 24rem);
         --bg-phone: #fff5f5;
         --bg-card: #ffffff;
-        
+
         --text-main: #4a3530; /* 暖朱古力色 */
         --text-muted: #8c736c;
+        --border-width: 1px;
         --border-line: #f5e3e0;
-        
+
         --color-mint-light: #e8f8f2;
         --color-mint-strong: #40bfa3; /* 马卡龙绿 */
         --color-primary: #ff8b94; /* 马卡龙草莓红 */
@@ -106,7 +110,7 @@
         --color-phrase-text: #4a3530;
         --color-routine-bg: #fffbf8;
         --color-btn-done: #4a3530;
-        
+
         --font-headings: 'Fredoka', 'Quicksand', sans-serif;
         --radius-large: 32px; /* 更圆润 */
         --radius-medium: 20px;
@@ -121,11 +125,12 @@
         --bg-ambient: none;
         --bg-phone: #fafafa;
         --bg-card: #ffffff;
-        
+
         --text-main: #111111;
         --text-muted: #777777;
+        --border-width: 1px;
         --border-line: #eeeeee;
-        
+
         --color-mint-light: #e2f0d9;
         --color-mint-strong: #0f3d3e;
         --color-primary: #0f3d3e; /* 典雅深青墨绿 */
@@ -141,7 +146,7 @@
         --color-phrase-text: #111111;
         --color-routine-bg: #ffffff;
         --color-btn-done: #111111;
-        
+
         --font-headings: 'Playfair Display', Georgia, serif;
         --radius-large: 12px; /* 更加克制的小圆角 */
         --radius-medium: 8px;
@@ -150,21 +155,58 @@
         --shadow-btn: 0 4px 12px rgba(0, 0, 0, 0.04);
       }
 
-      /* 睡睡/睡前温和模式 (Bedtime Mode) 覆盖变量 */
-      body.bedtime-mode {
-        --bg-page: #15100c; /* 暗黑背景 */
+      /* 风格四：游戏化玩偶盒 (Gamified Toy Box) - 新粗野主义 + 幼态设计 */
+      body.theme-gamified {
+        --bg-page: #e2e8f0;
+        --bg-ambient: radial-gradient(circle at 0 0, rgba(255, 123, 147, 0.15), transparent 26rem),
+                      radial-gradient(circle at 100% 12%, rgba(93, 140, 252, 0.15), transparent 24rem);
+        --bg-phone: #ffeba6; /* 亮黄游戏机底色 */
+        --bg-card: #ffffff;
+
+        --text-main: #000000;
+        --text-muted: #1a1a1a;
+
+        --border-width: 3px; /* 粗描边 */
+        --border-line: #000000; /* 纯黑框 */
+
+        --color-mint-light: #a8e6cf; /* 爆款绿 */
+        --color-mint-strong: #00a884;
+        --color-primary: #ff7b93; /* 街机粉 */
+        --color-accent: #5d8cfc; /* 街机蓝 */
+        --color-accent-hover: #4175e8;
+        --color-highlight: #ffde6a;
+        --color-kicker: #ff7b93;
+        --color-baby-gradient: linear-gradient(135deg, #ff7b93, #5d8cfc);
+        --color-baby-text: #ffffff;
+        --color-phrase-card: none;
+        --color-phrase-bg: #ffffff;
+        --color-phrase-kicker: #000000;
+        --color-phrase-text: #000000;
+        --color-routine-bg: #ffffff;
+        --color-btn-done: #000000;
+
+        --font-headings: 'Fredoka', 'Quicksand', sans-serif;
+        --radius-large: 28px; /* 极圆润幼态 */
+        --radius-medium: 18px;
+        --shadow-app: 8px 8px 0px #000000; /* 纯黑硬投影 */
+        --shadow-card: 4px 4px 0px #000000; /* 纯黑硬投影 */
+        --shadow-btn: 3px 3px 0px #000000; /* 纯黑硬投影 */
+      }
+
+      /* 睡前模式对非游戏化主题的覆盖 */
+      body.bedtime-mode:not(.theme-gamified) {
+        --bg-page: #15100c;
         --bg-ambient: none;
-        --bg-phone: #1c1510; /* 暗温床头灯色 */
-        --bg-card: #241c16; /* 稍亮卡片背景 */
-        
-        --text-main: #f0e6df; /* 温暖奶白字 */
-        --text-muted: #a3958c; /* 暗棕辅助字 */
-        --border-line: #3b2f27; /* 深咖啡线 */
-        
+        --bg-phone: #1c1510;
+        --bg-card: #241c16;
+        --text-main: #f0e6df;
+        --text-muted: #a3958c;
+        --border-width: 1px;
+        --border-line: #3b2f27;
         --color-mint-light: #1c322b;
         --color-mint-strong: #3b8c7e;
-        --color-primary: #cc7852; /* 红陶色 */
-        --color-accent: #cc9f3d; /* 琥珀黄 */
+        --color-primary: #cc7852;
+        --color-accent: #cc9f3d;
         --color-accent-hover: #b58c30;
         --color-highlight: #3b2f27;
         --color-kicker: #cc7852;
@@ -176,10 +218,42 @@
         --color-phrase-text: #f0e6df;
         --color-routine-bg: #241c16;
         --color-btn-done: #cc7852;
-        
         --shadow-app: 0 20px 60px rgba(0, 0, 0, 0.6);
         --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
         --shadow-btn: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      /* 睡前模式对游戏化主题的专属覆盖（保留粗描边与硬阴影，改变配色为琥珀暗金色） */
+      body.bedtime-mode.theme-gamified {
+        --bg-page: #120d0a;
+        --bg-ambient: none;
+        --bg-phone: #1e1611; /* 深茶色游戏机 */
+        --bg-card: #2c201a;
+        --text-main: #f0e6df;
+        --text-muted: #a3958c;
+
+        --border-width: 3px;
+        --border-line: #f0e6df; /* 燕麦白粗边框 */
+
+        --color-mint-light: #1c322b;
+        --color-mint-strong: #3b8c7e;
+        --color-primary: #cc7852; /* 陶土红 */
+        --color-accent: #cc9f3d; /* 琥珀金 */
+        --color-accent-hover: #b58c30;
+        --color-highlight: #3b2f27;
+        --color-kicker: #cc7852;
+        --color-baby-gradient: linear-gradient(135deg, #3b2f27, #2c201a);
+        --color-baby-text: #f0e6df;
+        --color-phrase-card: none;
+        --color-phrase-bg: #231914;
+        --color-phrase-kicker: #cc9f3d;
+        --color-phrase-text: #f0e6df;
+        --color-routine-bg: #2c201a;
+        --color-btn-done: #cc7852;
+
+        --shadow-app: 8px 8px 0px #cc9f3d; /* 琥珀金硬投影 */
+        --shadow-card: 4px 4px 0px #cc9f3d; /* 琥珀金硬投影 */
+        --shadow-btn: 3px 3px 0px #cc9f3d; /* 琥珀金硬投影 */
       }
 
       /* --- 2. 预览控制器控制台 (Theme Switcher Control Bar) --- */
@@ -202,7 +276,7 @@
         font-family: var(--font-body);
         transition: background 0.3s, border-color 0.3s;
       }
-      
+
       body.bedtime-mode .preview-console {
         background: rgba(28, 21, 16, 0.85);
         border-bottom-color: rgba(255, 255, 255, 0.08);
@@ -236,7 +310,8 @@
 
       .theme-btn-group {
         display: flex;
-        gap: 8px;
+        flex-wrap: wrap;
+        gap: 6px;
         background: rgba(0, 0, 0, 0.04);
         padding: 4px;
         border-radius: 12px;
@@ -315,6 +390,7 @@
         font-size: 0.78rem;
         color: #666;
         transition: color 0.3s;
+        line-height: 1.4;
       }
       body.bedtime-mode .theme-tip {
         color: #a3958c;
@@ -377,6 +453,9 @@
         padding: 24px 18px 110px;
         background: var(--bg-phone);
         transition: background 0.3s;
+        box-shadow: var(--shadow-app);
+        border: var(--border-width) solid var(--border-line);
+        border-radius: var(--radius-large);
       }
 
       .app-header {
@@ -432,18 +511,32 @@
       .response-grid button,
       .rate-options button,
       .simple-tools button {
-        border: 0;
+        border: var(--border-width) solid var(--border-line);
         -webkit-tap-highlight-color: transparent;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.1s, box-shadow 0.1s, background 0.2s, color 0.2s;
       }
-      
-      .round-button:active,
-      .primary-action:active,
-      .ghost-action:active,
-      .done-button:active,
-      .response-grid button:active,
-      .rate-options button:active {
+
+      /* 非游戏化主题的按压特效：轻微缩放 */
+      body:not(.theme-gamified) .round-button:active,
+      body:not(.theme-gamified) .primary-action:active,
+      body:not(.theme-gamified) .ghost-action:active,
+      body:not(.theme-gamified) .done-button:active,
+      body:not(.theme-gamified) .response-grid button:active,
+      body:not(.theme-gamified) .rate-options button:active {
         transform: scale(0.96);
+      }
+
+      /* 游戏化主题的物理位移与消融阴影特效 */
+      body.theme-gamified .round-button:active,
+      body.theme-gamified .primary-action:active,
+      body.theme-gamified .ghost-action:active,
+      body.theme-gamified .done-button:active,
+      body.theme-gamified .response-grid button:active,
+      body.theme-gamified .rate-options button:active,
+      body.theme-gamified .child-card:active,
+      body.theme-gamified .today-card:active {
+        transform: translate(3px, 3px) !important;
+        box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
       }
 
       .round-button {
@@ -465,11 +558,11 @@
         gap: 14px;
         padding: 14px;
         margin-bottom: 16px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-large);
         background: var(--bg-card);
         box-shadow: var(--shadow-card);
-        transition: background 0.3s, border-color 0.3s, border-radius 0.3s;
+        transition: transform 0.1s, box-shadow 0.1s, background 0.3s, border-color 0.3s, border-radius 0.3s;
       }
 
       .baby-mark {
@@ -519,7 +612,7 @@
         gap: 14px;
         padding: 18px;
         margin-bottom: 16px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-large);
         background: var(--bg-card);
         box-shadow: var(--shadow-card);
@@ -546,7 +639,7 @@
         width: 100%;
         min-height: 44px;
         padding: 0 12px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-medium);
         background: var(--bg-phone);
         color: var(--text-main);
@@ -580,13 +673,13 @@
       /* 今日场景卡片 */
       .today-card {
         padding: 18px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-large);
         background: var(--bg-card);
         box-shadow: var(--shadow-card);
-        transition: all 0.3s;
+        transition: transform 0.1s, box-shadow 0.1s, background 0.3s, border-color 0.3s, border-radius 0.3s;
       }
-      
+
       body.theme-organic .today-card {
         background: linear-gradient(180deg, rgba(223, 244, 231, 0.7), rgba(255, 255, 255, 0.95) 45%), var(--bg-card);
       }
@@ -619,6 +712,7 @@
         white-space: nowrap;
         font-family: var(--font-headings);
         transition: all 0.3s;
+        border: var(--border-width) solid var(--border-line);
       }
       body.bedtime-mode .time-pill {
         background: var(--color-accent);
@@ -631,7 +725,7 @@
         padding: 20px;
         border-radius: var(--radius-large);
         background: var(--color-phrase-card), var(--color-phrase-bg);
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         transition: all 0.3s;
       }
 
@@ -645,6 +739,7 @@
         font-size: 0.76rem;
         font-weight: 900;
         transition: all 0.3s;
+        border: var(--border-width) solid var(--border-line);
       }
       body.bedtime-mode .step-label {
         background: rgba(0, 0, 0, 0.25);
@@ -676,6 +771,7 @@
         border-radius: var(--radius-medium);
         font-weight: 900;
         font-size: 0.95rem;
+        box-shadow: var(--shadow-btn);
       }
 
       .primary-action {
@@ -693,12 +789,74 @@
         padding: 0 14px;
         background: rgba(255, 255, 255, 0.7);
         color: var(--color-phrase-kicker);
-        border: 1px solid rgba(0, 0, 0, 0.05);
       }
       body.bedtime-mode .ghost-action {
         background: rgba(255, 255, 255, 0.05);
         color: var(--text-main);
-        border-color: var(--border-line);
+      }
+
+      /* 游戏化进度属性条 */
+      .progress-container {
+        margin: 12px 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .progress-label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.76rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+      }
+      .progress-data-mono {
+        font-family: monospace;
+        font-size: 0.8rem;
+      }
+      .progress-bar-track {
+        width: 100%;
+        height: 12px;
+        background: var(--bg-phone);
+        border: var(--border-width) solid var(--border-line);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+      .progress-bar-fill {
+        width: 45%;
+        height: 100%;
+        background: var(--color-mint-strong);
+        border-radius: 99px;
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* 游戏化风格下的斜条纹匀速滚动微动画 */
+      body.theme-gamified .progress-bar-fill {
+        background: repeating-linear-gradient(
+          -45deg,
+          #ff7b93,
+          #ff7b93 8px,
+          #000000 8px,
+          #000000 16px
+        );
+        background-size: 23px 23px;
+        animation: stripe-scroll 1.2s linear infinite;
+      }
+      body.theme-gamified.bedtime-mode .progress-bar-fill {
+        background: repeating-linear-gradient(
+          -45deg,
+          #cc7852,
+          #cc7852 8px,
+          #f0e6df 8px,
+          #f0e6df 16px
+        );
+        background-size: 23px 23px;
+      }
+
+      @keyframes stripe-scroll {
+        0% { background-position: 0 0; }
+        100% { background-position: 23px 0; }
       }
 
       /* 照着做盒子 */
@@ -706,7 +864,7 @@
         padding: 16px;
         border-radius: var(--radius-medium);
         background: var(--color-routine-bg);
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         transition: background 0.3s, border-color 0.3s, border-radius 0.3s;
       }
 
@@ -755,6 +913,7 @@
         font-weight: 950;
         font-family: var(--font-headings);
         transition: all 0.3s;
+        border: var(--border-width) solid var(--border-line);
       }
 
       .routine-list strong,
@@ -796,7 +955,7 @@
       .phrase-drawer {
         padding: 18px;
         margin-top: 16px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-large);
         background: var(--bg-card);
         box-shadow: var(--shadow-card);
@@ -816,12 +975,16 @@
         color: var(--text-main);
         font-weight: 900;
         font-size: 0.92rem;
+        box-shadow: var(--shadow-btn);
       }
 
       .response-grid button.active {
         background: var(--color-mint-light);
         color: var(--color-mint-strong);
         box-shadow: inset 0 0 0 2px rgba(15, 118, 110, 0.18);
+      }
+      body.theme-gamified .response-grid button.active {
+        box-shadow: var(--shadow-btn), inset 0 0 0 2px #000000;
       }
       body.bedtime-mode .response-grid button.active {
         background: #1c322b;
@@ -841,7 +1004,7 @@
         width: min(calc(100% - 24px), 398px);
         margin: 0 auto;
         padding: 8px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-large);
         background: rgba(255, 255, 255, 0.88);
         box-shadow: var(--shadow-app);
@@ -858,6 +1021,10 @@
       body.theme-minimalist .simple-tools {
         background: rgba(250, 250, 250, 0.88);
         border-radius: 12px;
+      }
+      body.theme-gamified .simple-tools {
+        background: #ffeba6;
+        border-radius: 20px;
       }
       body.bedtime-mode .simple-tools {
         background: rgba(36, 28, 22, 0.88);
@@ -876,11 +1043,13 @@
         font-size: 0.78rem;
         font-weight: 900;
         border: 0;
+        transition: all 0.2s;
       }
 
       .simple-tools a:first-child {
         background: var(--color-primary);
         color: #ffffff;
+        border: var(--border-width) solid var(--border-line);
       }
       body.bedtime-mode .simple-tools a:first-child {
         background: var(--color-accent);
@@ -898,7 +1067,7 @@
         gap: 10px;
         align-items: center;
         padding: 14px;
-        border: 1px solid var(--border-line);
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-medium);
         background: var(--color-routine-bg);
         transition: all 0.3s;
@@ -926,7 +1095,7 @@
         width: 42px;
         height: 42px;
         place-items: center;
-        border: 0;
+        border: var(--border-width) solid var(--border-line);
         border-radius: var(--radius-medium);
         background: var(--color-mint-light);
         color: var(--color-mint-strong);
@@ -945,9 +1114,6 @@
         .phone-app {
           margin-top: 34px;
           min-height: calc(100vh - 150px);
-          border: 1px solid var(--border-line);
-          border-radius: 40px;
-          box-shadow: var(--shadow-app);
         }
       }
 
@@ -1020,6 +1186,7 @@
         <button type="button" class="theme-btn active" data-theme="organic" onclick="switchTheme('organic', this)">森林与燕麦 (Forest & Oat)</button>
         <button type="button" class="theme-btn" data-theme="macaron" onclick="switchTheme('macaron', this)">暖洋马卡龙 (Warm Macaron)</button>
         <button type="button" class="theme-btn" data-theme="minimalist" onclick="switchTheme('minimalist', this)">现代极简风 (Modern Minimalist)</button>
+        <button type="button" class="theme-btn" data-theme="gamified" onclick="switchTheme('gamified', this)">🕹️ 游戏化玩偶盒 (Gamified Toy Box)</button>
       </div>
       <div class="toggle-switch-container" id="bedtimeToggle" onclick="toggleBedtime()">
         <span>睡前温和模式</span>
@@ -1083,6 +1250,17 @@
             <h2>洗澡时说英语</h2>
           </div>
           <span class="time-pill">3 分钟</span>
+        </div>
+
+        <!-- 新增今日进度属性展示栏 -->
+        <div class="progress-container">
+          <div class="progress-label-row">
+            <span>今日习惯进度 (HUD)</span>
+            <span class="progress-data-mono" id="progressVal">45%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
         </div>
 
         <article class="phrase-card" aria-label="今日核心短句">
@@ -1189,7 +1367,8 @@
       const themeDescriptions = {
         organic: "当前风格：<strong>森林与燕麦 (Forest & Oat)</strong>。设计特色：暖乳黄底色与深绿色的自然融合。圆角温和柔顺（24px），专为育儿陪伴量身定制，传达一种有机生长与温馨平静的手账感，完全去除屏幕带来的焦虑心理。",
         macaron: "当前风格：<strong>暖洋马卡龙 (Warm Macaron)</strong>。设计特色：软粉红与奶油桃橙色的融合，边角大圆角（32px）十分圆润Q弹。展现出高亲和度、童趣和可爱的一面，适合喜欢温暖明亮插画风格的家庭。",
-        minimalist: "当前风格：<strong>现代极简风 (Modern Minimalist)</strong>。设计特色：冷静的灰白配色与深墨绿主调，搭配典雅高档的英文衬线体标题。圆角锋利克制（12px），展现极具格调的现代育儿杂志质感，适合追求极简审美与无干扰体验的父母。"
+        minimalist: "当前风格：<strong>现代极简风 (Modern Minimalist)</strong>。设计特色：冷静的灰白配色与深墨绿主调，搭配典雅高档的英文衬线体标题。圆角锋利克制（12px），展现极具格调的现代育儿杂志质感，适合追求极简审美与无干扰体验的父母。",
+        gamified: "当前风格：<strong>🕹️ 游戏化玩偶盒 (Gamified Toy Box)</strong>。设计特色：复古掌机与新粗野主义（Neo-Brutalism）结合。<strong>3px 纯黑粗边框与完全不模糊的硬重投影</strong>，按钮按下时向右下方位移 3px 并且投影瞬间消融，具备爽快的机械实体手感。进度条呈现出<b>滚动的黑粉糖果斜条纹微动画</b>，将英语打卡仪式塑造成 RPG 游戏里的探索图鉴。"
       };
 
       let phraseIndex = 0;
@@ -1206,7 +1385,7 @@
         // 更新Body类名
         document.body.className = '';
         document.body.classList.add(`theme-${themeName}`);
-        
+
         // 检查睡前模式是否激活并维持
         const isBedtime = document.getElementById('bedtimeToggle').classList.contains('active');
         if (isBedtime) {
@@ -1221,7 +1400,7 @@
       function toggleBedtime() {
         const toggle = document.getElementById('bedtimeToggle');
         const isActive = toggle.classList.toggle('active');
-        
+
         if (isActive) {
           document.body.classList.add('bedtime-mode');
         } else {
@@ -1243,6 +1422,8 @@
       const allPhrasesButton = document.querySelector("#allPhrasesButton");
       const phraseDrawer = document.querySelector("#phraseDrawer");
       const phraseList = document.querySelector("#phraseList");
+      const progressFill = document.querySelector("#progressFill");
+      const progressVal = document.querySelector("#progressVal");
 
       const renderCurrentPhrase = () => {
         const phrase = phrases[phraseIndex];
@@ -1326,6 +1507,7 @@
         });
       };
 
+      // 发音抽屉开关
       voicePanelButton.addEventListener("click", () => {
         const nextOpen = voicePanel.hidden;
         voicePanel.hidden = !nextOpen;
@@ -1341,11 +1523,18 @@
         renderCurrentPhrase();
       });
 
+      // 打卡行为关联属性值升级
       finishButton.addEventListener("click", () => {
         const done = finishButton.classList.toggle("is-done");
-        finishButton.innerHTML = done
-          ? '<svg><use href="#icon-check"></use></svg>今天完成了'
-          : '<svg><use href="#icon-check"></use></svg>我完成了今天的小任务';
+        if (done) {
+          finishButton.innerHTML = '<svg><use href="#icon-check"></use></svg>今天完成了';
+          progressFill.style.width = "100%";
+          progressVal.textContent = "100% (MAX)";
+        } else {
+          finishButton.innerHTML = '<svg><use href="#icon-check"></use></svg>我完成了今天的小任务';
+          progressFill.style.width = "45%";
+          progressVal.textContent = "45%";
+        }
       });
 
       responseButtons.forEach((btn) => {

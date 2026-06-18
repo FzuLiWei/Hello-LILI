@@ -23,8 +23,10 @@ const storageKeys = {
   done: "hellolili-mobile-done",
   voice: "hellolili-mobile-voice",
   rate: "hellolili-mobile-rate",
+  bedtime: "hellolili-mobile-bedtime",
 };
 
+// UI 元素声明
 const currentPhrase = document.querySelector("#currentPhrase");
 const currentMeaning = document.querySelector("#currentMeaning");
 const speakCurrent = document.querySelector("#speakCurrent");
@@ -39,16 +41,25 @@ const allPhrasesButton = document.querySelector("#allPhrasesButton");
 const phraseDrawer = document.querySelector("#phraseDrawer");
 const phraseList = document.querySelector("#phraseList");
 
+// 新增 UI 元素（进度条、睡睡模式、底栏面板）
+const progressFill = document.querySelector("#progressFill");
+const progressVal = document.querySelector("#progressVal");
+const bedtimeButton = document.querySelector("#bedtimeButton");
+const sheetOverlay = document.querySelector("#sheetOverlay");
+const sheetCloseButton = document.querySelector("#sheetCloseButton");
+
 let voices = [];
 let phraseIndex = Number(localStorage.getItem(storageKeys.phraseIndex) || 0);
 let selectedRate = Number(localStorage.getItem(storageKeys.rate) || 0.72);
 
+// 索引范围纠正
 const normalizeIndex = () => {
   if (Number.isNaN(phraseIndex) || phraseIndex < 0 || phraseIndex >= phrases.length) {
     phraseIndex = 0;
   }
 };
 
+// 渲染今日卡片内容
 const renderCurrentPhrase = () => {
   normalizeIndex();
   const phrase = phrases[phraseIndex];
@@ -57,17 +68,19 @@ const renderCurrentPhrase = () => {
   localStorage.setItem(storageKeys.phraseIndex, String(phraseIndex));
 };
 
+// 获取首选发音音色
 const getPreferredVoice = () => {
   const savedVoice = localStorage.getItem(storageKeys.voice);
-  const exactVoice = voices.find((voice) => voice.name === savedVoice);
+  const exactVoice = voices.find((v) => v.name === savedVoice);
   if (exactVoice) return exactVoice;
   return (
-    voices.find((voice) => voice.lang === "en-US") ||
-    voices.find((voice) => voice.lang.startsWith("en")) ||
+    voices.find((v) => v.lang === "en-US") ||
+    voices.find((v) => v.lang.startsWith("en")) ||
     null
   );
 };
 
+// TTS 播音逻辑
 const speak = (text) => {
   if (!("speechSynthesis" in window)) return;
 
@@ -81,6 +94,7 @@ const speak = (text) => {
   window.speechSynthesis.speak(utterance);
 };
 
+// 读取系统/浏览器 TTS 音色源
 const loadVoices = () => {
   if (!("speechSynthesis" in window)) {
     voiceSelect.innerHTML = "<option>当前浏览器不支持 TTS</option>";
@@ -90,7 +104,7 @@ const loadVoices = () => {
 
   voices = window.speechSynthesis
     .getVoices()
-    .filter((voice) => voice.lang.toLowerCase().startsWith("en"))
+    .filter((v) => v.lang.toLowerCase().startsWith("en"))
     .sort((a, b) => a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name));
 
   voiceSelect.innerHTML = "";
@@ -101,21 +115,33 @@ const loadVoices = () => {
   }
 
   const savedVoice = localStorage.getItem(storageKeys.voice);
-  voices.forEach((voice) => {
+  voices.forEach((v) => {
     const option = document.createElement("option");
-    option.value = voice.name;
-    option.textContent = `${voice.name} · ${voice.lang}`;
-    option.selected = savedVoice ? voice.name === savedVoice : voice === getPreferredVoice();
+    option.value = v.name;
+    option.textContent = `${v.name} · ${v.lang}`;
+    option.selected = savedVoice ? v.name === savedVoice : v === getPreferredVoice();
     voiceSelect.append(option);
   });
 };
 
 const renderRate = () => {
-  rateButtons.forEach((button) => {
-    button.classList.toggle("active", Number(button.dataset.rate) === selectedRate);
+  rateButtons.forEach((btn) => {
+    btn.classList.toggle("active", Number(btn.dataset.rate) === selectedRate);
   });
 };
 
+// 进度条渲染更新
+const renderProgress = (isFinished) => {
+  if (isFinished) {
+    progressFill.style.width = "100%";
+    progressVal.textContent = "100% (MAX)";
+  } else {
+    progressFill.style.width = "45%";
+    progressVal.textContent = "45%";
+  }
+};
+
+// 渲染更多短句可选列表
 const renderPhrases = () => {
   phraseList.innerHTML = "";
   phrases.forEach((phrase, index) => {
@@ -129,35 +155,50 @@ const renderPhrases = () => {
     meaning.textContent = phrase.meaning;
     copy.append(title, meaning);
 
-    const button = document.createElement("button");
-    button.type = "button";
-    button.setAttribute("aria-label", `选择并播放 ${phrase.text}`);
-    button.innerHTML = '<svg><use href="#icon-volume"></use></svg>';
-    button.addEventListener("click", () => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.setAttribute("aria-label", `选择并播放 ${phrase.text}`);
+    btn.innerHTML = '<svg><use href="#icon-volume"></use></svg>';
+    btn.addEventListener("click", () => {
       phraseIndex = index;
       renderCurrentPhrase();
       speak(phrase.text);
     });
 
-    item.append(copy, button);
+    item.append(copy, btn);
     phraseList.append(item);
   });
 };
 
-voicePanelButton.addEventListener("click", () => {
-  const nextOpen = voicePanel.hidden;
-  voicePanel.hidden = !nextOpen;
-  voicePanelButton.setAttribute("aria-expanded", String(nextOpen));
-});
+// --- Bottom Sheet 底栏面板交互逻辑 ---
+const openBottomSheet = () => {
+  voicePanel.hidden = false;
+  sheetOverlay.hidden = false;
+  voicePanel.setAttribute("aria-hidden", "false");
+  voicePanelButton.setAttribute("aria-expanded", "true");
+  voicePanel.focus();
+};
 
+const closeBottomSheet = () => {
+  voicePanel.hidden = true;
+  sheetOverlay.hidden = true;
+  voicePanel.setAttribute("aria-hidden", "true");
+  voicePanelButton.setAttribute("aria-expanded", "false");
+};
+
+voicePanelButton.addEventListener("click", openBottomSheet);
+sheetCloseButton.addEventListener("click", closeBottomSheet);
+sheetOverlay.addEventListener("click", closeBottomSheet);
+
+// 发音音色及语速持久化
 voiceSelect.addEventListener("change", () => {
   localStorage.setItem(storageKeys.voice, voiceSelect.value);
   speak(currentPhrase.textContent);
 });
 
-rateButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    selectedRate = Number(button.dataset.rate);
+rateButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    selectedRate = Number(btn.dataset.rate);
     localStorage.setItem(storageKeys.rate, String(selectedRate));
     renderRate();
     speak(currentPhrase.textContent);
@@ -173,29 +214,33 @@ nextPhrase.addEventListener("click", () => {
   renderCurrentPhrase();
 });
 
+// 打卡行为绑定进度槽
 finishButton.addEventListener("click", () => {
   const done = finishButton.classList.toggle("is-done");
   localStorage.setItem(storageKeys.done, done ? "1" : "0");
   finishButton.innerHTML = done
     ? '<svg><use href="#icon-check"></use></svg>今天完成了'
     : '<svg><use href="#icon-check"></use></svg>我完成了今天的小任务';
+  renderProgress(done);
 });
 
-responseButtons.forEach((button) => {
+// 记录反应反馈
+responseButtons.forEach((btn) => {
   const saved = JSON.parse(localStorage.getItem(storageKeys.responses) || "[]");
-  button.classList.toggle("active", saved.includes(button.dataset.response));
+  btn.classList.toggle("active", saved.includes(btn.dataset.response));
 
-  button.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
     const current = JSON.parse(localStorage.getItem(storageKeys.responses) || "[]");
-    const next = current.includes(button.dataset.response)
-      ? current.filter((item) => item !== button.dataset.response)
-      : [...current, button.dataset.response];
+    const next = current.includes(btn.dataset.response)
+      ? current.filter((item) => item !== btn.dataset.response)
+      : [...current, btn.dataset.response];
 
     localStorage.setItem(storageKeys.responses, JSON.stringify(next));
-    button.classList.toggle("active");
+    btn.classList.toggle("active");
   });
 });
 
+// 可选短句展板展开
 allPhrasesButton.addEventListener("click", () => {
   phraseDrawer.hidden = !phraseDrawer.hidden;
   if (!phraseDrawer.hidden) {
@@ -203,16 +248,55 @@ allPhrasesButton.addEventListener("click", () => {
   }
 });
 
-if (localStorage.getItem(storageKeys.done) === "1") {
-  finishButton.classList.add("is-done");
-  finishButton.innerHTML = '<svg><use href="#icon-check"></use></svg>今天完成了';
-}
+// --- 睡前温和模式交互 ---
+const updateBedtimeButtonIcon = (isBedtime) => {
+  const iconSun = bedtimeButton.querySelector(".icon-sun");
+  const iconMoon = bedtimeButton.querySelector(".icon-moon");
+  if (isBedtime) {
+    iconSun.style.display = "block";
+    iconMoon.style.display = "none";
+    bedtimeButton.setAttribute("aria-pressed", "true");
+  } else {
+    iconSun.style.display = "none";
+    iconMoon.style.display = "block";
+    bedtimeButton.setAttribute("aria-pressed", "false");
+  }
+};
 
-renderCurrentPhrase();
-renderRate();
-renderPhrases();
-loadVoices();
+const toggleBedtimeMode = () => {
+  const isCurrentlyBedtime = document.body.classList.toggle("bedtime-mode");
+  localStorage.setItem(storageKeys.bedtime, isCurrentlyBedtime ? "1" : "0");
+  updateBedtimeButtonIcon(isCurrentlyBedtime);
+};
 
-if ("speechSynthesis" in window) {
-  window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
-}
+bedtimeButton.addEventListener("click", toggleBedtimeMode);
+
+// 初始化
+const init = () => {
+  // 1. 发音短句与语速初始化
+  renderCurrentPhrase();
+  renderRate();
+  renderPhrases();
+  loadVoices();
+
+  // 2. 打卡状态与进度条载入
+  const isDone = localStorage.getItem(storageKeys.done) === "1";
+  if (isDone) {
+    finishButton.classList.add("is-done");
+    finishButton.innerHTML = '<svg><use href="#icon-check"></use></svg>今天完成了';
+  }
+  renderProgress(isDone);
+
+  // 3. 睡前温和模式载入
+  const isBedtime = localStorage.getItem(storageKeys.bedtime) === "1";
+  if (isBedtime) {
+    document.body.classList.add("bedtime-mode");
+  }
+  updateBedtimeButtonIcon(isBedtime);
+
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
+  }
+};
+
+init();

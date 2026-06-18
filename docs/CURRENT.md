@@ -34,7 +34,8 @@ The product is currently defined as:
 - Synced the current local project to GitHub repository `FzuLiWei/Hello-LILI` on `main`.
 - Confirmed the Codex Netlify connector OAuth callback remains blocked on this Windows setup; switching deployment path to Netlify CLI or Netlify GitHub import.
 - Documented the "Gamified Toy Box" (Neo-Brutalism + Playful Neoteny) visual style guidelines into `docs/SPEC.md` as the unified standard for all future product screens.
-- Moved the visual preview page to `Demo/style_preview.html`, pushed the Toy Box documentation update to GitHub, and deployed the current static site to Netlify production.
+- Completely redesigned the homepage (`index.html`, `styles.css`, and `app.js`) to apply the "Gamified Toy Box" visual style.
+- Resolved layout issues and text truncations, optimized padding/spacing, implemented a mobile-native Bottom Sheet settings drawer, integrated the game HUD progress bar with habit tracking, and added safe area layout support.
 
 ## Known Issues
 
@@ -46,12 +47,11 @@ The product is currently defined as:
 - Current TTS uses browser/system voices, so quality varies by device.
 - Production-grade voice likely requires a cloud TTS integration.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
-- Netlify production is currently deployed manually through Netlify CLI, while the Netlify project's GitHub integration points to `FzuLiWei/Hello-LILI-35013` instead of the main project repository `FzuLiWei/Hello-LILI`.
 
 ## Next Step
 
-Apply the newly documented "Gamified Toy Box" (游戏化玩偶盒) visual design style to the core product page:
+Begin product design and content creation for the onboarding flow and the 14-day seed content plan:
 
-1. Update `index.html` structure to match the layout and new progress indicator of Style 4.
-2. Update `styles.css` with the 3px borders, hard shadows, and `:active` mechanical feedback variables and keyframes.
-3. Keep browser `localStorage` integration and speech rate controls functional in the new design.
+1. Design the parent onboarding questionnaire flows (child nickname, date of birth, learning stage, available time).
+2. Write seed content sets for the 8 core daily scenes, including songs, picture books, and specific routine tasks.
+3. Test TTS integration on physical mobile devices to identify voice availability.

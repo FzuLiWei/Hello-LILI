@@ -2,11 +2,14 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>HelloLILI English</title>
+    <!-- 引入 Google 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Outfit:wght@400;600;900&family=Quicksand:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="theme-gamified">
+    <!-- SVG 图标库 -->
     <svg aria-hidden="true" class="icon-sprite">
       <symbol id="icon-play" viewBox="0 0 24 24">
         <path d="M8 5v14l11-7Z" />
@@ -43,6 +46,13 @@
       <symbol id="icon-heart" viewBox="0 0 24 24">
         <path d="M20.4 5.6a5 5 0 0 0-7.1 0L12 6.9l-1.3-1.3a5 5 0 0 0-7.1 7.1L12 21l8.4-8.3a5 5 0 0 0 0-7.1Z" />
       </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+      </symbol>
     </svg>
 
     <main class="phone-app" aria-label="HelloLILI English 移动端首页">
@@ -51,11 +61,18 @@
           <p class="kicker">HelloLILI</p>
           <h1>今天只做一件小事</h1>
         </div>
-        <button class="round-button" id="voicePanelButton" type="button" aria-controls="voicePanel" aria-expanded="false" title="发音设置">
-          <svg><use href="#icon-settings"></use></svg>
-        </button>
+        <div class="header-actions">
+          <button class="round-button" id="bedtimeButton" type="button" title="切换睡睡模式" aria-pressed="false">
+            <svg class="icon-sun" style="display:none;"><use href="#icon-sun"></use></svg>
+            <svg class="icon-moon"><use href="#icon-moon"></use></svg>
+          </button>
+          <button class="round-button" id="voicePanelButton" type="button" aria-controls="voicePanel" aria-expanded="false" title="发音设置">
+            <svg><use href="#icon-settings"></use></svg>
+          </button>
+        </div>
       </header>
 
+      <!-- 阶段状态面板 -->
       <section class="child-card" aria-label="当前阶段">
         <div class="baby-mark">
           <svg><use href="#icon-baby"></use></svg>
@@ -66,27 +83,7 @@
         </div>
       </section>
 
-      <section class="voice-panel" id="voicePanel" hidden>
-        <div class="section-title">
-          <span>发音设置</span>
-          <small>使用浏览器自带 TTS</small>
-        </div>
-        <label class="field">
-          <span>英文音色</span>
-          <select id="voiceSelect" aria-label="选择英文音色">
-            <option>正在读取音色...</option>
-          </select>
-        </label>
-        <div class="field">
-          <span>语速</span>
-          <div class="rate-options" aria-label="选择语速">
-            <button class="active" type="button" data-rate="0.72">慢速</button>
-            <button type="button" data-rate="0.9">自然</button>
-          </div>
-        </div>
-        <p class="tiny-note">如果还是不好听，需要后续接 OpenAI / Azure / Google 等云端 TTS。</p>
-      </section>
-
+      <!-- 今日推荐任务 -->
       <section class="today-card" id="today">
         <div class="today-top">
           <div>
@@ -96,6 +93,18 @@
           <span class="time-pill">3 分钟</span>
         </div>
 
+        <!-- 游戏化习惯属性进度条 (HUD) -->
+        <div class="progress-container">
+          <div class="progress-label-row">
+            <span>今日习惯进度 (HUD)</span>
+            <span class="progress-data-mono" id="progressVal">45%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- 核心卡片 -->
         <article class="phrase-card" aria-label="今日核心短句">
           <span class="step-label">先学这一句</span>
           <p class="big-phrase" id="currentPhrase">Splash splash.</p>
@@ -109,6 +118,7 @@
           </div>
         </article>
 
+        <!-- 照着做步骤 -->
         <div class="routine-box">
           <div class="section-title">
             <span>照着做</span>
@@ -135,6 +145,7 @@
         </div>
       </section>
 
+      <!-- 反应记录卡片 -->
       <section class="response-card" id="record">
         <div class="section-title">
           <span>记录一个反应</span>
@@ -148,6 +159,7 @@
         </div>
       </section>
 
+      <!-- 底部常驻栏 -->
       <section class="simple-tools" aria-label="更多入口">
         <a href="#today">
           <svg><use href="#icon-home"></use></svg>
@@ -163,6 +175,7 @@
         </a>
       </section>
 
+      <!-- 弹出可选词汇抽屉 -->
       <section class="phrase-drawer" id="phraseDrawer" hidden>
         <div class="section-title">
           <span>今天可选短句</span>
@@ -171,6 +184,35 @@
         <div class="phrase-list" id="phraseList"></div>
       </section>
     </main>
+
+    <!-- 半屏发音设置底栏面板 (Bottom Sheet) -->
+    <div class="sheet-overlay" id="sheetOverlay" hidden></div>
+    <section class="bottom-sheet" id="voicePanel" tabindex="-1" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+      <div class="sheet-header">
+        <div class="sheet-indicator"></div>
+        <div class="section-title">
+          <span>发音设置</span>
+          <small>使用浏览器本地 TTS 发音</small>
+        </div>
+        <button class="sheet-close" id="sheetCloseButton" type="button" aria-label="关闭设置">&times;</button>
+      </div>
+      <div class="sheet-content">
+        <label class="field">
+          <span>英文音色</span>
+          <select id="voiceSelect" aria-label="选择英文音色">
+            <option>正在读取音色...</option>
+          </select>
+        </label>
+        <div class="field">
+          <span>语速</span>
+          <div class="rate-options" aria-label="选择语速">
+            <button class="active" type="button" data-rate="0.72">慢速</button>
+            <button type="button" data-rate="0.9">自然</button>
+          </div>
+        </div>
+        <p class="tiny-note">如果发音不够生动，说明当前处于本地浏览器模拟。未来将接入微软 Azure / 谷歌 Cloud 高品质云端发音服务。</p>
+      </div>
+    </section>
 
     <script src="app.js"></script>
   </body>

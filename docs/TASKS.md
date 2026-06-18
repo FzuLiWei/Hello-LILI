@@ -18,8 +18,8 @@ Status:
 
 Current tasks:
 
-- Apply the newly documented "Gamified Toy Box" (游戏化玩偶盒) visual design style to the core pages (`index.html` and `styles.css`).
-- Verify visual aesthetics and interactive mechanical feedback on both mobile and desktop views.
+- Design onboarding questionnaire user flows (child nickname, birthday, stages) and UI specs.
+- Draft seed content sets (phrases, songs, and books) for 14-day parent assistant mode.
 - Keep the current implementation static until the core flow is validated.
 
 # Next Milestone

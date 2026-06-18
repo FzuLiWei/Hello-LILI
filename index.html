@@ -137,6 +137,15 @@
           </div>
         </article>
 
+        <!-- 当前场景短句列表，就地展开，避免把家长带到页面底部 -->
+        <section class="phrase-drawer" id="phraseDrawer" hidden>
+          <div class="section-title">
+            <span id="phraseDrawerTitle">今天可选短句</span>
+            <small>点一句，马上试说</small>
+          </div>
+          <div class="phrase-list" id="phraseList"></div>
+        </section>
+
         <!-- 照着做步骤 -->
         <div class="routine-box">
           <div class="section-title">
@@ -171,11 +180,12 @@
 
         <div class="mini-resource">
           <div>
-            <span>顺手加一点</span>
+            <span>真儿歌</span>
             <strong id="songTitle">Row, Row, Row Your Boat</strong>
-            <small id="bookTitle">Brown Bear, Brown Bear</small>
+            <small id="songSource">Super Simple Songs · 家长先听一段</small>
+            <small id="bookTitle">绘本：Brown Bear, Brown Bear</small>
           </div>
-          <button type="button" id="speakSongButton">听儿歌句</button>
+          <a href="#" id="songLink" target="_blank" rel="noopener noreferrer">打开真儿歌</a>
         </div>
       </section>
 
@@ -240,7 +250,7 @@
 
         <div class="guidance-hero" aria-live="polite">
           <span>今天怎么用</span>
-          <p id="parentTodayTip">打开当天计划后，只带走一句话和一个动作。</p>
+          <p id="parentTodayTip">只看一句，离开屏幕。</p>
         </div>
 
         <div class="guidance-list" id="guidanceList" aria-label="0 到 18 个月家长使用建议"></div>
@@ -270,14 +280,6 @@
         </a>
       </section>
 
-      <!-- 弹出可选词汇抽屉 -->
-      <section class="phrase-drawer" id="phraseDrawer" hidden>
-        <div class="section-title">
-          <span id="phraseDrawerTitle">今天可选短句</span>
-          <small>只选一句也可以</small>
-        </div>
-        <div class="phrase-list" id="phraseList"></div>
-      </section>
     </main>
 
     <div class="onboarding-overlay" id="onboardingOverlay" hidden>
@@ -345,7 +347,7 @@
         <div class="sheet-indicator"></div>
         <div class="section-title">
           <span>发音设置</span>
-          <small>使用浏览器本地 TTS 发音</small>
+          <small>短句临时校准</small>
         </div>
         <button class="sheet-close" id="sheetCloseButton" type="button" aria-label="关闭设置">&times;</button>
       </div>
@@ -363,7 +365,7 @@
             <button type="button" data-rate="0.9">自然</button>
           </div>
         </div>
-        <p class="tiny-note">如果发音不够生动，说明当前处于本地浏览器模拟。未来将接入微软 Azure / 谷歌 Cloud 高品质云端发音服务。</p>
+        <p class="tiny-note">这里是浏览器系统发音，只适合校准短句读法；儿歌请打开真实歌曲来源。高品质人声需要后续接入云端 TTS。</p>
       </div>
     </section>
 

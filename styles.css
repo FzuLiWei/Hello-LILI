@@ -236,8 +236,7 @@ h2 {
 .today-card,
 .response-card,
 .weekly-card,
-.parent-card,
-.phrase-drawer {
+.parent-card {
   border: var(--border-width) solid var(--border-line);
   border-radius: var(--radius-large);
   background: var(--bg-card);
@@ -640,7 +639,10 @@ body.bedtime-mode .done-button.is-done {
   line-height: 1.35;
 }
 
-.mini-resource button {
+.mini-resource a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
   min-height: 42px;
   padding: 0 12px;
@@ -651,6 +653,8 @@ body.bedtime-mode .done-button.is-done {
   box-shadow: var(--shadow-btn);
   font-size: 0.82rem;
   font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* --- 9. 反应观察卡片 --- */
@@ -785,12 +789,12 @@ body.bedtime-mode .done-button.is-done {
 /* --- 11. 家长指导卡片 --- */
 .parent-card {
   display: grid;
-  gap: 16px;
-  padding: 20px;
+  gap: 12px;
+  padding: 18px;
 }
 
 .guidance-hero {
-  padding: 16px;
+  padding: 14px;
   border: var(--border-width) solid var(--border-line);
   border-radius: var(--radius-medium);
   background: var(--color-highlight);
@@ -799,8 +803,8 @@ body.bedtime-mode .done-button.is-done {
 
 .guidance-hero span {
   display: inline-flex;
-  margin-bottom: 10px;
-  padding: 5px 12px;
+  margin-bottom: 8px;
+  padding: 4px 10px;
   border: var(--border-width) solid var(--border-line);
   border-radius: 999px;
   background: var(--bg-card);
@@ -812,20 +816,20 @@ body.bedtime-mode .done-button.is-done {
 .guidance-hero p {
   margin: 0;
   color: var(--text-main);
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 900;
-  line-height: 1.55;
+  line-height: 1.4;
 }
 
 .guidance-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .guidance-item {
   display: grid;
-  gap: 7px;
-  padding: 15px;
+  gap: 5px;
+  padding: 12px;
   border: var(--border-width) solid var(--border-line);
   border-radius: var(--radius-medium);
   background: var(--bg-phone);
@@ -834,7 +838,7 @@ body.bedtime-mode .done-button.is-done {
 
 .guidance-item span {
   width: fit-content;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border: var(--border-width) solid var(--border-line);
   border-radius: 999px;
   background: var(--color-primary);
@@ -849,7 +853,7 @@ body.bedtime-mode .guidance-item span {
 
 .guidance-item strong {
   color: var(--text-main);
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 900;
   line-height: 1.25;
 }
@@ -857,9 +861,9 @@ body.bedtime-mode .guidance-item span {
 .guidance-item p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  line-height: 1.55;
+  line-height: 1.35;
 }
 
 /* --- 11. 底部常驻导航栏 --- */
@@ -920,10 +924,13 @@ body.bedtime-mode .guidance-item span {
   box-shadow: var(--shadow-btn);
 }
 
-/* --- 12. 弹出可选短句抽屉 (底部内容非弹窗) --- */
+/* --- 12. 当前场景短句面板 --- */
 .phrase-drawer {
-  padding: 20px;
-  margin-top: 10px;
+  margin: -4px 0 20px;
+  padding: 16px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: var(--radius-medium);
+  background: var(--color-routine-bg);
 }
 
 .phrase-list {

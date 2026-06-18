@@ -10,7 +10,7 @@ The local project is initialized as a git repository and synced to GitHub `FzuLi
 
 ## Active Task
 
-Validate the static MVP flow with onboarding, 14-day parent assistant content, response logging, weekly summary, and parent guidance.
+Validate the static MVP flow with onboarding, 14-day parent assistant content, response logging, weekly summary, compressed parent guidance, and real song links.
 
 The product is currently defined as:
 
@@ -45,6 +45,9 @@ The product is currently defined as:
 - Updated the bottom navigation to include and correctly highlight the weekly summary entry.
 - Added a lightweight parent guidance area with a bottom navigation entry, dynamic "today how to use it" prompt, and seven low-screen parent guidance cards.
 - Removed the global 320px minimum width so the mobile shell does not create horizontal overflow in narrow viewport tests.
+- Moved the current-scene phrase list into the Today card so the Short Phrases entry expands near the core phrase instead of at the page bottom.
+- Compressed parent guidance from seven longer cards into four short, action-first reminders.
+- Replaced song-line browser TTS with real external song source links from Super Simple Songs, keeping browser TTS only for short parent phrases.
 
 ## Known Issues
 
@@ -53,10 +56,10 @@ The product is currently defined as:
 - Seed content is implemented as a first 14-day set, but still needs education/content review after real use.
 - Homepage state is stored only in browser `localStorage`.
 - No backend or account system has been added.
-- Current TTS uses browser/system voices, so quality varies by device.
+- Current TTS uses browser/system voices, so quality varies by device; it is intentionally limited to short phrase pronunciation.
 - Production-grade voice likely requires a cloud TTS integration.
 - Weekly summary is derived only from local daily completion and response data; it does not yet summarize song/book usage separately.
-- Parent guidance content is a first short-form set and still needs real parent readability review.
+- Compressed parent guidance and real song link choices still need real parent readability and usability review.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 - Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
 - Future task close-out should include GitHub commit, push result, Netlify deploy verification, and the live URL.
@@ -67,4 +70,4 @@ Validate the completed parent-assistant MVP slice:
 
 1. Test the full flow on physical iPhone and Android devices.
 2. Review the 14-day phrases, songs, books, and tasks for natural English and parent usability.
-3. Review the new parent guidance area during real use and refine any unclear or anxiety-inducing copy.
+3. Review the compressed guidance cards and real song links during real use.

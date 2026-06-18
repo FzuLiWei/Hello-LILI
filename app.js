@@ -25,7 +25,12 @@ const seedPlans = [
       ["配一个动作", "轻轻拍水或指小鸭子，不要求宝宝回答。"],
       ["重复三次就好", "今天够了，稳定比数量重要。"],
     ],
-    song: ["Row, Row, Row Your Boat", "Row, row, row your boat."],
+    song: {
+      title: "Row, Row, Row Your Boat",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/row-row-row-your-boat/",
+      tip: "洗澡后或睡前听一段，家长做摇船动作就够。",
+    },
     book: ["Brown Bear, Brown Bear", "只看两页也可以，指图比讲完整本更重要。"],
     responses: ["look", "smile", "reach", "calm"],
   },
@@ -46,7 +51,12 @@ const seedPlans = [
       ["慢慢重复", "不要连珠炮，留一点安静时间。"],
       ["配一个表情", "微笑和眼神比解释更有效。"],
     ],
-    song: ["Good Morning Song", "Good morning, good morning."],
+    song: {
+      title: "Good Morning, Mr. Rooster",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/good-morning-mr-rooster/",
+      tip: "起床后听一段，重点是固定早晨声音。",
+    },
     book: ["Hello, Baby!", "翻到有脸的页面，和宝宝对视。"],
     responses: ["look", "smile", "sound", "gesture"],
   },
@@ -67,7 +77,12 @@ const seedPlans = [
       ["动作同步", "抬腿、擦拭、贴好时各说一句。"],
       ["结束固定", "最后说 All clean，让宝宝熟悉流程。"],
     ],
-    song: ["Head, Shoulders, Knees and Toes", "Head, shoulders, knees and toes."],
+    song: {
+      title: "Head Shoulders Knees & Toes",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/head-shoulders-knees-toes-learn-it/",
+      tip: "只做一个身体部位动作，不追求跟唱。",
+    },
     book: ["Where's Spot?", "只玩找一找，不追求讲完整。"],
     responses: ["calm", "look", "reach", "sound"],
   },
@@ -88,7 +103,12 @@ const seedPlans = [
       ["配真实物品", "指水杯、勺子、食物。"],
       ["重复关键词", "今天只重复 hungry / yummy / water。"],
     ],
-    song: ["Pat-a-Cake", "Pat-a-cake, pat-a-cake."],
+    song: {
+      title: "Pat-A-Cake",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/pat-a-cake/",
+      tip: "吃饭后轻轻拍手，节奏比歌词完整更重要。",
+    },
     book: ["The Very Hungry Caterpillar", "只看食物页，指一两个图。"],
     responses: ["look", "reach", "smile", "calm"],
   },
@@ -109,7 +129,12 @@ const seedPlans = [
       ["边做边说", "滚一下说一次 Roll the ball。"],
       ["宝宝不回应也没关系", "你示范，他观察就已经在学习。"],
     ],
-    song: ["This Is the Way", "This is the way we roll the ball."],
+    song: {
+      title: "This Is The Way",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/this-is-the-way/",
+      tip: "听一段节奏，玩球时只保留一个动作。",
+    },
     book: ["Dear Zoo", "翻到动物页，模仿一个声音即可。"],
     responses: ["reach", "smile", "gesture", "sound"],
   },
@@ -130,7 +155,12 @@ const seedPlans = [
       ["只留一句主句", "Good night 反复出现就够。"],
       ["用中文安抚也可以", "英语是额外输入，不替代亲密交流。"],
     ],
-    song: ["Twinkle, Twinkle, Little Star", "Twinkle, twinkle, little star."],
+    song: {
+      title: "Twinkle Twinkle Little Star",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/twinkle-twinkle-little-star/",
+      tip: "睡前只放低音量听一小段，别把气氛唱兴奋。",
+    },
     book: ["Goodnight Moon", "只看月亮、灯、床几个图。"],
     responses: ["calm", "look", "smile", "sound"],
   },
@@ -151,7 +181,12 @@ const seedPlans = [
       ["只用一句", "选 It's okay 或 Daddy is here。"],
       ["观察变化", "记录是否安静下来。"],
     ],
-    song: ["Hush Little Baby", "Hush, little baby."],
+    song: {
+      title: "Hush Little Baby",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/hush-little-baby/",
+      tip: "安抚时可先由家长听，再用自己的声音哼。",
+    },
     book: ["Guess How Much I Love You", "只读一句 I love you。"],
     responses: ["calm", "look", "smile", "sound"],
   },
@@ -172,7 +207,12 @@ const seedPlans = [
       ["只找一个东西", "今天只看 tree 或 car。"],
       ["挥手告别", "Bye-bye 配合手势。"],
     ],
-    song: ["The Wheels on the Bus", "The wheels on the bus go round and round."],
+    song: {
+      title: "The Wheels On The Bus",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/wheels-on-the-bus/",
+      tip: "出门前听一段，配合转手或挥手动作。",
+    },
     book: ["Maisy Goes Out", "看出门相关图片即可。"],
     responses: ["look", "gesture", "smile", "reach"],
   },
@@ -193,7 +233,12 @@ const seedPlans = [
       ["重复一个身体词", "nose 或 hands 二选一。"],
       ["宝宝看就算完成", "不要求模仿。"],
     ],
-    song: ["If You're Happy and You Know It", "If you're happy and you know it, clap your hands."],
+    song: {
+      title: "If You're Happy",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/if-youre-happy/",
+      tip: "只做 clap 或 wave 一个动作，让宝宝看你示范。",
+    },
     book: ["Ten Little Fingers", "看手指图片，数不数都可以。"],
     responses: ["look", "gesture", "sound", "smile"],
   },
@@ -214,7 +259,12 @@ const seedPlans = [
       ["慢速说 water", "让宝宝听清 /w/ 的开头。"],
       ["结束时固定", "All done 是很实用的日常句。"],
     ],
-    song: ["Open Shut Them", "Open, shut them."],
+    song: {
+      title: "Open Shut Them",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/open-shut-them/",
+      tip: "喝水后做 open / shut 手势，不需要宝宝模仿。",
+    },
     book: ["Eating the Alphabet", "只看一种水果。"],
     responses: ["reach", "look", "smile", "calm"],
   },
@@ -235,7 +285,12 @@ const seedPlans = [
       ["突然出现", "说 Peekaboo，注意不要吓到宝宝。"],
       ["看反应", "笑、看向你、伸手都可以记录。"],
     ],
-    song: ["Peekaboo Song", "Peekaboo, I see you."],
+    song: {
+      title: "Peekaboo",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/peekaboo/",
+      tip: "游戏前听一段，真正互动时用你的脸和声音。",
+    },
     book: ["Where Is Baby's Belly Button?", "翻翻书很适合这个动作主题。"],
     responses: ["smile", "look", "reach", "gesture"],
   },
@@ -256,7 +311,12 @@ const seedPlans = [
       ["重复 arm", "左右手臂都用这个词。"],
       ["结束收口", "All set 是非常自然的结束句。"],
     ],
-    song: ["This Is the Way We Get Dressed", "This is the way we put on our shirt."],
+    song: {
+      title: "This Is The Way We Get Dressed",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/this-is-the-way-we-get-dressed/",
+      tip: "穿衣前听一段，穿的时候只说一个衣物动作。",
+    },
     book: ["Blue Hat, Green Hat", "看衣物和颜色，不要求宝宝认。"],
     responses: ["calm", "look", "gesture", "sound"],
   },
@@ -277,7 +337,12 @@ const seedPlans = [
       ["配合挥手", "Bye-bye 是宝宝容易观察的动作。"],
       ["说完就停", "外面信息多，短句更好。"],
     ],
-    song: ["Car Song", "Red car, red car, go, go, go."],
+    song: {
+      title: "Driving In My Car",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/driving-in-my-car/",
+      tip: "户外看车前听一段，出门后只做 vroom 声音游戏。",
+    },
     book: ["Cars and Trucks and Things That Go", "只看一页车，不追求读完。"],
     responses: ["look", "gesture", "smile", "sound"],
   },
@@ -298,7 +363,12 @@ const seedPlans = [
       ["读一页绘本", "只看图和重复句，不追求完整。"],
       ["记录一个变化", "看看宝宝是否更熟悉睡前英语。"],
     ],
-    song: ["Twinkle, Twinkle, Little Star", "Twinkle, twinkle, little star."],
+    song: {
+      title: "Twinkle Twinkle Little Star",
+      source: "Super Simple Songs",
+      url: "https://supersimple.com/song/twinkle-twinkle-little-star/",
+      tip: "复习晚安仪式时重复同一首，不急着换新。",
+    },
     book: ["Goodnight Moon", "第二次读同一本，比换新书更有价值。"],
     responses: ["calm", "look", "smile", "sound"],
   },
@@ -328,39 +398,24 @@ const storageKeys = {
 
 const guidanceItems = [
   {
-    label: "低屏幕",
-    title: "手机只服务家长",
-    text: "看清今天的一句和步骤后，就把注意力放回宝宝身上。0-18 个月不需要独立看屏幕。",
-  },
-  {
-    label: "不催说",
-    title: "反应不是开口才算",
-    text: "看向你、笑一下、安静下来、伸手，都说明宝宝正在接收熟悉的声音和情境。",
+    label: "看一眼",
+    title: "手机给家长看",
+    text: "看完一句和动作，就离开屏幕。",
   },
   {
     label: "一句话",
-    title: "一个场景只带走一句",
-    text: "今天只选一句最顺口的英文，配一个真实动作。少一点，更容易长期重复。",
+    title: "只带走一句",
+    text: "一个场景一句英文，反复几天也可以。",
   },
   {
-    label: "重复",
-    title: "同一句可以用很多天",
-    text: "婴幼儿需要稳定输入，不需要每天新鲜。连续几天说同一句，效果通常更好。",
+    label: "不催说",
+    title: "没回应也算输入",
+    text: "看你、笑、安静下来，都算反应。",
   },
   {
-    label: "绘本",
-    title: "只看两页也可以",
-    text: "指图片、说一个词、停顿等宝宝看，比从头讲完整本更适合这个阶段。",
-  },
-  {
-    label: "儿歌",
-    title: "唱主句，配动作",
-    text: "不用追求唱准整首歌。保留一句重复副歌，抱、拍、挥手这些动作更重要。",
-  },
-  {
-    label: "中文",
-    title: "家庭语言是底座",
-    text: "安抚和亲密交流可以自然使用中文。英语是额外输入，不替代家庭语言。",
+    label: "真声音",
+    title: "儿歌用真实来源",
+    text: "听一小段，家长跟着哼就好。",
   },
 ];
 
@@ -394,8 +449,9 @@ const prevDayButton = document.querySelector("#prevDayButton");
 const nextDayButton = document.querySelector("#nextDayButton");
 const routineList = document.querySelector("#routineList");
 const songTitle = document.querySelector("#songTitle");
+const songSource = document.querySelector("#songSource");
+const songLink = document.querySelector("#songLink");
 const bookTitle = document.querySelector("#bookTitle");
-const speakSongButton = document.querySelector("#speakSongButton");
 const phraseDrawerTitle = document.querySelector("#phraseDrawerTitle");
 const onboardingOverlay = document.querySelector("#onboardingOverlay");
 const onboardingForm = document.querySelector("#onboardingForm");
@@ -577,7 +633,7 @@ const renderWeeklySummary = () => {
 const renderGuidance = () => {
   const plan = getPlan();
   const [phrase] = plan.phrases[0];
-  parentTodayTip.textContent = `今天在${sceneLabels[plan.scene]}只带走一句 "${phrase}"。先听一遍，再离开屏幕，用你的声音配合一个动作重复两三次。`;
+  parentTodayTip.textContent = `${sceneLabels[plan.scene]}只带走 "${phrase}"，说两三次就停。`;
 
   guidanceList.innerHTML = "";
   guidanceItems.forEach((item) => {
@@ -691,7 +747,10 @@ const renderPlan = () => {
   planTitle.textContent = plan.title;
   planDuration.textContent = plan.duration;
   dayCounter.textContent = `${plan.day} / ${seedPlans.length}`;
-  songTitle.textContent = plan.song[0];
+  songTitle.textContent = plan.song.title;
+  songSource.textContent = `${plan.song.source} · ${plan.song.tip}`;
+  songLink.href = plan.song.url;
+  songLink.setAttribute("aria-label", `打开 ${plan.song.title} 真儿歌`);
   bookTitle.textContent = `绘本：${plan.book[0]}`;
 
   renderCurrentPhrase();
@@ -838,10 +897,6 @@ rateButtons.forEach((button) => {
 
 speakCurrent.addEventListener("click", () => {
   speak(currentPhrase.textContent);
-});
-
-speakSongButton.addEventListener("click", () => {
-  speak(getPlan().song[1]);
 });
 
 nextPhrase.addEventListener("click", () => {

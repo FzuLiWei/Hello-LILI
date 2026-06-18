@@ -134,13 +134,15 @@ Current homepage direction:
 TTS limitation:
 
 - Current TTS quality depends on the browser and operating system voices.
-- The static version can offer selectable local English voices and speech rate.
+- The static version can offer selectable local English voices and speech rate for short parent phrases only.
+- Browser TTS is not considered acceptable for songs or high-quality listening input.
+- Current song support uses external real song source links instead of machine-reading song lines.
 - Higher-quality voices require a backend integration with a cloud TTS provider.
 
 Current local data model:
 
 - `ChildProfile`: nickname, birthdate, parent English comfort level, daily available time, preferred routine scene, start date.
-- `SeedPlan`: 14 static daily plans, each with scene, title, duration, phrases, offline steps, song cue, picture book cue, and response options.
+- `SeedPlan`: 14 static daily plans, each with scene, title, duration, phrases, offline steps, real song source link, picture book cue, and response options.
 - `Progress`: per-day completion and child response selections stored in browser `localStorage`.
 - `WeeklySummary`: derived view of completed days, practiced scenes, observed responses, current week day states, and one low-pressure next action.
 
@@ -149,7 +151,7 @@ Current seed content coverage:
 - 14 daily plans.
 - 8 daily routine scenes: wake up, diaper/clothes, feeding, play, bath, going out, bedtime, and comforting.
 - 56 parent-facing phrases.
-- 14 song cues.
+- 14 song recommendations linked to real external song sources.
 - 14 picture book cues.
 - Reused response observation options suitable for 0-18 months.
 

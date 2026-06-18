@@ -77,26 +77,33 @@
         <div class="baby-mark">
           <svg><use href="#icon-baby"></use></svg>
         </div>
-        <div>
-          <strong>小 Lili · 9 个月</strong>
-          <span>反应与日常阶段，家长说，宝宝听和感受。</span>
+        <div class="child-copy">
+          <strong id="childSummary">小 Lili · 9 个月</strong>
+          <span id="childStageText">反应与日常阶段，家长说，宝宝听和感受。</span>
         </div>
+        <button class="mini-edit-button" id="editProfileButton" type="button">编辑</button>
       </section>
 
       <!-- 今日推荐任务 -->
       <section class="today-card" id="today">
         <div class="today-top">
           <div>
-            <p class="kicker">今日场景</p>
-            <h2>洗澡时说英语</h2>
+            <p class="kicker" id="dayLabel">第 1 天 · 今日场景</p>
+            <h2 id="planTitle">洗澡时说英语</h2>
           </div>
-          <span class="time-pill">3 分钟</span>
+          <span class="time-pill" id="planDuration">3 分钟</span>
+        </div>
+
+        <div class="day-switch" aria-label="切换 14 天计划">
+          <button type="button" id="prevDayButton">上一天</button>
+          <span id="dayCounter">1 / 14</span>
+          <button type="button" id="nextDayButton">下一天</button>
         </div>
 
         <!-- 游戏化习惯属性进度条 (HUD) -->
         <div class="progress-container">
           <div class="progress-label-row">
-            <span>今日习惯进度 (HUD)</span>
+            <span id="progressLabel">今日习惯进度</span>
             <span class="progress-data-mono" id="progressVal">45%</span>
           </div>
           <div class="progress-bar-track">
@@ -124,7 +131,7 @@
             <span>照着做</span>
             <small>离开屏幕后完成</small>
           </div>
-          <ol class="routine-list">
+          <ol class="routine-list" id="routineList">
             <li>
               <div>
                 <strong>看着宝宝说</strong>
@@ -148,6 +155,15 @@
             <svg><use href="#icon-check"></use></svg>
             我完成了今天的小任务
           </button>
+        </div>
+
+        <div class="mini-resource">
+          <div>
+            <span>顺手加一点</span>
+            <strong id="songTitle">Row, Row, Row Your Boat</strong>
+            <small id="bookTitle">Brown Bear, Brown Bear</small>
+          </div>
+          <button type="button" id="speakSongButton">听儿歌句</button>
         </div>
       </section>
 
@@ -184,12 +200,70 @@
       <!-- 弹出可选词汇抽屉 -->
       <section class="phrase-drawer" id="phraseDrawer" hidden>
         <div class="section-title">
-          <span>今天可选短句</span>
+          <span id="phraseDrawerTitle">今天可选短句</span>
           <small>只选一句也可以</small>
         </div>
         <div class="phrase-list" id="phraseList"></div>
       </section>
     </main>
+
+    <div class="onboarding-overlay" id="onboardingOverlay" hidden>
+      <section class="onboarding-card" role="dialog" aria-modal="true" aria-labelledby="onboardingTitle">
+        <p class="kicker">Parent setup</p>
+        <h2 id="onboardingTitle">先设置孩子档案</h2>
+        <p class="onboarding-copy">只问几个必要问题，用来安排 0-18 个月的每日小任务。</p>
+
+        <form id="onboardingForm">
+          <label class="field">
+            <span>孩子昵称</span>
+            <input id="childNicknameInput" name="nickname" autocomplete="off" maxlength="16" placeholder="例如：小 Lili" required />
+          </label>
+
+          <label class="field">
+            <span>出生日期</span>
+            <input id="childBirthdateInput" name="birthdate" type="date" required />
+          </label>
+
+          <label class="field">
+            <span>你的英语舒适度</span>
+            <select id="parentLevelInput" name="parentLevel">
+              <option value="beginner">想照着说，越简单越好</option>
+              <option value="comfortable">日常短句没问题</option>
+              <option value="confident">可以自由加句子</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>每天可用时间</span>
+            <select id="dailyTimeInput" name="dailyTime">
+              <option value="3">3 分钟</option>
+              <option value="5">5 分钟</option>
+              <option value="8">8 分钟</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>最想先用在哪个场景</span>
+            <select id="preferredSceneInput" name="preferredScene">
+              <option value="auto">系统安排</option>
+              <option value="wake">起床</option>
+              <option value="diaper">换尿布</option>
+              <option value="feeding">吃饭/喂奶</option>
+              <option value="play">玩耍</option>
+              <option value="bath">洗澡</option>
+              <option value="out">出门</option>
+              <option value="bed">睡前</option>
+              <option value="comfort">安抚</option>
+            </select>
+          </label>
+
+          <div class="onboarding-actions">
+            <button class="ghost-action" id="closeOnboardingButton" type="button">稍后</button>
+            <button class="done-button" type="submit">保存并开始</button>
+          </div>
+        </form>
+      </section>
+    </div>
 
     <!-- 半屏发音设置底栏面板 (Bottom Sheet) -->
     <div class="sheet-overlay" id="sheetOverlay" hidden></div>

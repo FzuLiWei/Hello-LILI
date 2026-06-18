@@ -10,7 +10,7 @@ The local project is initialized as a git repository and synced to GitHub `FzuLi
 
 ## Active Task
 
-Review and select the visual design style for HelloLILI English.
+Validate the static MVP flow with onboarding and 14-day parent assistant content.
 
 The product is currently defined as:
 
@@ -38,12 +38,15 @@ The product is currently defined as:
 - Resolved layout issues and text truncations, optimized padding/spacing, implemented a mobile-native Bottom Sheet settings drawer, integrated the game HUD progress bar with habit tracking, and added safe area layout support.
 - Verified Netlify continuous deployment from GitHub `FzuLiWei/Hello-LILI` on `main`; commit `7bba964` automatically deployed to production.
 - Added a project workflow rule requiring future completed tasks to push to GitHub `main`, wait for Netlify auto deployment, and report the live production URL.
+- Implemented onboarding for child nickname, birthdate, parent English comfort level, daily available time, and preferred scene.
+- Added a 14-day 0-18 month parent assistant seed plan covering 8 routine scenes, 56 phrases, song cues, picture book cues, offline steps, and response options.
+- Connected homepage content, phrase drawer, routine steps, progress, day switching, and response recording to the 14-day seed plan.
 
 ## Known Issues
 
 - No separate A/B product documents were found in the project directory.
 - Full application stack has not been chosen.
-- Seed content is still sample-level, not a complete 14-day content set.
+- Seed content is implemented as a first 14-day set, but still needs education/content review after real use.
 - Homepage state is stored only in browser `localStorage`.
 - No backend or account system has been added.
 - Current TTS uses browser/system voices, so quality varies by device.
@@ -54,8 +57,8 @@ The product is currently defined as:
 
 ## Next Step
 
-Begin product design and content creation for the onboarding flow and the 14-day seed content plan:
+Validate the completed onboarding and 14-day seed flow:
 
-1. Design the parent onboarding questionnaire flows (child nickname, date of birth, learning stage, available time).
-2. Write seed content sets for the 8 core daily scenes, including songs, picture books, and specific routine tasks.
-3. Test TTS integration on physical mobile devices to identify voice availability.
+1. Test the full flow on physical iPhone and Android devices.
+2. Review the 14-day phrases, songs, books, and tasks for natural English and parent usability.
+3. Design the weekly summary screen using the newly stored completion and response data.

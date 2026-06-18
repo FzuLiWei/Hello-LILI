@@ -128,12 +128,28 @@ Current homepage direction:
 - Keep the early flow extremely simple: one phrase, one offline routine, one response record.
 - Avoid desktop-style dashboards for the infant stage.
 - Expose secondary content through small entrances instead of showing many modules at once.
+- The static prototype now includes onboarding and a 14-day seed plan.
 
 TTS limitation:
 
 - Current TTS quality depends on the browser and operating system voices.
 - The static version can offer selectable local English voices and speech rate.
 - Higher-quality voices require a backend integration with a cloud TTS provider.
+
+Current local data model:
+
+- `ChildProfile`: nickname, birthdate, parent English comfort level, daily available time, preferred routine scene, start date.
+- `SeedPlan`: 14 static daily plans, each with scene, title, duration, phrases, offline steps, song cue, picture book cue, and response options.
+- `Progress`: per-day completion and child response selections stored in browser `localStorage`.
+
+Current seed content coverage:
+
+- 14 daily plans.
+- 8 daily routine scenes: wake up, diaper/clothes, feeding, play, bath, going out, bedtime, and comforting.
+- 56 parent-facing phrases.
+- 14 song cues.
+- 14 picture book cues.
+- Reused response observation options suitable for 0-18 months.
 
 ## Core User Journey
 

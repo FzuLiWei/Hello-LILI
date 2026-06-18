@@ -12,6 +12,8 @@ Status:
 - MVP scope defined as 0-3 parent assistant.
 - Requirements captured in `docs/SPEC.md`.
 - Mobile-first static homepage has been implemented for the 0-18 month parent assistant mode.
+- Onboarding questionnaire is implemented in the static prototype.
+- 14-day seed content is implemented and drives the homepage.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 - Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.
@@ -20,8 +22,9 @@ Status:
 
 Current tasks:
 
-- Design onboarding questionnaire user flows (child nickname, birthday, stages) and UI specs.
-- Draft seed content sets (phrases, songs, and books) for 14-day parent assistant mode.
+- Review and refine the 14-day seed content with real parent use.
+- Design weekly summary based on completed days, practiced scenes, and observed responses.
+- Test browser TTS on physical iPhone and Android devices.
 - Keep the current implementation static until the core flow is validated.
 
 # Next Milestone

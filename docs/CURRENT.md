@@ -36,6 +36,7 @@ The product is currently defined as:
 - Documented the "Gamified Toy Box" (Neo-Brutalism + Playful Neoteny) visual style guidelines into `docs/SPEC.md` as the unified standard for all future product screens.
 - Completely redesigned the homepage (`index.html`, `styles.css`, and `app.js`) to apply the "Gamified Toy Box" visual style.
 - Resolved layout issues and text truncations, optimized padding/spacing, implemented a mobile-native Bottom Sheet settings drawer, integrated the game HUD progress bar with habit tracking, and added safe area layout support.
+- Verified Netlify continuous deployment from GitHub `FzuLiWei/Hello-LILI` on `main`; commit `7bba964` automatically deployed to production.
 
 ## Known Issues
 
@@ -47,6 +48,7 @@ The product is currently defined as:
 - Current TTS uses browser/system voices, so quality varies by device.
 - Production-grade voice likely requires a cloud TTS integration.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
+- Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
 
 ## Next Step
 

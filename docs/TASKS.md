@@ -15,6 +15,7 @@ Status:
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 - Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.
+- Netlify continuous deployment is connected to `FzuLiWei/Hello-LILI` and verified from `main`.
 
 Current tasks:
 

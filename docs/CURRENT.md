@@ -34,6 +34,7 @@ The product is currently defined as:
 - Synced the current local project to GitHub repository `FzuLiWei/Hello-LILI` on `main`.
 - Confirmed the Codex Netlify connector OAuth callback remains blocked on this Windows setup; switching deployment path to Netlify CLI or Netlify GitHub import.
 - Documented the "Gamified Toy Box" (Neo-Brutalism + Playful Neoteny) visual style guidelines into `docs/SPEC.md` as the unified standard for all future product screens.
+- Moved the visual preview page to `Demo/style_preview.html`, pushed the Toy Box documentation update to GitHub, and deployed the current static site to Netlify production.
 
 ## Known Issues
 
@@ -41,10 +42,11 @@ The product is currently defined as:
 - Full application stack has not been chosen.
 - Seed content is still sample-level, not a complete 14-day content set.
 - Homepage state is stored only in browser `localStorage`.
-- No backend, account system, or deployment has been added.
+- No backend or account system has been added.
 - Current TTS uses browser/system voices, so quality varies by device.
 - Production-grade voice likely requires a cloud TTS integration.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
+- Netlify production is currently deployed manually through Netlify CLI, while the Netlify project's GitHub integration points to `FzuLiWei/Hello-LILI-35013` instead of the main project repository `FzuLiWei/Hello-LILI`.
 
 ## Next Step
 

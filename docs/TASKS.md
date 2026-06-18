@@ -14,6 +14,7 @@ Status:
 - Mobile-first static homepage has been implemented for the 0-18 month parent assistant mode.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
+- Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.
 
 Current tasks:
 

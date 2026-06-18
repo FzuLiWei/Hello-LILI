@@ -53,6 +53,11 @@
         <path d="M13 16V8" />
         <path d="M18 16v-7" />
       </symbol>
+      <symbol id="icon-parent" viewBox="0 0 24 24">
+        <path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+        <path d="M2.5 21a5.5 5.5 0 0 1 11 0" />
+        <path d="M17.8 6.2a3 3 0 0 1 4.2 4.2L17 15.4l-5-5a3 3 0 0 1 4.2-4.2l.8.8Z" />
+      </symbol>
       <symbol id="icon-sun" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="4"/>
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
@@ -227,6 +232,20 @@
         </div>
       </section>
 
+      <section class="parent-card" id="parent">
+        <div class="section-title">
+          <span>家长指导</span>
+          <small>看一眼，然后回到生活里</small>
+        </div>
+
+        <div class="guidance-hero" aria-live="polite">
+          <span>今天怎么用</span>
+          <p id="parentTodayTip">打开当天计划后，只带走一句话和一个动作。</p>
+        </div>
+
+        <div class="guidance-list" id="guidanceList" aria-label="0 到 18 个月家长使用建议"></div>
+      </section>
+
       <!-- 底部常驻栏 -->
       <section class="simple-tools" aria-label="更多入口">
         <a href="#today" class="is-active" data-nav-target="today">
@@ -244,6 +263,10 @@
         <a href="#summary" data-nav-target="summary">
           <svg><use href="#icon-chart"></use></svg>
           <span>周报</span>
+        </a>
+        <a href="#parent" data-nav-target="parent">
+          <svg><use href="#icon-parent"></use></svg>
+          <span>家长</span>
         </a>
       </section>
 

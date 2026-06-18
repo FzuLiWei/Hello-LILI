@@ -78,13 +78,11 @@ body.bedtime-mode {
 }
 
 html {
-  min-width: 320px;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
   min-height: 100vh;
   background: var(--bg-ambient), var(--bg-page);
   color: var(--text-main);
@@ -238,6 +236,7 @@ h2 {
 .today-card,
 .response-card,
 .weekly-card,
+.parent-card,
 .phrase-drawer {
   border: var(--border-width) solid var(--border-line);
   border-radius: var(--radius-large);
@@ -783,6 +782,86 @@ body.bedtime-mode .done-button.is-done {
   background: var(--color-mint-light);
 }
 
+/* --- 11. 家长指导卡片 --- */
+.parent-card {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.guidance-hero {
+  padding: 16px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: var(--radius-medium);
+  background: var(--color-highlight);
+  box-shadow: var(--shadow-btn);
+}
+
+.guidance-hero span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-size: 0.76rem;
+  font-weight: 950;
+}
+
+.guidance-hero p {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.guidance-list {
+  display: grid;
+  gap: 12px;
+}
+
+.guidance-item {
+  display: grid;
+  gap: 7px;
+  padding: 15px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: var(--radius-medium);
+  background: var(--bg-phone);
+  box-shadow: var(--shadow-btn);
+}
+
+.guidance-item span {
+  width: fit-content;
+  padding: 4px 10px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+body.bedtime-mode .guidance-item span {
+  color: var(--color-baby-text);
+}
+
+.guidance-item strong {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.guidance-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 /* --- 11. 底部常驻导航栏 --- */
 .simple-tools {
   position: fixed;
@@ -790,8 +869,8 @@ body.bedtime-mode .done-button.is-done {
   bottom: 0;
   left: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
   width: min(100%, 430px);
   margin: 0 auto;
   padding: 12px 20px calc(14px + env(safe-area-inset-bottom)); /* 适配底部安全区 */
@@ -814,10 +893,24 @@ body.bedtime-mode .done-button.is-done {
   border-radius: var(--radius-medium);
   background: transparent;
   color: var(--text-muted);
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-weight: 900;
   border: 0;
   padding: 4px 0;
+  min-width: 0;
+}
+
+.simple-tools svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.simple-tools span {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .simple-tools .is-active {

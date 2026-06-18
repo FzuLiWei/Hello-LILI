@@ -326,6 +326,44 @@ const storageKeys = {
   bedtime: "hellolili-mobile-bedtime",
 };
 
+const guidanceItems = [
+  {
+    label: "低屏幕",
+    title: "手机只服务家长",
+    text: "看清今天的一句和步骤后，就把注意力放回宝宝身上。0-18 个月不需要独立看屏幕。",
+  },
+  {
+    label: "不催说",
+    title: "反应不是开口才算",
+    text: "看向你、笑一下、安静下来、伸手，都说明宝宝正在接收熟悉的声音和情境。",
+  },
+  {
+    label: "一句话",
+    title: "一个场景只带走一句",
+    text: "今天只选一句最顺口的英文，配一个真实动作。少一点，更容易长期重复。",
+  },
+  {
+    label: "重复",
+    title: "同一句可以用很多天",
+    text: "婴幼儿需要稳定输入，不需要每天新鲜。连续几天说同一句，效果通常更好。",
+  },
+  {
+    label: "绘本",
+    title: "只看两页也可以",
+    text: "指图片、说一个词、停顿等宝宝看，比从头讲完整本更适合这个阶段。",
+  },
+  {
+    label: "儿歌",
+    title: "唱主句，配动作",
+    text: "不用追求唱准整首歌。保留一句重复副歌，抱、拍、挥手这些动作更重要。",
+  },
+  {
+    label: "中文",
+    title: "家庭语言是底座",
+    text: "安抚和亲密交流可以自然使用中文。英语是额外输入，不替代家庭语言。",
+  },
+];
+
 const currentPhrase = document.querySelector("#currentPhrase");
 const currentMeaning = document.querySelector("#currentMeaning");
 const speakCurrent = document.querySelector("#speakCurrent");
@@ -374,6 +412,8 @@ const weekStrip = document.querySelector("#weekStrip");
 const summarySceneText = document.querySelector("#summarySceneText");
 const summaryResponseText = document.querySelector("#summaryResponseText");
 const summarySuggestion = document.querySelector("#summarySuggestion");
+const parentTodayTip = document.querySelector("#parentTodayTip");
+const guidanceList = document.querySelector("#guidanceList");
 const navItems = document.querySelectorAll("[data-nav-target]");
 
 let voices = [];
@@ -449,7 +489,7 @@ const setActiveNav = (target) => {
 
 const syncNavFromHash = () => {
   const target = window.location.hash.replace("#", "") || "today";
-  if (["today", "record", "summary"].includes(target)) {
+  if (["today", "record", "summary", "parent"].includes(target)) {
     setActiveNav(target);
   }
 };
@@ -531,6 +571,30 @@ const renderWeeklySummary = () => {
     day.classList.toggle("is-observed", Boolean(responseMap[plan.id]?.length));
     day.classList.toggle("is-done", Boolean(completed[plan.id]));
     weekStrip.append(day);
+  });
+};
+
+const renderGuidance = () => {
+  const plan = getPlan();
+  const [phrase] = plan.phrases[0];
+  parentTodayTip.textContent = `今天在${sceneLabels[plan.scene]}只带走一句 "${phrase}"。先听一遍，再离开屏幕，用你的声音配合一个动作重复两三次。`;
+
+  guidanceList.innerHTML = "";
+  guidanceItems.forEach((item) => {
+    const article = document.createElement("article");
+    article.className = "guidance-item";
+
+    const label = document.createElement("span");
+    label.textContent = item.label;
+
+    const title = document.createElement("strong");
+    title.textContent = item.title;
+
+    const text = document.createElement("p");
+    text.textContent = item.text;
+
+    article.append(label, title, text);
+    guidanceList.append(article);
   });
 };
 
@@ -636,6 +700,7 @@ const renderPlan = () => {
   renderResponseOptions();
   renderProgress();
   renderWeeklySummary();
+  renderGuidance();
 };
 
 const getPreferredVoice = () => {

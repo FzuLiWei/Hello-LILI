@@ -12,6 +12,7 @@ Status:
 - MVP scope defined as 0-3 parent assistant.
 - Requirements captured in `docs/SPEC.md`.
 - Mobile-first static homepage has been implemented for the 0-18 month parent assistant mode.
+- Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 
 Current tasks:
 

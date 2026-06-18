@@ -6,6 +6,8 @@ Homepage implementation phase.
 
 The project now has a mobile-first static web homepage for the 0-18 month parent assistant mode, along with an interactive visual style preview page.
 
+The local project is initialized as a git repository and synced to GitHub `FzuLiWei/Hello-LILI` on the `main` branch.
+
 ## Active Task
 
 Review and select the visual design style for HelloLILI English.
@@ -29,6 +31,7 @@ The product is currently defined as:
 - Reworked homepage after product review into a simpler mobile-first flow.
 - Added selectable browser English voices and speech-rate options for temporary TTS.
 - Created `style_preview.html` containing three distinct visual themes (Forest & Oat, Warm Macaron, Modern Minimalist) and an ambient "Bedtime Mode" toggle for visual testing.
+- Synced the current local project to GitHub repository `FzuLiWei/Hello-LILI` on `main`.
 
 ## Known Issues
 

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HelloLILI English</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg aria-hidden="true" class="icon-sprite">
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7Z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-volume" viewBox="0 0 24 24">
+        <path d="M4 10v4h4l5 4V6l-5 4Z" />
+        <path d="M16 9a4 4 0 0 1 0 6" />
+        <path d="M18.5 6.5a8 8 0 0 1 0 11" />
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />
+        <path d="M4.9 15.1 3.5 13l1.4-2.1-.6-2.4 2.4-.6L8.1 6l2.4.6L12 5l1.5 1.6 2.4-.6 1.4 1.9 2.4.6-.6 2.4L20.5 13l-1.4 2.1.6 2.4-2.4.6-1.4 1.9-2.4-.6L12 21l-1.5-1.6-2.4.6-1.4-1.9-2.4-.6Z" />
+      </symbol>
+      <symbol id="icon-baby" viewBox="0 0 24 24">
+        <path d="M9 10h.01" />
+        <path d="M15 10h.01" />
+        <path d="M9.5 15a4 4 0 0 0 5 0" />
+        <path d="M12 3c-1.7 0-3 1.2-3 2.6 0 1 .7 1.9 1.7 2.3" />
+        <path d="M6 12a6 6 0 1 0 12 0 6 6 0 0 0-12 0Z" />
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24">
+        <path d="m3 11 9-8 9 8" />
+        <path d="M5 10v10h14V10" />
+      </symbol>
+      <symbol id="icon-note" viewBox="0 0 24 24">
+        <path d="M7 3h8l4 4v14H7Z" />
+        <path d="M15 3v5h5" />
+        <path d="M9 13h6" />
+        <path d="M9 17h4" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path d="M20.4 5.6a5 5 0 0 0-7.1 0L12 6.9l-1.3-1.3a5 5 0 0 0-7.1 7.1L12 21l8.4-8.3a5 5 0 0 0 0-7.1Z" />
+      </symbol>
+    </svg>
+
+    <main class="phone-app" aria-label="HelloLILI English 移动端首页">
+      <header class="app-header">
+        <div>
+          <p class="kicker">HelloLILI</p>
+          <h1>今天只做一件小事</h1>
+        </div>
+        <button class="round-button" id="voicePanelButton" type="button" aria-controls="voicePanel" aria-expanded="false" title="发音设置">
+          <svg><use href="#icon-settings"></use></svg>
+        </button>
+      </header>
+
+      <section class="child-card" aria-label="当前阶段">
+        <div class="baby-mark">
+          <svg><use href="#icon-baby"></use></svg>
+        </div>
+        <div>
+          <strong>小 Lili · 9 个月</strong>
+          <span>反应与日常阶段，家长说，宝宝听和感受。</span>
+        </div>
+      </section>
+
+      <section class="voice-panel" id="voicePanel" hidden>
+        <div class="section-title">
+          <span>发音设置</span>
+          <small>使用浏览器自带 TTS</small>
+        </div>
+        <label class="field">
+          <span>英文音色</span>
+          <select id="voiceSelect" aria-label="选择英文音色">
+            <option>正在读取音色...</option>
+          </select>
+        </label>
+        <div class="field">
+          <span>语速</span>
+          <div class="rate-options" aria-label="选择语速">
+            <button class="active" type="button" data-rate="0.72">慢速</button>
+            <button type="button" data-rate="0.9">自然</button>
+          </div>
+        </div>
+        <p class="tiny-note">如果还是不好听，需要后续接 OpenAI / Azure / Google 等云端 TTS。</p>
+      </section>
+
+      <section class="today-card" id="today">
+        <div class="today-top">
+          <div>
+            <p class="kicker">今日场景</p>
+            <h2>洗澡时说英语</h2>
+          </div>
+          <span class="time-pill">3 分钟</span>
+        </div>
+
+        <article class="phrase-card" aria-label="今日核心短句">
+          <span class="step-label">先学这一句</span>
+          <p class="big-phrase" id="currentPhrase">Splash splash.</p>
+          <p class="phrase-meaning" id="currentMeaning">玩水时说两遍，配合轻轻拍水的动作。</p>
+          <div class="phrase-actions">
+            <button class="primary-action" type="button" id="speakCurrent">
+              <svg><use href="#icon-volume"></use></svg>
+              听发音
+            </button>
+            <button class="ghost-action" type="button" id="nextPhrase">换一句</button>
+          </div>
+        </article>
+
+        <div class="routine-box">
+          <div class="section-title">
+            <span>照着做</span>
+            <small>离开屏幕后完成</small>
+          </div>
+          <ol class="routine-list">
+            <li>
+              <strong>看着宝宝说</strong>
+              <span>先听一遍发音，再用你的声音说。</span>
+            </li>
+            <li>
+              <strong>配一个动作</strong>
+              <span>轻轻拍水或指小鸭子，不要求宝宝回答。</span>
+            </li>
+            <li>
+              <strong>重复三次就好</strong>
+              <span>今天够了，稳定比数量重要。</span>
+            </li>
+          </ol>
+          <button class="done-button" id="finishButton" type="button">
+            <svg><use href="#icon-check"></use></svg>
+            我完成了今天的小任务
+          </button>
+        </div>
+      </section>
+
+      <section class="response-card" id="record">
+        <div class="section-title">
+          <span>记录一个反应</span>
+          <small>不是测试，只是观察</small>
+        </div>
+        <div class="response-grid" id="responseGrid">
+          <button type="button" data-response="look">看向我</button>
+          <button type="button" data-response="smile">笑了</button>
+          <button type="button" data-response="reach">伸手</button>
+          <button type="button" data-response="calm">安静下来</button>
+        </div>
+      </section>
+
+      <section class="simple-tools" aria-label="更多入口">
+        <a href="#today">
+          <svg><use href="#icon-home"></use></svg>
+          <span>今日</span>
+        </a>
+        <button type="button" id="allPhrasesButton">
+          <svg><use href="#icon-note"></use></svg>
+          <span>短句</span>
+        </button>
+        <a href="#record">
+          <svg><use href="#icon-heart"></use></svg>
+          <span>记录</span>
+        </a>
+      </section>
+
+      <section class="phrase-drawer" id="phraseDrawer" hidden>
+        <div class="section-title">
+          <span>今天可选短句</span>
+          <small>只选一句也可以</small>
+        </div>
+        <div class="phrase-list" id="phraseList"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

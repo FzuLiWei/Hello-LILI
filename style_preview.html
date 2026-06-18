@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HelloLILI English - 视觉风格预览器</title>
+    <!-- 引入 Google 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Outfit:wght@400;600;900&family=Playfair+Display:ital,wght@0,600;1,400&family=Quicksand:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      /* --- 1. 基础设计标记与主题定义 --- */
+      :root {
+        /* 默认主题：森林与燕麦 (Forest & Oat) */
+        --bg-page: #f2f6f1;
+        --bg-ambient: radial-gradient(circle at 0 0, rgba(255, 214, 107, 0.25), transparent 26rem),
+                      radial-gradient(circle at 100% 12%, rgba(205, 231, 255, 0.5), transparent 24rem);
+        --bg-phone: #fffaf3;
+        --bg-card: #ffffff;
+        
+        --text-main: #17211f;
+        --text-muted: #6a726e;
+        --border-line: #e6ded1;
+        
+        --color-mint-light: #dff4e7;
+        --color-mint-strong: #0f766e;
+        --color-primary: #174c43;
+        --color-accent: #ffb38a;
+        --color-accent-hover: #ff9e6b;
+        --color-highlight: #ffd66b;
+        --color-kicker: #0f766e;
+        --color-baby-gradient: linear-gradient(135deg, #ffd66b, #ffb38a);
+        --color-baby-text: #5a341f;
+        --color-phrase-card: linear-gradient(135deg, rgba(255, 214, 107, 0.32), rgba(247, 210, 196, 0.45));
+        --color-phrase-bg: #fff9ed;
+        --color-phrase-kicker: #7b4a22;
+        --color-phrase-text: #251a14;
+        --color-routine-bg: #fffdf8;
+        --color-btn-done: #19241f;
+        
+        --font-headings: 'Outfit', 'Quicksand', sans-serif;
+        --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+        
+        --radius-large: 24px;
+        --radius-medium: 16px;
+        --shadow-app: 0 20px 60px rgba(45, 52, 44, 0.12);
+        --shadow-card: 0 14px 40px rgba(45, 52, 44, 0.06);
+        --shadow-btn: 0 8px 24px rgba(45, 52, 44, 0.08);
+      }
+
+      /* 风格一：森林与燕麦 (Forest & Oat) 显式类名 */
+      body.theme-organic {
+        --bg-page: #f2f6f1;
+        --bg-ambient: radial-gradient(circle at 0 0, rgba(255, 214, 107, 0.25), transparent 26rem),
+                      radial-gradient(circle at 100% 12%, rgba(205, 231, 255, 0.5), transparent 24rem);
+        --bg-phone: #fffaf3;
+        --bg-card: #ffffff;
+        --text-main: #17211f;
+        --text-muted: #6a726e;
+        --border-line: #e6ded1;
+        --color-mint-light: #dff4e7;
+        --color-mint-strong: #0f766e;
+        --color-primary: #174c43;
+        --color-accent: #ffb38a;
+        --color-accent-hover: #ff9e6b;
+        --color-highlight: #ffd66b;
+        --color-kicker: #0f766e;
+        --color-baby-gradient: linear-gradient(135deg, #ffd66b, #ffb38a);
+        --color-baby-text: #5a341f;
+        --color-phrase-card: linear-gradient(135deg, rgba(255, 214, 107, 0.32), rgba(247, 210, 196, 0.45));
+        --color-phrase-bg: #fff9ed;
+        --color-phrase-kicker: #7b4a22;
+        --color-phrase-text: #251a14;
+        --color-routine-bg: #fffdf8;
+        --color-btn-done: #19241f;
+        --font-headings: 'Outfit', 'Quicksand', sans-serif;
+        --radius-large: 24px;
+        --radius-medium: 16px;
+        --shadow-app: 0 20px 60px rgba(45, 52, 44, 0.12);
+        --shadow-card: 0 14px 40px rgba(45, 52, 44, 0.06);
+        --shadow-btn: 0 8px 24px rgba(45, 52, 44, 0.08);
+      }
+
+      /* 风格二：暖洋马卡龙 (Warm Macaron) 类名 */
+      body.theme-macaron {
+        --bg-page: #fbf7f5;
+        --bg-ambient: radial-gradient(circle at 0 0, rgba(255, 179, 186, 0.3), transparent 26rem),
+                      radial-gradient(circle at 100% 12%, rgba(186, 255, 201, 0.3), transparent 24rem);
+        --bg-phone: #fff5f5;
+        --bg-card: #ffffff;
+        
+        --text-main: #4a3530; /* 暖朱古力色 */
+        --text-muted: #8c736c;
+        --border-line: #f5e3e0;
+        
+        --color-mint-light: #e8f8f2;
+        --color-mint-strong: #40bfa3; /* 马卡龙绿 */
+        --color-primary: #ff8b94; /* 马卡龙草莓红 */
+        --color-accent: #ffd3b6; /* 杏黄 */
+        --color-accent-hover: #ffbfa3;
+        --color-highlight: #ffaaa5; /* 软珊瑚橘 */
+        --color-kicker: #ff8b94;
+        --color-baby-gradient: linear-gradient(135deg, #ffd3b6, #ffaaa5);
+        --color-baby-text: #5a341f;
+        --color-phrase-card: linear-gradient(135deg, rgba(255, 170, 165, 0.25), rgba(255, 211, 182, 0.45));
+        --color-phrase-bg: #fffbf8;
+        --color-phrase-kicker: #b05c4a;
+        --color-phrase-text: #4a3530;
+        --color-routine-bg: #fffbf8;
+        --color-btn-done: #4a3530;
+        
+        --font-headings: 'Fredoka', 'Quicksand', sans-serif;
+        --radius-large: 32px; /* 更圆润 */
+        --radius-medium: 20px;
+        --shadow-app: 0 20px 60px rgba(255, 139, 148, 0.12);
+        --shadow-card: 0 14px 40px rgba(255, 139, 148, 0.06);
+        --shadow-btn: 0 8px 24px rgba(255, 139, 148, 0.08);
+      }
+
+      /* 风格三：现代极简风 (Modern Minimalist) 类名 */
+      body.theme-minimalist {
+        --bg-page: #f4f4f4;
+        --bg-ambient: none;
+        --bg-phone: #fafafa;
+        --bg-card: #ffffff;
+        
+        --text-main: #111111;
+        --text-muted: #777777;
+        --border-line: #eeeeee;
+        
+        --color-mint-light: #e2f0d9;
+        --color-mint-strong: #0f3d3e;
+        --color-primary: #0f3d3e; /* 典雅深青墨绿 */
+        --color-accent: #e2d782; /* 复古浅金 */
+        --color-accent-hover: #d4c668;
+        --color-highlight: #100f0f;
+        --color-kicker: #0f3d3e;
+        --color-baby-gradient: linear-gradient(135deg, #f0ebd4, #e2d782);
+        --color-baby-text: #2f2a15;
+        --color-phrase-card: none;
+        --color-phrase-bg: #f5f5f5;
+        --color-phrase-kicker: #555555;
+        --color-phrase-text: #111111;
+        --color-routine-bg: #ffffff;
+        --color-btn-done: #111111;
+        
+        --font-headings: 'Playfair Display', Georgia, serif;
+        --radius-large: 12px; /* 更加克制的小圆角 */
+        --radius-medium: 8px;
+        --shadow-app: 0 20px 40px rgba(0, 0, 0, 0.05);
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.02);
+        --shadow-btn: 0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+
+      /* 睡睡/睡前温和模式 (Bedtime Mode) 覆盖变量 */
+      body.bedtime-mode {
+        --bg-page: #15100c; /* 暗黑背景 */
+        --bg-ambient: none;
+        --bg-phone: #1c1510; /* 暗温床头灯色 */
+        --bg-card: #241c16; /* 稍亮卡片背景 */
+        
+        --text-main: #f0e6df; /* 温暖奶白字 */
+        --text-muted: #a3958c; /* 暗棕辅助字 */
+        --border-line: #3b2f27; /* 深咖啡线 */
+        
+        --color-mint-light: #1c322b;
+        --color-mint-strong: #3b8c7e;
+        --color-primary: #cc7852; /* 红陶色 */
+        --color-accent: #cc9f3d; /* 琥珀黄 */
+        --color-accent-hover: #b58c30;
+        --color-highlight: #3b2f27;
+        --color-kicker: #cc7852;
+        --color-baby-gradient: linear-gradient(135deg, #3b2f27, #241c16);
+        --color-baby-text: #f0e6df;
+        --color-phrase-card: linear-gradient(135deg, rgba(204, 159, 61, 0.15), rgba(204, 120, 82, 0.15));
+        --color-phrase-bg: #2d231b;
+        --color-phrase-kicker: #cc9f3d;
+        --color-phrase-text: #f0e6df;
+        --color-routine-bg: #241c16;
+        --color-btn-done: #cc7852;
+        
+        --shadow-app: 0 20px 60px rgba(0, 0, 0, 0.6);
+        --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+        --shadow-btn: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      /* --- 2. 预览控制器控制台 (Theme Switcher Control Bar) --- */
+      .preview-console {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 12px 20px;
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        font-family: var(--font-body);
+        transition: background 0.3s, border-color 0.3s;
+      }
+      
+      body.bedtime-mode .preview-console {
+        background: rgba(28, 21, 16, 0.85);
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+        color: #f0e6df;
+      }
+
+      .preview-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: #111111;
+      }
+      body.bedtime-mode .preview-title {
+        color: #f0e6df;
+      }
+      .preview-title span {
+        background: #0f766e;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      body.bedtime-mode .preview-title span {
+        background: #cc7852;
+      }
+
+      .theme-btn-group {
+        display: flex;
+        gap: 8px;
+        background: rgba(0, 0, 0, 0.04);
+        padding: 4px;
+        border-radius: 12px;
+      }
+      body.bedtime-mode .theme-btn-group {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .theme-btn {
+        border: 0;
+        background: transparent;
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #555555;
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      body.bedtime-mode .theme-btn {
+        color: #a3958c;
+      }
+
+      .theme-btn.active {
+        background: #ffffff;
+        color: #111111;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+      body.bedtime-mode .theme-btn.active {
+        background: #241c16;
+        color: #f0e6df;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .toggle-switch-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .switch-track {
+        width: 44px;
+        height: 24px;
+        background: #ddd;
+        border-radius: 99px;
+        position: relative;
+        transition: background 0.3s;
+      }
+      .switch-track::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .toggle-switch-container.active .switch-track {
+        background: #cc9f3d;
+      }
+      .toggle-switch-container.active .switch-track::after {
+        transform: translateX(20px);
+      }
+
+      .theme-tip {
+        width: 100%;
+        margin: 4px 0 0 0;
+        font-size: 0.78rem;
+        color: #666;
+        transition: color 0.3s;
+      }
+      body.bedtime-mode .theme-tip {
+        color: #a3958c;
+      }
+
+      /* --- 3. 基础页面重置与排版 --- */
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 320px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        min-height: 100vh;
+        background: var(--bg-ambient), var(--bg-page);
+        color: var(--text-main);
+        font-family: var(--font-body);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      button,
+      select {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+        outline: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .icon-sprite {
+        display: none;
+      }
+
+      svg {
+        width: 1.05rem;
+        height: 1.05rem;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.2;
+      }
+
+      /* --- 4. 模拟手机框架布局 (Phone Container) --- */
+      .phone-app {
+        width: min(100%, 430px);
+        min-height: calc(100vh - 80px);
+        margin: 0 auto;
+        padding: 24px 18px 110px;
+        background: var(--bg-phone);
+        transition: background 0.3s;
+      }
+
+      .app-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 6px 2px 20px;
+      }
+
+      .kicker {
+        margin: 0 0 6px;
+        color: var(--color-kicker);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-family: var(--font-headings);
+        transition: color 0.3s;
+      }
+
+      h1,
+      h2,
+      p {
+        overflow-wrap: anywhere;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-family: var(--font-headings);
+        letter-spacing: -0.5px;
+        transition: color 0.3s;
+      }
+
+      h1 {
+        max-width: 15rem;
+        font-size: 2.35rem;
+        line-height: 1.02;
+        font-weight: 900;
+      }
+
+      h2 {
+        font-size: 1.55rem;
+        line-height: 1.15;
+        font-weight: 800;
+      }
+
+      .round-button,
+      .primary-action,
+      .ghost-action,
+      .done-button,
+      .response-grid button,
+      .rate-options button,
+      .simple-tools button {
+        border: 0;
+        -webkit-tap-highlight-color: transparent;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .round-button:active,
+      .primary-action:active,
+      .ghost-action:active,
+      .done-button:active,
+      .response-grid button:active,
+      .rate-options button:active {
+        transform: scale(0.96);
+      }
+
+      .round-button {
+        display: grid;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--bg-card);
+        color: var(--color-primary);
+        box-shadow: var(--shadow-btn);
+      }
+
+      /* 婴儿阶段状态卡片 */
+      .child-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-large);
+        background: var(--bg-card);
+        box-shadow: var(--shadow-card);
+        transition: background 0.3s, border-color 0.3s, border-radius 0.3s;
+      }
+
+      .baby-mark {
+        display: grid;
+        flex: 0 0 auto;
+        width: 52px;
+        height: 52px;
+        place-items: center;
+        border-radius: var(--radius-medium);
+        background: var(--color-baby-gradient);
+        color: var(--color-baby-text);
+        transition: background 0.3s, border-radius 0.3s;
+      }
+
+      .baby-mark svg {
+        width: 1.55rem;
+        height: 1.55rem;
+      }
+
+      .child-card strong,
+      .child-card span {
+        display: block;
+      }
+
+      .child-card strong {
+        font-size: 1.05rem;
+        font-weight: 800;
+      }
+
+      .child-card span,
+      .tiny-note,
+      .phrase-meaning,
+      .routine-list span {
+        color: var(--text-muted);
+        line-height: 1.5;
+        transition: color 0.3s;
+      }
+
+      .child-card span {
+        margin-top: 3px;
+        font-size: 0.88rem;
+      }
+
+      /* 发音设置抽屉 */
+      .voice-panel {
+        display: grid;
+        gap: 14px;
+        padding: 18px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-large);
+        background: var(--bg-card);
+        box-shadow: var(--shadow-card);
+        transition: all 0.3s;
+      }
+
+      .voice-panel[hidden] {
+        display: none;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field > span {
+        color: var(--text-muted);
+        font-size: 0.84rem;
+        font-weight: 800;
+        transition: color 0.3s;
+      }
+
+      select {
+        width: 100%;
+        min-height: 44px;
+        padding: 0 12px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-medium);
+        background: var(--bg-phone);
+        color: var(--text-main);
+        transition: all 0.3s;
+      }
+
+      .rate-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .rate-options button {
+        min-height: 42px;
+        border-radius: var(--radius-medium);
+        background: var(--bg-page);
+        color: var(--text-muted);
+        font-weight: 900;
+      }
+
+      .rate-options button.active {
+        background: var(--color-primary);
+        color: #ffffff;
+      }
+
+      .tiny-note {
+        margin: 0;
+        font-size: 0.78rem;
+      }
+
+      /* 今日场景卡片 */
+      .today-card {
+        padding: 18px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-large);
+        background: var(--bg-card);
+        box-shadow: var(--shadow-card);
+        transition: all 0.3s;
+      }
+      
+      body.theme-organic .today-card {
+        background: linear-gradient(180deg, rgba(223, 244, 231, 0.7), rgba(255, 255, 255, 0.95) 45%), var(--bg-card);
+      }
+      body.theme-macaron .today-card {
+        background: linear-gradient(180deg, rgba(255, 211, 182, 0.3), rgba(255, 255, 255, 0.95) 45%), var(--bg-card);
+      }
+      body.bedtime-mode .today-card {
+        background: var(--bg-card);
+      }
+
+      .today-top,
+      .section-title,
+      .phrase-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .time-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background: var(--color-primary);
+        color: #ffffff;
+        font-size: 0.82rem;
+        font-weight: 900;
+        white-space: nowrap;
+        font-family: var(--font-headings);
+        transition: all 0.3s;
+      }
+      body.bedtime-mode .time-pill {
+        background: var(--color-accent);
+        color: var(--color-baby-text);
+      }
+
+      /* 核心短句卡片 */
+      .phrase-card {
+        margin: 20px 0 16px;
+        padding: 20px;
+        border-radius: var(--radius-large);
+        background: var(--color-phrase-card), var(--color-phrase-bg);
+        border: 1px solid var(--border-line);
+        transition: all 0.3s;
+      }
+
+      .step-label {
+        display: inline-flex;
+        margin-bottom: 12px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.65);
+        color: var(--color-phrase-kicker);
+        font-size: 0.76rem;
+        font-weight: 900;
+        transition: all 0.3s;
+      }
+      body.bedtime-mode .step-label {
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      .big-phrase {
+        margin: 0;
+        color: var(--color-phrase-text);
+        font-size: 2.3rem;
+        font-weight: 950;
+        line-height: 1.05;
+        font-family: var(--font-headings);
+        transition: color 0.3s;
+      }
+
+      .phrase-meaning {
+        margin: 10px 0 20px;
+        font-size: 0.94rem;
+      }
+
+      .primary-action,
+      .ghost-action,
+      .done-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        border-radius: var(--radius-medium);
+        font-weight: 900;
+        font-size: 0.95rem;
+      }
+
+      .primary-action {
+        flex: 1;
+        background: var(--color-primary);
+        color: #ffffff;
+      }
+      body.bedtime-mode .primary-action {
+        background: var(--color-accent);
+        color: var(--color-baby-text);
+      }
+
+      .ghost-action {
+        min-width: 92px;
+        padding: 0 14px;
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--color-phrase-kicker);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      body.bedtime-mode .ghost-action {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-main);
+        border-color: var(--border-line);
+      }
+
+      /* 照着做盒子 */
+      .routine-box {
+        padding: 16px;
+        border-radius: var(--radius-medium);
+        background: var(--color-routine-bg);
+        border: 1px solid var(--border-line);
+        transition: background 0.3s, border-color 0.3s, border-radius 0.3s;
+      }
+
+      .section-title {
+        margin-bottom: 14px;
+      }
+
+      .section-title span {
+        font-size: 1.05rem;
+        font-weight: 950;
+        font-family: var(--font-headings);
+      }
+
+      .section-title small {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 800;
+      }
+
+      .routine-list {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        margin: 0 0 16px;
+        list-style: none;
+        counter-reset: steps;
+      }
+
+      .routine-list li {
+        display: grid;
+        grid-template-columns: 32px minmax(0, 1fr);
+        column-gap: 12px;
+      }
+
+      .routine-list li::before {
+        display: grid;
+        width: 32px;
+        height: 32px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--color-mint-light);
+        color: var(--color-mint-strong);
+        content: counter(steps);
+        counter-increment: steps;
+        font-size: 0.85rem;
+        font-weight: 950;
+        font-family: var(--font-headings);
+        transition: all 0.3s;
+      }
+
+      .routine-list strong,
+      .routine-list span {
+        display: block;
+      }
+
+      .routine-list strong {
+        padding-top: 2px;
+        font-size: 0.98rem;
+        font-weight: 800;
+      }
+
+      .routine-list span {
+        margin-top: 4px;
+        font-size: 0.88rem;
+      }
+
+      .done-button {
+        width: 100%;
+        background: var(--color-btn-done);
+        color: #ffffff;
+      }
+      body.bedtime-mode .done-button {
+        background: #3b2f27;
+        color: #f0e6df;
+      }
+
+      .done-button.is-done {
+        background: var(--color-mint-strong);
+      }
+      body.bedtime-mode .done-button.is-done {
+        background: #3b8c7e;
+        color: #ffffff;
+      }
+
+      /* 反应观察卡片 */
+      .response-card,
+      .phrase-drawer {
+        padding: 18px;
+        margin-top: 16px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-large);
+        background: var(--bg-card);
+        box-shadow: var(--shadow-card);
+        transition: all 0.3s;
+      }
+
+      .response-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .response-grid button {
+        min-height: 48px;
+        border-radius: var(--radius-medium);
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-weight: 900;
+        font-size: 0.92rem;
+      }
+
+      .response-grid button.active {
+        background: var(--color-mint-light);
+        color: var(--color-mint-strong);
+        box-shadow: inset 0 0 0 2px rgba(15, 118, 110, 0.18);
+      }
+      body.bedtime-mode .response-grid button.active {
+        background: #1c322b;
+        color: #3b8c7e;
+        box-shadow: inset 0 0 0 2px rgba(59, 140, 126, 0.4);
+      }
+
+      /* 底部导航工具条 */
+      .simple-tools {
+        position: fixed;
+        right: 0;
+        bottom: 14px;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        width: min(calc(100% - 24px), 398px);
+        margin: 0 auto;
+        padding: 8px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-large);
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: var(--shadow-app);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transition: all 0.3s;
+      }
+      body.theme-organic .simple-tools {
+        background: rgba(255, 250, 243, 0.88);
+      }
+      body.theme-macaron .simple-tools {
+        background: rgba(255, 245, 245, 0.88);
+      }
+      body.theme-minimalist .simple-tools {
+        background: rgba(250, 250, 250, 0.88);
+        border-radius: 12px;
+      }
+      body.bedtime-mode .simple-tools {
+        background: rgba(36, 28, 22, 0.88);
+        border-color: var(--border-line);
+      }
+
+      .simple-tools a,
+      .simple-tools button {
+        display: grid;
+        gap: 3px;
+        min-height: 56px;
+        place-items: center;
+        border-radius: var(--radius-medium);
+        background: transparent;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        font-weight: 900;
+        border: 0;
+      }
+
+      .simple-tools a:first-child {
+        background: var(--color-primary);
+        color: #ffffff;
+      }
+      body.bedtime-mode .simple-tools a:first-child {
+        background: var(--color-accent);
+        color: var(--color-baby-text);
+      }
+
+      .phrase-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .phrase-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 42px;
+        gap: 10px;
+        align-items: center;
+        padding: 14px;
+        border: 1px solid var(--border-line);
+        border-radius: var(--radius-medium);
+        background: var(--color-routine-bg);
+        transition: all 0.3s;
+      }
+
+      .phrase-item strong,
+      .phrase-item span {
+        display: block;
+      }
+
+      .phrase-item strong {
+        font-size: 1.05rem;
+        font-weight: 800;
+      }
+
+      .phrase-item span {
+        margin-top: 4px;
+        color: var(--text-muted);
+        font-size: 0.86rem;
+        line-height: 1.4;
+      }
+
+      .phrase-item button {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 0;
+        border-radius: var(--radius-medium);
+        background: var(--color-mint-light);
+        color: var(--color-mint-strong);
+        transition: all 0.3s;
+      }
+
+      /* --- 5. 电脑网页端自适应预览排版 --- */
+      @media (min-width: 760px) {
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0 0 40px 0;
+        }
+
+        .phone-app {
+          margin-top: 34px;
+          min-height: calc(100vh - 150px);
+          border: 1px solid var(--border-line);
+          border-radius: 40px;
+          box-shadow: var(--shadow-app);
+        }
+      }
+
+      @media (max-width: 360px) {
+        .phone-app {
+          padding-right: 12px;
+          padding-left: 12px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .big-phrase {
+          font-size: 1.9rem;
+        }
+
+        .response-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="theme-organic">
+    <!-- SVG 图标库 -->
+    <svg aria-hidden="true" class="icon-sprite">
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7Z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-volume" viewBox="0 0 24 24">
+        <path d="M4 10v4h4l5 4V6l-5 4Z" />
+        <path d="M16 9a4 4 0 0 1 0 6" />
+        <path d="M18.5 6.5a8 8 0 0 1 0 11" />
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />
+        <path d="M4.9 15.1 3.5 13l1.4-2.1-.6-2.4 2.4-.6L8.1 6l2.4.6L12 5l1.5 1.6 2.4-.6 1.4 1.9 2.4.6-.6 2.4L20.5 13l-1.4 2.1.6 2.4-2.4.6-1.4 1.9-2.4-.6L12 21l-1.5-1.6-2.4.6-1.4-1.9-2.4-.6Z" />
+      </symbol>
+      <symbol id="icon-baby" viewBox="0 0 24 24">
+        <path d="M9 10h.01" />
+        <path d="M15 10h.01" />
+        <path d="M9.5 15a4 4 0 0 0 5 0" />
+        <path d="M12 3c-1.7 0-3 1.2-3 2.6 0 1 .7 1.9 1.7 2.3" />
+        <path d="M6 12a6 6 0 1 0 12 0 6 6 0 0 0-12 0Z" />
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24">
+        <path d="m3 11 9-8 9 8" />
+        <path d="M5 10v10h14V10" />
+      </symbol>
+      <symbol id="icon-note" viewBox="0 0 24 24">
+        <path d="M7 3h8l4 4v14H7Z" />
+        <path d="M15 3v5h5" />
+        <path d="M9 13h6" />
+        <path d="M9 17h4" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path d="M20.4 5.6a5 5 0 0 0-7.1 0L12 6.9l-1.3-1.3a5 5 0 0 0-7.1 7.1L12 21l8.4-8.3a5 5 0 0 0 0-7.1Z" />
+      </symbol>
+    </svg>
+
+    <!-- 顶层风格选择控制器 -->
+    <header class="preview-console">
+      <div class="preview-title">
+        HelloLILI 视觉风格预览器 <span>Preview</span>
+      </div>
+      <div class="theme-btn-group" role="group" aria-label="主题选择">
+        <button type="button" class="theme-btn active" data-theme="organic" onclick="switchTheme('organic', this)">森林与燕麦 (Forest & Oat)</button>
+        <button type="button" class="theme-btn" data-theme="macaron" onclick="switchTheme('macaron', this)">暖洋马卡龙 (Warm Macaron)</button>
+        <button type="button" class="theme-btn" data-theme="minimalist" onclick="switchTheme('minimalist', this)">现代极简风 (Modern Minimalist)</button>
+      </div>
+      <div class="toggle-switch-container" id="bedtimeToggle" onclick="toggleBedtime()">
+        <span>睡前温和模式</span>
+        <div class="switch-track"></div>
+      </div>
+      <div class="theme-tip" id="themeDescription">
+        当前风格：<strong>森林与燕麦</strong>。设计特色：暖黄与绿色的自然融合，温暖的手账手感。圆角柔和（24px），具有强烈的家庭和成长氛围，极低视觉侵入感。
+      </div>
+    </header>
+
+    <!-- 手机应用模拟界面 -->
+    <main class="phone-app" aria-label="HelloLILI English 移动端首页">
+      <header class="app-header">
+        <div>
+          <p class="kicker">HelloLILI</p>
+          <h1>今天只做一件小事</h1>
+        </div>
+        <button class="round-button" id="voicePanelButton" type="button" aria-controls="voicePanel" aria-expanded="false" title="发音设置">
+          <svg><use href="#icon-settings"></use></svg>
+        </button>
+      </header>
+
+      <!-- 孩子阶段卡片 -->
+      <section class="child-card" aria-label="当前阶段">
+        <div class="baby-mark">
+          <svg><use href="#icon-baby"></use></svg>
+        </div>
+        <div>
+          <strong>小 Lili · 9 个月</strong>
+          <span>反应与日常阶段，家长说，宝宝听和感受。</span>
+        </div>
+      </section>
+
+      <!-- 发音设置抽屉 -->
+      <section class="voice-panel" id="voicePanel" hidden>
+        <div class="section-title">
+          <span>发音设置</span>
+          <small>使用浏览器自带 TTS</small>
+        </div>
+        <label class="field">
+          <span>英文音色</span>
+          <select id="voiceSelect" aria-label="选择英文音色">
+            <option>正在读取音色...</option>
+          </select>
+        </label>
+        <div class="field">
+          <span>语速</span>
+          <div class="rate-options" aria-label="选择语速">
+            <button class="active" type="button" data-rate="0.72">慢速</button>
+            <button type="button" data-rate="0.9">自然</button>
+          </div>
+        </div>
+        <p class="tiny-note">如果发音不够生动，说明当前处于本地预览。未来将接入微软/谷歌高品质云端 TTS。</p>
+      </section>
+
+      <!-- 今日推荐卡片 -->
+      <section class="today-card" id="today">
+        <div class="today-top">
+          <div>
+            <p class="kicker">今日场景</p>
+            <h2>洗澡时说英语</h2>
+          </div>
+          <span class="time-pill">3 分钟</span>
+        </div>
+
+        <article class="phrase-card" aria-label="今日核心短句">
+          <span class="step-label">先学这一句</span>
+          <p class="big-phrase" id="currentPhrase">Splash splash.</p>
+          <p class="phrase-meaning" id="currentMeaning">玩水时说两遍，配合轻轻拍水的动作。</p>
+          <div class="phrase-actions">
+            <button class="primary-action" type="button" id="speakCurrent">
+              <svg><use href="#icon-volume"></use></svg>
+              听发音
+            </button>
+            <button class="ghost-action" type="button" id="nextPhrase">换一句</button>
+          </div>
+        </article>
+
+        <!-- 照着做步骤 -->
+        <div class="routine-box">
+          <div class="section-title">
+            <span>照着做</span>
+            <small>离开屏幕后完成</small>
+          </div>
+          <ol class="routine-list">
+            <li>
+              <strong>看着宝宝说</strong>
+              <span>先听一遍发音，再用你的声音说。</span>
+            </li>
+            <li>
+              <strong>配一个动作</strong>
+              <span>轻轻拍水或指小鸭子，不要求宝宝回答。</span>
+            </li>
+            <li>
+              <strong>重复三次就好</strong>
+              <span>今天够了，稳定比数量重要。</span>
+            </li>
+          </ol>
+          <button class="done-button" id="finishButton" type="button">
+            <svg><use href="#icon-check"></use></svg>
+            我完成了今天的小任务
+          </button>
+        </div>
+      </section>
+
+      <!-- 反应记录卡片 -->
+      <section class="response-card" id="record">
+        <div class="section-title">
+          <span>记录一个反应</span>
+          <small>不是测试，只是观察</small>
+        </div>
+        <div class="response-grid" id="responseGrid">
+          <button type="button" data-response="look">看向我</button>
+          <button type="button" data-response="smile">笑了</button>
+          <button type="button" data-response="reach">伸手</button>
+          <button type="button" data-response="calm">安静下来</button>
+        </div>
+      </section>
+
+      <!-- 底部常驻栏 -->
+      <section class="simple-tools" aria-label="更多入口">
+        <a href="#today">
+          <svg><use href="#icon-home"></use></svg>
+          <span>今日</span>
+        </a>
+        <button type="button" id="allPhrasesButton">
+          <svg><use href="#icon-note"></use></svg>
+          <span>短句</span>
+        </button>
+        <a href="#record">
+          <svg><use href="#icon-heart"></use></svg>
+          <span>记录</span>
+        </a>
+      </section>
+
+      <!-- 弹出词汇抽屉 -->
+      <section class="phrase-drawer" id="phraseDrawer" hidden>
+        <div class="section-title">
+          <span>今天可选短句</span>
+          <small>只选一句也可以</small>
+        </div>
+        <div class="phrase-list" id="phraseList"></div>
+      </section>
+    </main>
+
+    <!-- 交互脚本 -->
+    <script>
+      const phrases = [
+        {
+          text: "Splash splash.",
+          meaning: "玩水时说两遍，配合轻轻拍水的动作。",
+        },
+        {
+          text: "Wash your hands.",
+          meaning: "洗手时说，动作比解释更重要。",
+        },
+        {
+          text: "Where is your duck?",
+          meaning: "指向小鸭子，停顿一下等宝宝看过去。",
+        },
+        {
+          text: "Bath time is over.",
+          meaning: "洗澡结束时固定说，帮助建立日常信号。",
+        },
+      ];
+
+      const themeDescriptions = {
+        organic: "当前风格：<strong>森林与燕麦 (Forest & Oat)</strong>。设计特色：暖乳黄底色与深绿色的自然融合。圆角温和柔顺（24px），专为育儿陪伴量身定制，传达一种有机生长与温馨平静的手账感，完全去除屏幕带来的焦虑心理。",
+        macaron: "当前风格：<strong>暖洋马卡龙 (Warm Macaron)</strong>。设计特色：软粉红与奶油桃橙色的融合，边角大圆角（32px）十分圆润Q弹。展现出高亲和度、童趣和可爱的一面，适合喜欢温暖明亮插画风格的家庭。",
+        minimalist: "当前风格：<strong>现代极简风 (Modern Minimalist)</strong>。设计特色：冷静的灰白配色与深墨绿主调，搭配典雅高档的英文衬线体标题。圆角锋利克制（12px），展现极具格调的现代育儿杂志质感，适合追求极简审美与无干扰体验的父母。"
+      };
+
+      let phraseIndex = 0;
+      let selectedRate = 0.72;
+      let voices = [];
+
+      // 主题切换函数
+      function switchTheme(themeName, btnElement) {
+        // 更新激活按钮样式
+        const buttons = document.querySelectorAll('.theme-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        btnElement.classList.add('active');
+
+        // 更新Body类名
+        document.body.className = '';
+        document.body.classList.add(`theme-${themeName}`);
+        
+        // 检查睡前模式是否激活并维持
+        const isBedtime = document.getElementById('bedtimeToggle').classList.contains('active');
+        if (isBedtime) {
+          document.body.classList.add('bedtime-mode');
+        }
+
+        // 更新控制台说明文字
+        document.getElementById('themeDescription').innerHTML = themeDescriptions[themeName];
+      }
+
+      // 睡前模式切换
+      function toggleBedtime() {
+        const toggle = document.getElementById('bedtimeToggle');
+        const isActive = toggle.classList.toggle('active');
+        
+        if (isActive) {
+          document.body.classList.add('bedtime-mode');
+        } else {
+          document.body.classList.remove('bedtime-mode');
+        }
+      }
+
+      // UI 基础交互
+      const currentPhrase = document.querySelector("#currentPhrase");
+      const currentMeaning = document.querySelector("#currentMeaning");
+      const speakCurrent = document.querySelector("#speakCurrent");
+      const nextPhrase = document.querySelector("#nextPhrase");
+      const finishButton = document.querySelector("#finishButton");
+      const responseButtons = document.querySelectorAll("[data-response]");
+      const voicePanelButton = document.querySelector("#voicePanelButton");
+      const voicePanel = document.querySelector("#voicePanel");
+      const voiceSelect = document.querySelector("#voiceSelect");
+      const rateButtons = document.querySelectorAll("[data-rate]");
+      const allPhrasesButton = document.querySelector("#allPhrasesButton");
+      const phraseDrawer = document.querySelector("#phraseDrawer");
+      const phraseList = document.querySelector("#phraseList");
+
+      const renderCurrentPhrase = () => {
+        const phrase = phrases[phraseIndex];
+        currentPhrase.textContent = phrase.text;
+        currentMeaning.textContent = phrase.meaning;
+      };
+
+      const getPreferredVoice = () => {
+        const exactVoice = voices.find((v) => v.name.includes("Google") && v.lang.startsWith("en"));
+        if (exactVoice) return exactVoice;
+        return (
+          voices.find((v) => v.lang === "en-US") ||
+          voices.find((v) => v.lang.startsWith("en")) ||
+          null
+        );
+      };
+
+      const speak = (text) => {
+        if (!("speechSynthesis" in window)) return;
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        const voice = getPreferredVoice();
+        utterance.lang = voice?.lang || "en-US";
+        utterance.voice = voice;
+        utterance.rate = selectedRate;
+        window.speechSynthesis.speak(utterance);
+      };
+
+      const loadVoices = () => {
+        if (!("speechSynthesis" in window)) {
+          voiceSelect.innerHTML = "<option>当前浏览器不支持 TTS</option>";
+          voiceSelect.disabled = true;
+          return;
+        }
+
+        voices = window.speechSynthesis
+          .getVoices()
+          .filter((v) => v.lang.toLowerCase().startsWith("en"))
+          .sort((a, b) => a.lang.localeCompare(b.lang));
+
+        voiceSelect.innerHTML = "";
+        if (!voices.length) {
+          voiceSelect.innerHTML = "<option>没有找到英文音色</option>";
+          return;
+        }
+
+        voices.forEach((v) => {
+          const option = document.createElement("option");
+          option.value = v.name;
+          option.textContent = `${v.name} · ${v.lang}`;
+          option.selected = v === getPreferredVoice();
+          voiceSelect.append(option);
+        });
+      };
+
+      const renderPhrases = () => {
+        phraseList.innerHTML = "";
+        phrases.forEach((phrase, index) => {
+          const item = document.createElement("div");
+          item.className = "phrase-item";
+
+          const copy = document.createElement("div");
+          const title = document.createElement("strong");
+          title.textContent = phrase.text;
+          const meaning = document.createElement("span");
+          meaning.textContent = phrase.meaning;
+          copy.append(title, meaning);
+
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.setAttribute("aria-label", `选择并播放 ${phrase.text}`);
+          btn.innerHTML = '<svg><use href="#icon-volume"></use></svg>';
+          btn.addEventListener("click", () => {
+            phraseIndex = index;
+            renderCurrentPhrase();
+            speak(phrase.text);
+          });
+
+          item.append(copy, btn);
+          phraseList.append(item);
+        });
+      };
+
+      voicePanelButton.addEventListener("click", () => {
+        const nextOpen = voicePanel.hidden;
+        voicePanel.hidden = !nextOpen;
+        voicePanelButton.setAttribute("aria-expanded", String(nextOpen));
+      });
+
+      speakCurrent.addEventListener("click", () => {
+        speak(currentPhrase.textContent);
+      });
+
+      nextPhrase.addEventListener("click", () => {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        renderCurrentPhrase();
+      });
+
+      finishButton.addEventListener("click", () => {
+        const done = finishButton.classList.toggle("is-done");
+        finishButton.innerHTML = done
+          ? '<svg><use href="#icon-check"></use></svg>今天完成了'
+          : '<svg><use href="#icon-check"></use></svg>我完成了今天的小任务';
+      });
+
+      responseButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("active");
+        });
+      });
+
+      allPhrasesButton.addEventListener("click", () => {
+        phraseDrawer.hidden = !phraseDrawer.hidden;
+        if (!phraseDrawer.hidden) {
+          phraseDrawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      });
+
+      rateButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          rateButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          selectedRate = Number(btn.dataset.rate);
+          speak(currentPhrase.textContent);
+        });
+      });
+
+      renderCurrentPhrase();
+      renderPhrases();
+      loadVoices();
+
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
+      }
+    </script>
+  </body>
+</html>

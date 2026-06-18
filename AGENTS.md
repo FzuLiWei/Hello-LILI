@@ -308,3 +308,51 @@ CONTEXT → INTAKE → PLAN → IMPLEMENT → VERIFY → CLOSE
 宁可小步多次，也不要一次大改。
 
 不要让 "TASKS.md" 和 "CURRENT.md" 变成历史垃圾桶。
+
+---
+
+## 10. Publish And Deploy
+
+每次任务完成并通过 VERIFY 后，必须自动发布到 GitHub 和 Netlify。
+
+发布流程：
+
+1. 先完成 CLOSE：
+   - 更新 docs/TASKS.md
+   - 更新 docs/CURRENT.md
+   - 必要时更新 docs/SPEC.md
+   - 已完成事项写入 archive/tasks-YYYY-MM.md
+
+2. Git 提交与推送：
+   - 执行 `git status --short --branch`
+   - 只暂存本次任务相关文件
+   - 如果用户明确要求“提交当前所有未提交内容”，才允许提交全部改动
+   - 创建清晰简短的 commit message
+   - 推送到 `origin main`
+
+3. Netlify 自动部署验证：
+   - 本项目 Netlify 站点：`cheerful-mooncake-bf41c5`
+   - 线上地址：`https://cheerful-mooncake-bf41c5.netlify.app`
+   - Netlify 已绑定 GitHub 仓库：`FzuLiWei/Hello-LILI`
+   - Netlify 生产分支：`main`
+   - push 后必须等待 Netlify 最新 deploy 完成
+   - 必须确认最新 deploy 对应当前 Git commit
+   - 必须验证线上地址 HTTP 200
+   - 前端改动还要检查线上页面包含本次改动的关键内容
+
+4. 最终回复必须包含：
+   - 完成了什么
+   - 修改了哪些文件
+   - 执行了哪些验证
+   - GitHub commit hash
+   - push 是否成功
+   - Netlify deploy id 或 deploy 记录
+   - 线上可用地址
+   - 是否有遗留风险
+
+禁止：
+
+- 测试失败时假装完成部署
+- Netlify 未验证完成就说线上已更新
+- 悄悄提交无关文件
+- 提交 `.netlify/` 等本地状态目录

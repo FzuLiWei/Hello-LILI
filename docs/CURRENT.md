@@ -37,6 +37,7 @@ The product is currently defined as:
 - Completely redesigned the homepage (`index.html`, `styles.css`, and `app.js`) to apply the "Gamified Toy Box" visual style.
 - Resolved layout issues and text truncations, optimized padding/spacing, implemented a mobile-native Bottom Sheet settings drawer, integrated the game HUD progress bar with habit tracking, and added safe area layout support.
 - Verified Netlify continuous deployment from GitHub `FzuLiWei/Hello-LILI` on `main`; commit `7bba964` automatically deployed to production.
+- Added a project workflow rule requiring future completed tasks to push to GitHub `main`, wait for Netlify auto deployment, and report the live production URL.
 
 ## Known Issues
 
@@ -49,6 +50,7 @@ The product is currently defined as:
 - Production-grade voice likely requires a cloud TTS integration.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 - Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
+- Future task close-out should include GitHub commit, push result, Netlify deploy verification, and the live URL.
 
 ## Next Step
 

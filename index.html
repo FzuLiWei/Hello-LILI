@@ -178,14 +178,23 @@
           </button>
         </div>
 
-        <div class="mini-resource">
-          <div>
-            <span>真儿歌</span>
+        <div class="mini-resource song-player">
+          <div class="song-copy">
+            <span>真儿歌播放</span>
             <strong id="songTitle">Row, Row, Row Your Boat</strong>
-            <small id="songSource">Super Simple Songs · 家长先听一段</small>
+            <small id="songSource">Wikimedia Commons · CC BY-SA 3.0</small>
+            <small id="songTip">洗澡后或睡前听一段，家长做摇船动作就够。</small>
             <small id="bookTitle">绘本：Brown Bear, Brown Bear</small>
           </div>
-          <a href="#" id="songLink" target="_blank" rel="noopener noreferrer">打开真儿歌</a>
+          <div class="song-controls">
+            <button class="song-play-button" type="button" id="songPlayButton">
+              <svg><use href="#icon-play"></use></svg>
+              <span>播放真儿歌</span>
+            </button>
+            <span id="songStatus" aria-live="polite">未播放</span>
+          </div>
+          <audio id="songAudio" preload="none" controls></audio>
+          <a href="#" id="songCreditLink" target="_blank" rel="noopener noreferrer">音频来源 / 署名</a>
         </div>
       </section>
 
@@ -365,7 +374,7 @@
             <button type="button" data-rate="0.9">自然</button>
           </div>
         </div>
-        <p class="tiny-note">这里是浏览器系统发音，只适合校准短句读法；儿歌请打开真实歌曲来源。高品质人声需要后续接入云端 TTS。</p>
+        <p class="tiny-note">这里是浏览器系统发音，只适合校准短句读法；儿歌卡片会播放真实音频。高品质定制人声需要后续接入云端 TTS。</p>
       </div>
     </section>
 

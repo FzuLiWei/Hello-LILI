@@ -7,6 +7,99 @@ const responseChoices = {
   gesture: "模仿动作",
 };
 
+const songSources = {
+  rowBoat: {
+    title: "Row, Row, Row Your Boat",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/61/Row%2C_Row%2C_Row_Your_Boat.ogg/Row%2C_Row%2C_Row_Your_Boat.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/Row%2C_Row%2C_Row_Your_Boat.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Row,_Row,_Row_Your_Boat.ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CambridgeBayWeather",
+  },
+  twinkle: {
+    title: "Twinkle Twinkle Little Star",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/25/Twinkle_twinkle_little_star_%28vocal%29.ogg/Twinkle_twinkle_little_star_%28vocal%29.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/2/25/Twinkle_twinkle_little_star_%28vocal%29.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Twinkle_twinkle_little_star_(vocal).ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CommandSpry",
+  },
+  alphabet: {
+    title: "Alphabet Song",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/30/Alphabet_song.ogg/Alphabet_song.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/3/30/Alphabet_song.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Alphabet_song.ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CambridgeBayWeather",
+  },
+  hotCrossBuns: {
+    title: "Hot Cross Buns",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/13/Hot_Cross_Buns.ogg/Hot_Cross_Buns.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/1/13/Hot_Cross_Buns.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Hot_Cross_Buns.ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CambridgeBayWeather",
+  },
+  popGoes: {
+    title: "Pop Goes the Weasel",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Pop_Goes_the_Weasel.ogg/Pop_Goes_the_Weasel.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pop_Goes_the_Weasel.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Pop_Goes_the_Weasel.ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CambridgeBayWeather",
+  },
+  threeKittens: {
+    title: "Three Little Kittens",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1c/Three_Little_Kittens.ogg/Three_Little_Kittens.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Three_Little_Kittens.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Three_Little_Kittens.ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CambridgeBayWeather",
+  },
+  jackAndJill: {
+    title: "Jack and Jill",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d4/Jack_and_Jill_%281890%29.ogg/Jack_and_Jill_%281890%29.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jack_and_Jill_%281890%29.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Jack_and_Jill_(1890).ogg",
+    license: "Public domain",
+    credit: "Internet Archive",
+  },
+  doctorFoster: {
+    title: "Doctor Foster",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Doctor_Foster.ogg/Doctor_Foster.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Doctor_Foster.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Doctor_Foster.ogg",
+    license: "CC BY-SA 3.0",
+    credit: "CambridgeBayWeather",
+  },
+  motherGoose: {
+    title: "Mother Goose Nursery Rhymes",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg/01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d1/01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg",
+    license: "CC BY 3.0 US",
+    credit: "Grantyny",
+  },
+  hickory: {
+    title: "Hickory Dickory Dock",
+    source: "Wikimedia Commons",
+    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b0/Hickory_Dickory_%281889%29.oga/Hickory_Dickory_%281889%29.oga.mp3",
+    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Hickory_Dickory_%281889%29.oga",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Hickory_Dickory_(1889).oga",
+    license: "Public domain",
+    credit: "National Park Service",
+  },
+};
+
 const seedPlans = [
   {
     id: "day-01",
@@ -26,9 +119,7 @@ const seedPlans = [
       ["重复三次就好", "今天够了，稳定比数量重要。"],
     ],
     song: {
-      title: "Row, Row, Row Your Boat",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/row-row-row-your-boat/",
+      ...songSources.rowBoat,
       tip: "洗澡后或睡前听一段，家长做摇船动作就够。",
     },
     book: ["Brown Bear, Brown Bear", "只看两页也可以，指图比讲完整本更重要。"],
@@ -52,10 +143,8 @@ const seedPlans = [
       ["配一个表情", "微笑和眼神比解释更有效。"],
     ],
     song: {
-      title: "Good Morning, Mr. Rooster",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/good-morning-mr-rooster/",
-      tip: "起床后听一段，重点是固定早晨声音。",
+      ...songSources.hickory,
+      tip: "起床后听一小段，重点是固定早晨声音。",
     },
     book: ["Hello, Baby!", "翻到有脸的页面，和宝宝对视。"],
     responses: ["look", "smile", "sound", "gesture"],
@@ -78,10 +167,8 @@ const seedPlans = [
       ["结束固定", "最后说 All clean，让宝宝熟悉流程。"],
     ],
     song: {
-      title: "Head Shoulders Knees & Toes",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/head-shoulders-knees-toes-learn-it/",
-      tip: "只做一个身体部位动作，不追求跟唱。",
+      ...songSources.alphabet,
+      tip: "换好后听一小段，宝宝只需要听节奏和重复。",
     },
     book: ["Where's Spot?", "只玩找一找，不追求讲完整。"],
     responses: ["calm", "look", "reach", "sound"],
@@ -104,9 +191,7 @@ const seedPlans = [
       ["重复关键词", "今天只重复 hungry / yummy / water。"],
     ],
     song: {
-      title: "Pat-A-Cake",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/pat-a-cake/",
+      ...songSources.hotCrossBuns,
       tip: "吃饭后轻轻拍手，节奏比歌词完整更重要。",
     },
     book: ["The Very Hungry Caterpillar", "只看食物页，指一两个图。"],
@@ -130,9 +215,7 @@ const seedPlans = [
       ["宝宝不回应也没关系", "你示范，他观察就已经在学习。"],
     ],
     song: {
-      title: "This Is The Way",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/this-is-the-way/",
+      ...songSources.popGoes,
       tip: "听一段节奏，玩球时只保留一个动作。",
     },
     book: ["Dear Zoo", "翻到动物页，模仿一个声音即可。"],
@@ -156,9 +239,7 @@ const seedPlans = [
       ["用中文安抚也可以", "英语是额外输入，不替代亲密交流。"],
     ],
     song: {
-      title: "Twinkle Twinkle Little Star",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/twinkle-twinkle-little-star/",
+      ...songSources.twinkle,
       tip: "睡前只放低音量听一小段，别把气氛唱兴奋。",
     },
     book: ["Goodnight Moon", "只看月亮、灯、床几个图。"],
@@ -182,10 +263,8 @@ const seedPlans = [
       ["观察变化", "记录是否安静下来。"],
     ],
     song: {
-      title: "Hush Little Baby",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/hush-little-baby/",
-      tip: "安抚时可先由家长听，再用自己的声音哼。",
+      ...songSources.motherGoose,
+      tip: "安抚时低音量听一小段，再用自己的声音轻轻哼。",
     },
     book: ["Guess How Much I Love You", "只读一句 I love you。"],
     responses: ["calm", "look", "smile", "sound"],
@@ -208,10 +287,8 @@ const seedPlans = [
       ["挥手告别", "Bye-bye 配合手势。"],
     ],
     song: {
-      title: "The Wheels On The Bus",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/wheels-on-the-bus/",
-      tip: "出门前听一段，配合转手或挥手动作。",
+      ...songSources.jackAndJill,
+      tip: "出门前听一小段，配合上上下下的动作。",
     },
     book: ["Maisy Goes Out", "看出门相关图片即可。"],
     responses: ["look", "gesture", "smile", "reach"],
@@ -234,9 +311,7 @@ const seedPlans = [
       ["宝宝看就算完成", "不要求模仿。"],
     ],
     song: {
-      title: "If You're Happy",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/if-youre-happy/",
+      ...songSources.hotCrossBuns,
       tip: "只做 clap 或 wave 一个动作，让宝宝看你示范。",
     },
     book: ["Ten Little Fingers", "看手指图片，数不数都可以。"],
@@ -260,10 +335,8 @@ const seedPlans = [
       ["结束时固定", "All done 是很实用的日常句。"],
     ],
     song: {
-      title: "Open Shut Them",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/open-shut-them/",
-      tip: "喝水后做 open / shut 手势，不需要宝宝模仿。",
+      ...songSources.alphabet,
+      tip: "喝水后听一小段，选择一个重复音跟着哼。",
     },
     book: ["Eating the Alphabet", "只看一种水果。"],
     responses: ["reach", "look", "smile", "calm"],
@@ -286,9 +359,7 @@ const seedPlans = [
       ["看反应", "笑、看向你、伸手都可以记录。"],
     ],
     song: {
-      title: "Peekaboo",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/peekaboo/",
+      ...songSources.threeKittens,
       tip: "游戏前听一段，真正互动时用你的脸和声音。",
     },
     book: ["Where Is Baby's Belly Button?", "翻翻书很适合这个动作主题。"],
@@ -312,9 +383,7 @@ const seedPlans = [
       ["结束收口", "All set 是非常自然的结束句。"],
     ],
     song: {
-      title: "This Is The Way We Get Dressed",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/this-is-the-way-we-get-dressed/",
+      ...songSources.doctorFoster,
       tip: "穿衣前听一段，穿的时候只说一个衣物动作。",
     },
     book: ["Blue Hat, Green Hat", "看衣物和颜色，不要求宝宝认。"],
@@ -338,10 +407,8 @@ const seedPlans = [
       ["说完就停", "外面信息多，短句更好。"],
     ],
     song: {
-      title: "Driving In My Car",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/driving-in-my-car/",
-      tip: "户外看车前听一段，出门后只做 vroom 声音游戏。",
+      ...songSources.popGoes,
+      tip: "户外看车前听一段，出门后只做声音和挥手游戏。",
     },
     book: ["Cars and Trucks and Things That Go", "只看一页车，不追求读完。"],
     responses: ["look", "gesture", "smile", "sound"],
@@ -364,9 +431,7 @@ const seedPlans = [
       ["记录一个变化", "看看宝宝是否更熟悉睡前英语。"],
     ],
     song: {
-      title: "Twinkle Twinkle Little Star",
-      source: "Super Simple Songs",
-      url: "https://supersimple.com/song/twinkle-twinkle-little-star/",
+      ...songSources.twinkle,
       tip: "复习晚安仪式时重复同一首，不急着换新。",
     },
     book: ["Goodnight Moon", "第二次读同一本，比换新书更有价值。"],
@@ -415,7 +480,7 @@ const guidanceItems = [
   {
     label: "真声音",
     title: "儿歌用真实来源",
-    text: "听一小段，家长跟着哼就好。",
+    text: "卡片内放一小段，家长跟着哼就好。",
   },
 ];
 
@@ -450,7 +515,12 @@ const nextDayButton = document.querySelector("#nextDayButton");
 const routineList = document.querySelector("#routineList");
 const songTitle = document.querySelector("#songTitle");
 const songSource = document.querySelector("#songSource");
-const songLink = document.querySelector("#songLink");
+const songTip = document.querySelector("#songTip");
+const songPlayButton = document.querySelector("#songPlayButton");
+const songPlayButtonText = songPlayButton.querySelector("span");
+const songStatus = document.querySelector("#songStatus");
+const songAudio = document.querySelector("#songAudio");
+const songCreditLink = document.querySelector("#songCreditLink");
 const bookTitle = document.querySelector("#bookTitle");
 const phraseDrawerTitle = document.querySelector("#phraseDrawerTitle");
 const onboardingOverlay = document.querySelector("#onboardingOverlay");
@@ -476,6 +546,7 @@ let voices = [];
 let selectedRate = Number(localStorage.getItem(storageKeys.rate) || 0.72);
 let currentDayIndex = 0;
 let currentPhraseIndex = 0;
+let songFallbackTried = false;
 
 const readJson = (key, fallback) => {
   try {
@@ -738,6 +809,32 @@ const renderCurrentPhrase = () => {
   localStorage.setItem(storageKeys.phraseIndex, String(currentPhraseIndex));
 };
 
+const setSongPlayingState = (isPlaying) => {
+  songPlayButtonText.textContent = isPlaying ? "暂停真儿歌" : "播放真儿歌";
+  songPlayButton.setAttribute(
+    "aria-label",
+    `${isPlaying ? "暂停" : "播放"} ${getPlan().song.title}`
+  );
+};
+
+const prepareSongAudio = (song) => {
+  songFallbackTried = false;
+  songAudio.pause();
+  songAudio.src = song.audioUrl;
+  songAudio.load();
+  songStatus.textContent = "未播放";
+  setSongPlayingState(false);
+};
+
+const playSong = async () => {
+  try {
+    await songAudio.play();
+  } catch {
+    songStatus.textContent = "可点下方音频控件";
+    setSongPlayingState(false);
+  }
+};
+
 const renderPlan = () => {
   const plan = getPlan();
   currentPhraseIndex = Number(localStorage.getItem(storageKeys.phraseIndex) || 0);
@@ -748,10 +845,12 @@ const renderPlan = () => {
   planDuration.textContent = plan.duration;
   dayCounter.textContent = `${plan.day} / ${seedPlans.length}`;
   songTitle.textContent = plan.song.title;
-  songSource.textContent = `${plan.song.source} · ${plan.song.tip}`;
-  songLink.href = plan.song.url;
-  songLink.setAttribute("aria-label", `打开 ${plan.song.title} 真儿歌`);
+  songSource.textContent = `${plan.song.source} · ${plan.song.license} · ${plan.song.credit}`;
+  songTip.textContent = plan.song.tip;
+  songCreditLink.href = plan.song.sourceUrl;
+  songCreditLink.setAttribute("aria-label", `查看 ${plan.song.title} 音频来源和署名`);
   bookTitle.textContent = `绘本：${plan.book[0]}`;
+  prepareSongAudio(plan.song);
 
   renderCurrentPhrase();
   renderRoutine();
@@ -897,6 +996,58 @@ rateButtons.forEach((button) => {
 
 speakCurrent.addEventListener("click", () => {
   speak(currentPhrase.textContent);
+});
+
+songPlayButton.addEventListener("click", () => {
+  if (songAudio.paused) {
+    playSong();
+  } else {
+    songAudio.pause();
+  }
+});
+
+songAudio.addEventListener("loadedmetadata", () => {
+  if (songAudio.paused) {
+    songStatus.textContent = "已准备";
+  }
+});
+
+songAudio.addEventListener("waiting", () => {
+  songStatus.textContent = "加载中";
+});
+
+songAudio.addEventListener("playing", () => {
+  songStatus.textContent = "正在播放";
+  setSongPlayingState(true);
+});
+
+songAudio.addEventListener("pause", () => {
+  if (songAudio.ended) return;
+  songStatus.textContent = songAudio.currentTime > 0 ? "已暂停" : "未播放";
+  setSongPlayingState(false);
+});
+
+songAudio.addEventListener("ended", () => {
+  songStatus.textContent = "播放结束";
+  setSongPlayingState(false);
+});
+
+songAudio.addEventListener("error", () => {
+  const song = getPlan().song;
+  const canFallback = song.fallbackUrl && !songFallbackTried && songAudio.currentSrc !== song.fallbackUrl;
+
+  if (canFallback) {
+    const shouldResume = !songAudio.paused;
+    songFallbackTried = true;
+    songStatus.textContent = "切换备用音频";
+    songAudio.src = song.fallbackUrl;
+    songAudio.load();
+    if (shouldResume) playSong();
+    return;
+  }
+
+  songStatus.textContent = "音频暂时加载失败";
+  setSongPlayingState(false);
 });
 
 nextPhrase.addEventListener("click", () => {

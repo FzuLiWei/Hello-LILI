@@ -10,7 +10,7 @@ The local project is initialized as a git repository and synced to GitHub `FzuLi
 
 ## Active Task
 
-Validate the static MVP flow with onboarding, 14-day parent assistant content, response logging, weekly summary, compressed parent guidance, and real song links.
+Validate the static MVP flow with onboarding, 14-day parent assistant content, response logging, weekly summary, compressed parent guidance, and in-page real song playback.
 
 The product is currently defined as:
 
@@ -47,7 +47,7 @@ The product is currently defined as:
 - Removed the global 320px minimum width so the mobile shell does not create horizontal overflow in narrow viewport tests.
 - Moved the current-scene phrase list into the Today card so the Short Phrases entry expands near the core phrase instead of at the page bottom.
 - Compressed parent guidance from seven longer cards into four short, action-first reminders.
-- Replaced song-line browser TTS with real external song source links from Super Simple Songs, keeping browser TTS only for short parent phrases.
+- Replaced song-line browser TTS and external song-link primary flow with in-page real audio playback from open-license or public-domain sources, keeping browser TTS only for short parent phrases.
 
 ## Known Issues
 
@@ -59,7 +59,7 @@ The product is currently defined as:
 - Current TTS uses browser/system voices, so quality varies by device; it is intentionally limited to short phrase pronunciation.
 - Production-grade voice likely requires a cloud TTS integration.
 - Weekly summary is derived only from local daily completion and response data; it does not yet summarize song/book usage separately.
-- Compressed parent guidance and real song link choices still need real parent readability and usability review.
+- Compressed parent guidance and in-page open-audio song choices still need real parent readability, device playback, and usability review.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 - Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
 - Future task close-out should include GitHub commit, push result, Netlify deploy verification, and the live URL.
@@ -70,4 +70,4 @@ Validate the completed parent-assistant MVP slice:
 
 1. Test the full flow on physical iPhone and Android devices.
 2. Review the 14-day phrases, songs, books, and tasks for natural English and parent usability.
-3. Review the compressed guidance cards and real song links during real use.
+3. Review the compressed guidance cards and in-page song playback during real use.

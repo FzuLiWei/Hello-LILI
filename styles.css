@@ -200,7 +200,8 @@ h2 {
 .response-grid button,
 .rate-options button,
 .simple-tools button,
-.phrase-item button {
+.phrase-item button,
+.song-play-button {
   border: var(--border-width) solid var(--border-line);
   -webkit-tap-highlight-color: transparent;
 }
@@ -215,6 +216,7 @@ h2 {
 .simple-tools button:active,
 .simple-tools a:active,
 .phrase-item button:active,
+.song-play-button:active,
 .child-card:active {
   transform: translate(3px, 3px) !important;
   box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
@@ -598,10 +600,8 @@ body.bedtime-mode .done-button.is-done {
 }
 
 .mini-resource {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+  display: grid;
+  gap: 12px;
   margin-top: 16px;
   padding: 16px;
   border: var(--border-width) solid var(--border-line);
@@ -610,7 +610,7 @@ body.bedtime-mode .done-button.is-done {
   box-shadow: var(--shadow-card);
 }
 
-.mini-resource div {
+.song-copy {
   min-width: 0;
 }
 
@@ -655,6 +655,58 @@ body.bedtime-mode .done-button.is-done {
   font-weight: 900;
   text-align: center;
   white-space: nowrap;
+}
+
+.song-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.song-play-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: var(--radius-medium);
+  background: var(--color-primary);
+  color: #ffffff;
+  box-shadow: var(--shadow-btn);
+  font-size: 0.84rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+body.bedtime-mode .song-play-button {
+  color: var(--color-baby-text);
+}
+
+#songStatus {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.song-player audio {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  border-radius: var(--radius-medium);
+}
+
+.song-player a {
+  justify-self: start;
+  min-height: 36px;
+  background: var(--bg-phone);
+  color: var(--text-main);
+  font-size: 0.78rem;
 }
 
 /* --- 9. 反应观察卡片 --- */

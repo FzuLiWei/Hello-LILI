@@ -32,6 +32,7 @@ The product is currently defined as:
 - Added selectable browser English voices and speech-rate options for temporary TTS.
 - Created `style_preview.html` containing three distinct visual themes (Forest & Oat, Warm Macaron, Modern Minimalist) and an ambient "Bedtime Mode" toggle for visual testing.
 - Synced the current local project to GitHub repository `FzuLiWei/Hello-LILI` on `main`.
+- Confirmed the Codex Netlify connector OAuth callback remains blocked on this Windows setup; switching deployment path to Netlify CLI or Netlify GitHub import.
 
 ## Known Issues
 
@@ -42,6 +43,7 @@ The product is currently defined as:
 - No backend, account system, or deployment has been added.
 - Current TTS uses browser/system voices, so quality varies by device.
 - Production-grade voice likely requires a cloud TTS integration.
+- Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 
 ## Next Step
 
@@ -50,3 +52,5 @@ Gather user feedback on the three visual design styles:
 1. Open `style_preview.html` and compare "Forest & Oat", "Warm Macaron", and "Modern Minimalist".
 2. Test the dynamic "Bedtime Mode" under different themes.
 3. Choose the final design style and apply it to the main `styles.css` and `index.html`.
+
+Also deploy through Netlify CLI authorization or Netlify GitHub import using the synced `FzuLiWei/Hello-LILI` repository.

@@ -16,6 +16,7 @@ Status:
 
 Current tasks:
 
+- Use Netlify CLI or Netlify GitHub import to deploy the static site, because the Codex Netlify connector OAuth callback is blocked by the current Windows `codex://` protocol issue.
 - Review the visual styles in `style_preview.html` and select the final UI theme.
 - Apply the chosen theme and responsive variables to `styles.css`.
 - Keep the current implementation static until the core flow is validated.

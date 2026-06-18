@@ -10,7 +10,7 @@ The local project is initialized as a git repository and synced to GitHub `FzuLi
 
 ## Active Task
 
-Validate the static MVP flow with onboarding and 14-day parent assistant content.
+Validate the static MVP flow with onboarding, 14-day parent assistant content, response logging, and weekly summary.
 
 The product is currently defined as:
 
@@ -41,6 +41,8 @@ The product is currently defined as:
 - Implemented onboarding for child nickname, birthdate, parent English comfort level, daily available time, and preferred scene.
 - Added a 14-day 0-18 month parent assistant seed plan covering 8 routine scenes, 56 phrases, song cues, picture book cues, offline steps, and response options.
 - Connected homepage content, phrase drawer, routine steps, progress, day switching, and response recording to the 14-day seed plan.
+- Added a mobile weekly summary card with completed days, practiced scenes, observed responses, seven-day status strip, and one low-pressure next-step suggestion.
+- Updated the bottom navigation to include and correctly highlight the weekly summary entry.
 
 ## Known Issues
 
@@ -51,14 +53,15 @@ The product is currently defined as:
 - No backend or account system has been added.
 - Current TTS uses browser/system voices, so quality varies by device.
 - Production-grade voice likely requires a cloud TTS integration.
+- Weekly summary is derived only from local daily completion and response data; it does not yet summarize song/book usage separately.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 - Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
 - Future task close-out should include GitHub commit, push result, Netlify deploy verification, and the live URL.
 
 ## Next Step
 
-Validate the completed onboarding and 14-day seed flow:
+Validate the completed parent-assistant MVP slice:
 
 1. Test the full flow on physical iPhone and Android devices.
 2. Review the 14-day phrases, songs, books, and tasks for natural English and parent usability.
-3. Design the weekly summary screen using the newly stored completion and response data.
+3. Add a lightweight parent guidance area for 0-18 month low-screen usage, repetition, songs, and picture-book reading.

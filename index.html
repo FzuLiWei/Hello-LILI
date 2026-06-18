@@ -46,6 +46,13 @@
       <symbol id="icon-heart" viewBox="0 0 24 24">
         <path d="M20.4 5.6a5 5 0 0 0-7.1 0L12 6.9l-1.3-1.3a5 5 0 0 0-7.1 7.1L12 21l8.4-8.3a5 5 0 0 0 0-7.1Z" />
       </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M4 20V5" />
+        <path d="M4 20h17" />
+        <path d="M8 16v-4" />
+        <path d="M13 16V8" />
+        <path d="M18 16v-7" />
+      </symbol>
       <symbol id="icon-sun" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="4"/>
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
@@ -181,19 +188,62 @@
         </div>
       </section>
 
+      <section class="weekly-card" id="summary">
+        <div class="section-title">
+          <span>本周小结</span>
+          <small>不是成绩，是回顾</small>
+        </div>
+
+        <div class="weekly-metrics" aria-label="本周统计">
+          <div>
+            <strong id="summaryDoneDays">0</strong>
+            <span>完成天数</span>
+          </div>
+          <div>
+            <strong id="summaryScenes">0</strong>
+            <span>练过场景</span>
+          </div>
+          <div>
+            <strong id="summaryResponses">0</strong>
+            <span>观察记录</span>
+          </div>
+        </div>
+
+        <div class="week-strip" id="weekStrip" aria-label="本周每日状态"></div>
+
+        <div class="summary-details">
+          <div>
+            <span>本周场景</span>
+            <p id="summarySceneText">完成一次任务后会显示。</p>
+          </div>
+          <div>
+            <span>宝宝反应</span>
+            <p id="summaryResponseText">记录一个反应后会显示。</p>
+          </div>
+          <div class="summary-next">
+            <span>下一步建议</span>
+            <p id="summarySuggestion">先完成今天的一句和一个观察。</p>
+          </div>
+        </div>
+      </section>
+
       <!-- 底部常驻栏 -->
       <section class="simple-tools" aria-label="更多入口">
-        <a href="#today">
+        <a href="#today" class="is-active" data-nav-target="today">
           <svg><use href="#icon-home"></use></svg>
           <span>今日</span>
         </a>
-        <button type="button" id="allPhrasesButton">
+        <button type="button" id="allPhrasesButton" data-nav-target="phrases">
           <svg><use href="#icon-note"></use></svg>
           <span>短句</span>
         </button>
-        <a href="#record">
+        <a href="#record" data-nav-target="record">
           <svg><use href="#icon-heart"></use></svg>
           <span>记录</span>
+        </a>
+        <a href="#summary" data-nav-target="summary">
+          <svg><use href="#icon-chart"></use></svg>
+          <span>周报</span>
         </a>
       </section>
 

@@ -367,6 +367,14 @@ const childBirthdateInput = document.querySelector("#childBirthdateInput");
 const parentLevelInput = document.querySelector("#parentLevelInput");
 const dailyTimeInput = document.querySelector("#dailyTimeInput");
 const preferredSceneInput = document.querySelector("#preferredSceneInput");
+const summaryDoneDays = document.querySelector("#summaryDoneDays");
+const summaryScenes = document.querySelector("#summaryScenes");
+const summaryResponses = document.querySelector("#summaryResponses");
+const weekStrip = document.querySelector("#weekStrip");
+const summarySceneText = document.querySelector("#summarySceneText");
+const summaryResponseText = document.querySelector("#summaryResponseText");
+const summarySuggestion = document.querySelector("#summarySuggestion");
+const navItems = document.querySelectorAll("[data-nav-target]");
 
 let voices = [];
 let selectedRate = Number(localStorage.getItem(storageKeys.rate) || 0.72);
@@ -428,6 +436,24 @@ const getInitialDayIndex = () => {
 
 const getPlanMap = (key) => readJson(key, {});
 
+const getCurrentWeekPlans = () => {
+  const weekStart = currentDayIndex < 7 ? 0 : 7;
+  return seedPlans.slice(weekStart, weekStart + 7);
+};
+
+const setActiveNav = (target) => {
+  navItems.forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.navTarget === target);
+  });
+};
+
+const syncNavFromHash = () => {
+  const target = window.location.hash.replace("#", "") || "today";
+  if (["today", "record", "summary"].includes(target)) {
+    setActiveNav(target);
+  }
+};
+
 const setDayIndex = (index) => {
   currentDayIndex = clampDayIndex(index);
   localStorage.setItem(storageKeys.dayIndex, String(currentDayIndex));
@@ -467,6 +493,47 @@ const renderProgress = () => {
     : '<svg><use href="#icon-check"></use></svg>我完成了今天的小任务';
 };
 
+const renderWeeklySummary = () => {
+  const completed = getPlanMap(storageKeys.completed);
+  const responseMap = getPlanMap(storageKeys.responses);
+  const weekPlans = getCurrentWeekPlans();
+  const practicedPlans = weekPlans.filter((plan) => completed[plan.id] || responseMap[plan.id]?.length);
+  const doneCount = weekPlans.filter((plan) => completed[plan.id]).length;
+  const responseKeys = weekPlans.flatMap((plan) => responseMap[plan.id] || []);
+  const sceneNames = [...new Set(practicedPlans.map((plan) => sceneLabels[plan.scene]))];
+  const responseLabels = [...new Set(responseKeys.map((key) => responseChoices[key]).filter(Boolean))];
+
+  summaryDoneDays.textContent = String(doneCount);
+  summaryScenes.textContent = String(sceneNames.length);
+  summaryResponses.textContent = String(responseKeys.length);
+  summarySceneText.textContent = sceneNames.length ? sceneNames.join("、") : "完成一次任务后会显示。";
+  summaryResponseText.textContent = responseLabels.length
+    ? responseLabels.join("、")
+    : "记录一个反应后会显示。";
+
+  if (doneCount === 0) {
+    summarySuggestion.textContent = "先完成今天的一句和一个观察，节奏比数量更重要。";
+  } else if (doneCount < 3) {
+    summarySuggestion.textContent = "本周先把一个固定场景做稳，不急着加量。";
+  } else if (responseKeys.length === 0) {
+    summarySuggestion.textContent = "下次完成后顺手记录一个宝宝反应，方便判断哪些句子更有效。";
+  } else if (sceneNames.length < 2) {
+    summarySuggestion.textContent = "可以尝试把英语放进第二个日常场景，比如洗澡或睡前。";
+  } else {
+    summarySuggestion.textContent = "下周继续重复高反应场景，少量换句即可。";
+  }
+
+  weekStrip.innerHTML = "";
+  weekPlans.forEach((plan) => {
+    const day = document.createElement("span");
+    day.textContent = `D${plan.day}`;
+    day.title = plan.title;
+    day.classList.toggle("is-observed", Boolean(responseMap[plan.id]?.length));
+    day.classList.toggle("is-done", Boolean(completed[plan.id]));
+    weekStrip.append(day);
+  });
+};
+
 const renderResponseOptions = () => {
   const plan = getPlan();
   const responseMap = getPlanMap(storageKeys.responses);
@@ -489,6 +556,7 @@ const renderResponseOptions = () => {
       writeJson(storageKeys.responses, currentMap);
       renderResponseOptions();
       renderProgress();
+      renderWeeklySummary();
     });
     responseGrid.append(button);
   });
@@ -567,6 +635,7 @@ const renderPlan = () => {
   renderPhrases();
   renderResponseOptions();
   renderProgress();
+  renderWeeklySummary();
 };
 
 const getPreferredVoice = () => {
@@ -721,12 +790,16 @@ finishButton.addEventListener("click", () => {
   completed[plan.id] = !completed[plan.id];
   writeJson(storageKeys.completed, completed);
   renderProgress();
+  renderWeeklySummary();
 });
 
 allPhrasesButton.addEventListener("click", () => {
   phraseDrawer.hidden = !phraseDrawer.hidden;
   if (!phraseDrawer.hidden) {
+    setActiveNav("phrases");
     phraseDrawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } else {
+    syncNavFromHash();
   }
 });
 
@@ -767,6 +840,7 @@ const toggleBedtimeMode = () => {
 };
 
 bedtimeButton.addEventListener("click", toggleBedtimeMode);
+window.addEventListener("hashchange", syncNavFromHash);
 
 const init = () => {
   currentDayIndex = getInitialDayIndex();
@@ -774,6 +848,7 @@ const init = () => {
   renderProfile();
   renderPlan();
   renderRate();
+  syncNavFromHash();
   loadVoices();
 
   const isBedtime = localStorage.getItem(storageKeys.bedtime) === "1";

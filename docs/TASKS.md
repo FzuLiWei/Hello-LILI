@@ -14,6 +14,7 @@ Status:
 - Mobile-first static homepage has been implemented for the 0-18 month parent assistant mode.
 - Onboarding questionnaire is implemented in the static prototype.
 - 14-day seed content is implemented and drives the homepage.
+- Weekly summary is implemented in the static prototype using completion and response data.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 - Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.
@@ -23,8 +24,9 @@ Status:
 Current tasks:
 
 - Review and refine the 14-day seed content with real parent use.
-- Design weekly summary based on completed days, practiced scenes, and observed responses.
+- Validate the weekly summary during real parent use and refine its next-step suggestion copy.
 - Test browser TTS on physical iPhone and Android devices.
+- Add a lightweight parent guidance area for 0-18 month low-screen usage, repetition, songs, and picture-book reading.
 - Keep the current implementation static until the core flow is validated.
 
 # Next Milestone

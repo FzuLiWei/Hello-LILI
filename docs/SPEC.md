@@ -129,6 +129,7 @@ Current homepage direction:
 - Avoid desktop-style dashboards for the infant stage.
 - Expose secondary content through small entrances instead of showing many modules at once.
 - The static prototype now includes onboarding and a 14-day seed plan.
+- The static prototype now includes a simple weekly summary derived from daily completion and response records.
 
 TTS limitation:
 
@@ -141,6 +142,7 @@ Current local data model:
 - `ChildProfile`: nickname, birthdate, parent English comfort level, daily available time, preferred routine scene, start date.
 - `SeedPlan`: 14 static daily plans, each with scene, title, duration, phrases, offline steps, song cue, picture book cue, and response options.
 - `Progress`: per-day completion and child response selections stored in browser `localStorage`.
+- `WeeklySummary`: derived view of completed days, practiced scenes, observed responses, current week day states, and one low-pressure next action.
 
 Current seed content coverage:
 

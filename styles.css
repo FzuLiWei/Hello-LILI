@@ -237,6 +237,7 @@ h2 {
 .child-card,
 .today-card,
 .response-card,
+.weekly-card,
 .phrase-drawer {
   border: var(--border-width) solid var(--border-line);
   border-radius: var(--radius-large);
@@ -680,15 +681,117 @@ body.bedtime-mode .done-button.is-done {
   box-shadow: var(--shadow-btn), inset 0 0 0 2px var(--border-line);
 }
 
-/* --- 10. 底部常驻导航栏 --- */
+/* --- 10. 周总结卡片 --- */
+.weekly-card {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.weekly-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.weekly-metrics div {
+  min-width: 0;
+  padding: 12px 8px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: var(--radius-medium);
+  background: var(--color-highlight);
+  box-shadow: var(--shadow-btn);
+  text-align: center;
+}
+
+.weekly-metrics strong,
+.weekly-metrics span {
+  display: block;
+}
+
+.weekly-metrics strong {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.weekly-metrics span {
+  margin-top: 6px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--text-main);
+}
+
+.week-strip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.week-strip span {
+  display: grid;
+  min-width: 0;
+  min-height: 42px;
+  place-items: center;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: 14px;
+  background: var(--bg-phone);
+  color: var(--text-muted);
+  box-shadow: 2px 2px 0 var(--border-line);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.week-strip span.is-observed {
+  background: var(--color-mint-light);
+  color: var(--text-main);
+}
+
+.week-strip span.is-done {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.summary-details {
+  display: grid;
+  gap: 10px;
+}
+
+.summary-details div {
+  padding: 12px;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: var(--radius-medium);
+  background: var(--bg-phone);
+}
+
+.summary-details span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  color: var(--text-muted);
+}
+
+.summary-details p {
+  margin: 0;
+  color: var(--text-main);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.summary-details .summary-next {
+  background: var(--color-mint-light);
+}
+
+/* --- 11. 底部常驻导航栏 --- */
 .simple-tools {
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
   width: min(100%, 430px);
   margin: 0 auto;
   padding: 12px 20px calc(14px + env(safe-area-inset-bottom)); /* 适配底部安全区 */
@@ -711,20 +814,20 @@ body.bedtime-mode .done-button.is-done {
   border-radius: var(--radius-medium);
   background: transparent;
   color: var(--text-muted);
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 900;
   border: 0;
   padding: 4px 0;
 }
 
-.simple-tools a:first-child {
+.simple-tools .is-active {
   background: var(--color-primary);
   color: #ffffff;
   border: var(--border-width) solid var(--border-line);
   box-shadow: var(--shadow-btn);
 }
 
-/* --- 11. 弹出可选短句抽屉 (底部内容非弹窗) --- */
+/* --- 12. 弹出可选短句抽屉 (底部内容非弹窗) --- */
 .phrase-drawer {
   padding: 20px;
   margin-top: 10px;

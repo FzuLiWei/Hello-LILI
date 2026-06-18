@@ -47,7 +47,7 @@ The product is currently defined as:
 - Removed the global 320px minimum width so the mobile shell does not create horizontal overflow in narrow viewport tests.
 - Moved the current-scene phrase list into the Today card so the Short Phrases entry expands near the core phrase instead of at the page bottom.
 - Compressed parent guidance from seven longer cards into four short, action-first reminders.
-- Replaced song-line browser TTS and external song-link primary flow with in-page real audio playback from open-license or public-domain sources, keeping browser TTS only for short parent phrases.
+- Replaced low-quality open song audio with an in-page official vocal video fallback, while preserving a local audio path for future family-provided MP3 files.
 
 ## Known Issues
 
@@ -59,7 +59,7 @@ The product is currently defined as:
 - Current TTS uses browser/system voices, so quality varies by device; it is intentionally limited to short phrase pronunciation.
 - Production-grade voice likely requires a cloud TTS integration.
 - Weekly summary is derived only from local daily completion and response data; it does not yet summarize song/book usage separately.
-- Compressed parent guidance and in-page open-audio song choices still need real parent readability, device playback, and usability review.
+- Compressed parent guidance and in-page official song video playback still need real parent readability, device playback, and usability review.
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 - Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
 - Future task close-out should include GitHub commit, push result, Netlify deploy verification, and the live URL.

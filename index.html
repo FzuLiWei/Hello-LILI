@@ -182,19 +182,28 @@
           <div class="song-copy">
             <span>真儿歌播放</span>
             <strong id="songTitle">Row, Row, Row Your Boat</strong>
-            <small id="songSource">Wikimedia Commons · CC BY-SA 3.0</small>
+            <small id="songSource">Super Simple Songs · Official video</small>
             <small id="songTip">洗澡后或睡前听一段，家长做摇船动作就够。</small>
             <small id="bookTitle">绘本：Brown Bear, Brown Bear</small>
           </div>
-          <div class="song-controls">
+          <div class="song-controls" id="songControls">
             <button class="song-play-button" type="button" id="songPlayButton">
               <svg><use href="#icon-play"></use></svg>
-              <span>播放真儿歌</span>
+              <span>播放本地音频</span>
             </button>
             <span id="songStatus" aria-live="polite">未播放</span>
           </div>
           <audio id="songAudio" preload="none" controls></audio>
-          <a href="#" id="songCreditLink" target="_blank" rel="noopener noreferrer">音频来源 / 署名</a>
+          <div class="song-video" id="songVideoWrap" hidden>
+            <iframe
+              id="songVideo"
+              title="官方儿歌视频"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <a href="#" id="songCreditLink" target="_blank" rel="noopener noreferrer">官方来源</a>
         </div>
       </section>
 

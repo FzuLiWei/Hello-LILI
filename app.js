@@ -10,93 +10,107 @@ const responseChoices = {
 const songSources = {
   rowBoat: {
     title: "Row, Row, Row Your Boat",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/61/Row%2C_Row%2C_Row_Your_Boat.ogg/Row%2C_Row%2C_Row_Your_Boat.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/Row%2C_Row%2C_Row_Your_Boat.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Row,_Row,_Row_Your_Boat.ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CambridgeBayWeather",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "7otAJa3jui8",
+    sourceUrl: "https://supersimple.com/song/row-row-row-your-boat/",
+    credit: "Official video",
+  },
+  goodMorning: {
+    title: "Good Morning, Mr. Rooster",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "1Ziku4FLka4",
+    sourceUrl: "https://supersimple.com/song/good-morning-mr-rooster/",
+    credit: "Official video",
+  },
+  headShoulders: {
+    title: "Head Shoulders Knees & Toes",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "lMQcwNZVUO8",
+    sourceUrl: "https://supersimple.com/song/head-shoulders-knees-toes-learn-it/",
+    credit: "Official video",
+  },
+  patACake: {
+    title: "Pat-A-Cake",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "jdg50KzCR9w",
+    sourceUrl: "https://supersimple.com/song/pat-a-cake/",
+    credit: "Official video",
+  },
+  thisIsTheWay: {
+    title: "This Is The Way",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "4XLQpRI_wOQ",
+    sourceUrl: "https://supersimple.com/song/this-is-the-way/",
+    credit: "Official video",
   },
   twinkle: {
     title: "Twinkle Twinkle Little Star",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/25/Twinkle_twinkle_little_star_%28vocal%29.ogg/Twinkle_twinkle_little_star_%28vocal%29.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/2/25/Twinkle_twinkle_little_star_%28vocal%29.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Twinkle_twinkle_little_star_(vocal).ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CommandSpry",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "yCjJyiqpAuU",
+    sourceUrl: "https://supersimple.com/song/twinkle-twinkle-little-star/",
+    credit: "Official video",
   },
-  alphabet: {
-    title: "Alphabet Song",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/30/Alphabet_song.ogg/Alphabet_song.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/3/30/Alphabet_song.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Alphabet_song.ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CambridgeBayWeather",
+  hushBaby: {
+    title: "Hush Little Baby",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "f_raDpgx_3M",
+    sourceUrl: "https://supersimple.com/song/hush-little-baby/",
+    credit: "Official video",
   },
-  hotCrossBuns: {
-    title: "Hot Cross Buns",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/13/Hot_Cross_Buns.ogg/Hot_Cross_Buns.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/1/13/Hot_Cross_Buns.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Hot_Cross_Buns.ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CambridgeBayWeather",
+  wheelsBus: {
+    title: "The Wheels On The Bus",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "9UasekNr8KI",
+    sourceUrl: "https://supersimple.com/song/wheels-on-the-bus/",
+    credit: "Official video",
   },
-  popGoes: {
-    title: "Pop Goes the Weasel",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Pop_Goes_the_Weasel.ogg/Pop_Goes_the_Weasel.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pop_Goes_the_Weasel.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Pop_Goes_the_Weasel.ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CambridgeBayWeather",
+  happy: {
+    title: "If You're Happy",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "wqvQAcloTRQ",
+    sourceUrl: "https://supersimple.com/song/if-youre-happy/",
+    credit: "Official video",
   },
-  threeKittens: {
-    title: "Three Little Kittens",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1c/Three_Little_Kittens.ogg/Three_Little_Kittens.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Three_Little_Kittens.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Three_Little_Kittens.ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CambridgeBayWeather",
+  openShut: {
+    title: "Open Shut Them",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "RNUZBHlRH4Y",
+    sourceUrl: "https://supersimple.com/song/open-shut-them/",
+    credit: "Official video",
   },
-  jackAndJill: {
-    title: "Jack and Jill",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d4/Jack_and_Jill_%281890%29.ogg/Jack_and_Jill_%281890%29.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jack_and_Jill_%281890%29.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Jack_and_Jill_(1890).ogg",
-    license: "Public domain",
-    credit: "Internet Archive",
+  peekaboo: {
+    title: "Peekaboo",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "lVFj91Z1AfM",
+    sourceUrl: "https://supersimple.com/song/peekaboo/",
+    credit: "Official video",
   },
-  doctorFoster: {
-    title: "Doctor Foster",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Doctor_Foster.ogg/Doctor_Foster.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Doctor_Foster.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Doctor_Foster.ogg",
-    license: "CC BY-SA 3.0",
-    credit: "CambridgeBayWeather",
+  getDressed: {
+    title: "This Is The Way We Get Dressed",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "1GDFa-nEzlg",
+    sourceUrl: "https://supersimple.com/song/this-is-the-way-we-get-dressed/",
+    credit: "Official video",
   },
-  motherGoose: {
-    title: "Mother Goose Nursery Rhymes",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg/01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d1/01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:01_Mother_Goose_Nursery_Rhymes_-_Part_2.ogg",
-    license: "CC BY 3.0 US",
-    credit: "Grantyny",
-  },
-  hickory: {
-    title: "Hickory Dickory Dock",
-    source: "Wikimedia Commons",
-    audioUrl: "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b0/Hickory_Dickory_%281889%29.oga/Hickory_Dickory_%281889%29.oga.mp3",
-    fallbackUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Hickory_Dickory_%281889%29.oga",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Hickory_Dickory_(1889).oga",
-    license: "Public domain",
-    credit: "National Park Service",
+  drivingCar: {
+    title: "Driving In My Car",
+    source: "Super Simple Songs",
+    localAudioUrl: "",
+    youtubeId: "BdrZWu2dZ4c",
+    sourceUrl: "https://supersimple.com/song/driving-in-my-car/",
+    credit: "Official video",
   },
 };
 
@@ -143,7 +157,7 @@ const seedPlans = [
       ["配一个表情", "微笑和眼神比解释更有效。"],
     ],
     song: {
-      ...songSources.hickory,
+      ...songSources.goodMorning,
       tip: "起床后听一小段，重点是固定早晨声音。",
     },
     book: ["Hello, Baby!", "翻到有脸的页面，和宝宝对视。"],
@@ -167,8 +181,8 @@ const seedPlans = [
       ["结束固定", "最后说 All clean，让宝宝熟悉流程。"],
     ],
     song: {
-      ...songSources.alphabet,
-      tip: "换好后听一小段，宝宝只需要听节奏和重复。",
+      ...songSources.headShoulders,
+      tip: "只做一个身体部位动作，不追求跟唱。",
     },
     book: ["Where's Spot?", "只玩找一找，不追求讲完整。"],
     responses: ["calm", "look", "reach", "sound"],
@@ -191,7 +205,7 @@ const seedPlans = [
       ["重复关键词", "今天只重复 hungry / yummy / water。"],
     ],
     song: {
-      ...songSources.hotCrossBuns,
+      ...songSources.patACake,
       tip: "吃饭后轻轻拍手，节奏比歌词完整更重要。",
     },
     book: ["The Very Hungry Caterpillar", "只看食物页，指一两个图。"],
@@ -215,7 +229,7 @@ const seedPlans = [
       ["宝宝不回应也没关系", "你示范，他观察就已经在学习。"],
     ],
     song: {
-      ...songSources.popGoes,
+      ...songSources.thisIsTheWay,
       tip: "听一段节奏，玩球时只保留一个动作。",
     },
     book: ["Dear Zoo", "翻到动物页，模仿一个声音即可。"],
@@ -263,8 +277,8 @@ const seedPlans = [
       ["观察变化", "记录是否安静下来。"],
     ],
     song: {
-      ...songSources.motherGoose,
-      tip: "安抚时低音量听一小段，再用自己的声音轻轻哼。",
+      ...songSources.hushBaby,
+      tip: "安抚时可先由家长听，再用自己的声音哼。",
     },
     book: ["Guess How Much I Love You", "只读一句 I love you。"],
     responses: ["calm", "look", "smile", "sound"],
@@ -287,8 +301,8 @@ const seedPlans = [
       ["挥手告别", "Bye-bye 配合手势。"],
     ],
     song: {
-      ...songSources.jackAndJill,
-      tip: "出门前听一小段，配合上上下下的动作。",
+      ...songSources.wheelsBus,
+      tip: "出门前听一段，配合转手或挥手动作。",
     },
     book: ["Maisy Goes Out", "看出门相关图片即可。"],
     responses: ["look", "gesture", "smile", "reach"],
@@ -311,7 +325,7 @@ const seedPlans = [
       ["宝宝看就算完成", "不要求模仿。"],
     ],
     song: {
-      ...songSources.hotCrossBuns,
+      ...songSources.happy,
       tip: "只做 clap 或 wave 一个动作，让宝宝看你示范。",
     },
     book: ["Ten Little Fingers", "看手指图片，数不数都可以。"],
@@ -335,8 +349,8 @@ const seedPlans = [
       ["结束时固定", "All done 是很实用的日常句。"],
     ],
     song: {
-      ...songSources.alphabet,
-      tip: "喝水后听一小段，选择一个重复音跟着哼。",
+      ...songSources.openShut,
+      tip: "喝水后做 open / shut 手势，不需要宝宝模仿。",
     },
     book: ["Eating the Alphabet", "只看一种水果。"],
     responses: ["reach", "look", "smile", "calm"],
@@ -359,7 +373,7 @@ const seedPlans = [
       ["看反应", "笑、看向你、伸手都可以记录。"],
     ],
     song: {
-      ...songSources.threeKittens,
+      ...songSources.peekaboo,
       tip: "游戏前听一段，真正互动时用你的脸和声音。",
     },
     book: ["Where Is Baby's Belly Button?", "翻翻书很适合这个动作主题。"],
@@ -383,7 +397,7 @@ const seedPlans = [
       ["结束收口", "All set 是非常自然的结束句。"],
     ],
     song: {
-      ...songSources.doctorFoster,
+      ...songSources.getDressed,
       tip: "穿衣前听一段，穿的时候只说一个衣物动作。",
     },
     book: ["Blue Hat, Green Hat", "看衣物和颜色，不要求宝宝认。"],
@@ -407,8 +421,8 @@ const seedPlans = [
       ["说完就停", "外面信息多，短句更好。"],
     ],
     song: {
-      ...songSources.popGoes,
-      tip: "户外看车前听一段，出门后只做声音和挥手游戏。",
+      ...songSources.drivingCar,
+      tip: "户外看车前听一段，出门后只做 vroom 声音游戏。",
     },
     book: ["Cars and Trucks and Things That Go", "只看一页车，不追求读完。"],
     responses: ["look", "gesture", "smile", "sound"],
@@ -516,10 +530,13 @@ const routineList = document.querySelector("#routineList");
 const songTitle = document.querySelector("#songTitle");
 const songSource = document.querySelector("#songSource");
 const songTip = document.querySelector("#songTip");
+const songControls = document.querySelector("#songControls");
 const songPlayButton = document.querySelector("#songPlayButton");
 const songPlayButtonText = songPlayButton.querySelector("span");
 const songStatus = document.querySelector("#songStatus");
 const songAudio = document.querySelector("#songAudio");
+const songVideoWrap = document.querySelector("#songVideoWrap");
+const songVideo = document.querySelector("#songVideo");
 const songCreditLink = document.querySelector("#songCreditLink");
 const bookTitle = document.querySelector("#bookTitle");
 const phraseDrawerTitle = document.querySelector("#phraseDrawerTitle");
@@ -546,7 +563,6 @@ let voices = [];
 let selectedRate = Number(localStorage.getItem(storageKeys.rate) || 0.72);
 let currentDayIndex = 0;
 let currentPhraseIndex = 0;
-let songFallbackTried = false;
 
 const readJson = (key, fallback) => {
   try {
@@ -810,20 +826,41 @@ const renderCurrentPhrase = () => {
 };
 
 const setSongPlayingState = (isPlaying) => {
-  songPlayButtonText.textContent = isPlaying ? "暂停真儿歌" : "播放真儿歌";
+  songPlayButtonText.textContent = isPlaying ? "暂停本地音频" : "播放本地音频";
   songPlayButton.setAttribute(
     "aria-label",
-    `${isPlaying ? "暂停" : "播放"} ${getPlan().song.title}`
+    `${isPlaying ? "暂停" : "播放"} ${getPlan().song.title} 本地音频`
   );
 };
 
-const prepareSongAudio = (song) => {
-  songFallbackTried = false;
+const getSongEmbedUrl = (song) => {
+  if (!song.youtubeId) return "";
+  return `https://www.youtube-nocookie.com/embed/${song.youtubeId}?rel=0&modestbranding=1&playsinline=1`;
+};
+
+const prepareSongMedia = (song) => {
   songAudio.pause();
-  songAudio.src = song.audioUrl;
-  songAudio.load();
-  songStatus.textContent = "未播放";
   setSongPlayingState(false);
+
+  if (song.localAudioUrl) {
+    songControls.hidden = false;
+    songAudio.hidden = false;
+    songVideoWrap.hidden = true;
+    songVideo.removeAttribute("src");
+    songAudio.src = song.localAudioUrl;
+    songAudio.load();
+    songStatus.textContent = "本地音频";
+    return;
+  }
+
+  songControls.hidden = true;
+  songAudio.hidden = true;
+  songAudio.removeAttribute("src");
+  songAudio.load();
+  songVideoWrap.hidden = false;
+  songVideo.src = getSongEmbedUrl(song);
+  songVideo.title = `${song.title} 官方儿歌视频`;
+  songStatus.textContent = "官方视频";
 };
 
 const playSong = async () => {
@@ -845,12 +882,13 @@ const renderPlan = () => {
   planDuration.textContent = plan.duration;
   dayCounter.textContent = `${plan.day} / ${seedPlans.length}`;
   songTitle.textContent = plan.song.title;
-  songSource.textContent = `${plan.song.source} · ${plan.song.license} · ${plan.song.credit}`;
+  songSource.textContent = `${plan.song.source} · ${plan.song.credit}`;
   songTip.textContent = plan.song.tip;
   songCreditLink.href = plan.song.sourceUrl;
-  songCreditLink.setAttribute("aria-label", `查看 ${plan.song.title} 音频来源和署名`);
+  songCreditLink.textContent = plan.song.localAudioUrl ? "本地音频来源" : "打开官方页面";
+  songCreditLink.setAttribute("aria-label", `查看 ${plan.song.title} 官方来源`);
   bookTitle.textContent = `绘本：${plan.book[0]}`;
-  prepareSongAudio(plan.song);
+  prepareSongMedia(plan.song);
 
   renderCurrentPhrase();
   renderRoutine();
@@ -1033,20 +1071,7 @@ songAudio.addEventListener("ended", () => {
 });
 
 songAudio.addEventListener("error", () => {
-  const song = getPlan().song;
-  const canFallback = song.fallbackUrl && !songFallbackTried && songAudio.currentSrc !== song.fallbackUrl;
-
-  if (canFallback) {
-    const shouldResume = !songAudio.paused;
-    songFallbackTried = true;
-    songStatus.textContent = "切换备用音频";
-    songAudio.src = song.fallbackUrl;
-    songAudio.load();
-    if (shouldResume) playSong();
-    return;
-  }
-
-  songStatus.textContent = "音频暂时加载失败";
+  songStatus.textContent = "本地音频加载失败";
   setSongPlayingState(false);
 });
 

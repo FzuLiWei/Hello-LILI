@@ -136,13 +136,13 @@ TTS limitation:
 - Current TTS quality depends on the browser and operating system voices.
 - The static version can offer selectable local English voices and speech rate for short parent phrases only.
 - Browser TTS is not considered acceptable for songs or high-quality listening input.
-- Current song support plays real in-page audio from open-license or public-domain sources, with attribution/source links kept as secondary context.
-- Higher-quality custom voices or commercial song libraries require backend integration, content licensing, or a cloud audio provider.
+- Current song support prioritizes local audio files when provided and otherwise embeds official high-quality vocal song videos in-page.
+- Browser TTS, low-quality instrumental clips, and low-confidence open audio sources should not be used as the primary song experience.
 
 Current local data model:
 
 - `ChildProfile`: nickname, birthdate, parent English comfort level, daily available time, preferred routine scene, start date.
-- `SeedPlan`: 14 static daily plans, each with scene, title, duration, phrases, offline steps, playable song audio source with attribution, picture book cue, and response options.
+- `SeedPlan`: 14 static daily plans, each with scene, title, duration, phrases, offline steps, local-audio-or-official-video song source, picture book cue, and response options.
 - `Progress`: per-day completion and child response selections stored in browser `localStorage`.
 - `WeeklySummary`: derived view of completed days, practiced scenes, observed responses, current week day states, and one low-pressure next action.
 
@@ -151,7 +151,7 @@ Current seed content coverage:
 - 14 daily plans.
 - 8 daily routine scenes: wake up, diaper/clothes, feeding, play, bath, going out, bedtime, and comforting.
 - 56 parent-facing phrases.
-- 14 song recommendations mapped to reusable in-page playable audio sources.
+- 14 song recommendations mapped to reusable in-page vocal song media sources.
 - 14 picture book cues.
 - Reused response observation options suitable for 0-18 months.
 

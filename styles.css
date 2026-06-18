@@ -701,6 +701,29 @@ body.bedtime-mode .song-play-button {
   border-radius: var(--radius-medium);
 }
 
+.song-player audio[hidden],
+.song-controls[hidden],
+.song-video[hidden] {
+  display: none !important;
+}
+
+.song-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: var(--border-width) solid var(--border-line);
+  border-radius: var(--radius-medium);
+  background: #000000;
+  box-shadow: var(--shadow-btn);
+}
+
+.song-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .song-player a {
   justify-self: start;
   min-height: 36px;

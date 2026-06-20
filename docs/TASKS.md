@@ -16,7 +16,7 @@ Status:
 - 14-day seed content is implemented and drives the homepage.
 - Weekly summary is implemented in the static prototype using completion and response data.
 - Lightweight parent guidance area is implemented and compressed into short, action-first cards.
-- Daily song support now prioritizes local audio files when available and otherwise embeds official high-quality vocal song videos in-page.
+- Daily song support now prioritizes local audio files when available and otherwise embeds official high-quality vocal song videos in-page with English captions requested by default.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 - Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.
@@ -27,7 +27,7 @@ Current tasks:
 
 - Review and refine the 14-day seed content with real parent use.
 - Validate the weekly summary during real parent use and refine its next-step suggestion copy.
-- Validate the compressed parent guidance and in-page real song playback during real parent use.
+- Validate the compressed parent guidance and in-page real song playback with requested English captions during real parent use.
 - Test browser TTS on physical iPhone and Android devices for short phrase pronunciation only.
 - Keep the current implementation static until the core flow is validated.
 

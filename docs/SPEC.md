@@ -137,6 +137,7 @@ TTS limitation:
 - The static version can offer selectable local English voices and speech rate for short parent phrases only.
 - Browser TTS is not considered acceptable for songs or high-quality listening input.
 - Current song support prioritizes local audio files when provided and otherwise embeds official high-quality vocal song videos in-page.
+- Official song video embeds should request English captions by default when the video provides caption tracks; the static prototype should not store full copyrighted song lyrics.
 - Browser TTS, low-quality instrumental clips, and low-confidence open audio sources should not be used as the primary song experience.
 
 Current local data model:

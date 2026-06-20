@@ -530,6 +530,7 @@ const routineList = document.querySelector("#routineList");
 const songTitle = document.querySelector("#songTitle");
 const songSource = document.querySelector("#songSource");
 const songTip = document.querySelector("#songTip");
+const songCaptionTip = document.querySelector("#songCaptionTip");
 const songControls = document.querySelector("#songControls");
 const songPlayButton = document.querySelector("#songPlayButton");
 const songPlayButtonText = songPlayButton.querySelector("span");
@@ -835,7 +836,15 @@ const setSongPlayingState = (isPlaying) => {
 
 const getSongEmbedUrl = (song) => {
   if (!song.youtubeId) return "";
-  return `https://www.youtube-nocookie.com/embed/${song.youtubeId}?rel=0&modestbranding=1&playsinline=1`;
+  const params = new URLSearchParams({
+    rel: "0",
+    modestbranding: "1",
+    playsinline: "1",
+    cc_load_policy: "1",
+    cc_lang_pref: "en",
+    hl: "en",
+  });
+  return `https://www.youtube-nocookie.com/embed/${song.youtubeId}?${params.toString()}`;
 };
 
 const prepareSongMedia = (song) => {
@@ -884,6 +893,9 @@ const renderPlan = () => {
   songTitle.textContent = plan.song.title;
   songSource.textContent = `${plan.song.source} · ${plan.song.credit}`;
   songTip.textContent = plan.song.tip;
+  songCaptionTip.textContent = plan.song.localAudioUrl
+    ? "本地音频暂不含字幕；先由家长跟唱。"
+    : "已请求英文字幕；若未显示，请点视频里的 CC。";
   songCreditLink.href = plan.song.sourceUrl;
   songCreditLink.textContent = plan.song.localAudioUrl ? "本地音频来源" : "打开官方页面";
   songCreditLink.setAttribute("aria-label", `查看 ${plan.song.title} 官方来源`);

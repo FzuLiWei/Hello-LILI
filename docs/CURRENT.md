@@ -18,6 +18,8 @@ The product is currently defined as:
 
 ## Recently Completed
 
+- Fetched corresponding YouTube URLs for the 34 English songs in `docs/songs/儿歌.txt` and appended them to the file.
+
 - Read `AGENTS.md`.
 - Confirmed required context documents were missing.
 - Created `docs/SPEC.md`.

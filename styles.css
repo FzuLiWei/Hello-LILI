@@ -718,21 +718,12 @@ body.bedtime-mode .song-play-button {
   background: #000000;
 }
 
-.song-video video {
+.song-video iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
   object-fit: contain;
-}
-
-::cue {
-  font-family: var(--font-body);
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #ffde6a;
-  background-color: rgba(0, 0, 0, 0.85);
-  text-shadow: 2px 2px 0px #000000;
 }
 
 .song-player a {
@@ -1279,4 +1270,39 @@ body.onboarding-open {
   .response-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* 儿歌库样式 */
+.library-card {
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+.library-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.library-song-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+.library-song-item:hover {
+  border-color: var(--primary-color);
+}
+.library-song-item strong {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+.library-song-item small {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }

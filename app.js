@@ -605,7 +605,39 @@ const writeJson = (key, value) => {
 const todayIso = () => new Date().toISOString().slice(0, 10);
 
 const getProfile = () => readJson(storageKeys.profile, null);
-const getPlan = () => seedPlans[currentDayIndex];
+
+let player;
+
+const getSongForToday = () => {
+  const profile = getProfile();
+  let ageGroup = "0_to_18_months";
+  if (profile?.birthdate) {
+    const months = getAgeMonths(profile.birthdate);
+    if (months > 18 && months <= 36) ageGroup = "18_to_36_months";
+    else if (months > 36) ageGroup = "3_to_6_years";
+  }
+  const db = typeof songDatabase !== 'undefined' ? songDatabase : {};
+  const songs = db[ageGroup] || [];
+  if (songs.length === 0) return null;
+  const songIndex = currentDayIndex % songs.length;
+  return songs[songIndex];
+};
+
+const getPlan = () => {
+  const plan = seedPlans[currentDayIndex];
+  const dynamicSong = getSongForToday();
+  if (dynamicSong) {
+    plan.song = {
+      title: dynamicSong.title,
+      source: dynamicSong.source,
+      youtubeId: dynamicSong.youtubeId,
+      sourceUrl: `https://youtube.com/watch?v=${dynamicSong.youtubeId}`,
+      credit: "YouTube"
+    };
+  }
+  return plan;
+};
+
 
 const clampDayIndex = (value) => {
   if (Number.isNaN(value)) return 0;
@@ -860,52 +892,91 @@ const setSongPlayingState = (isPlaying) => {
 };
 
 const prepareSongMedia = (song) => {
-  songAudio.pause();
   setSongPlayingState(false);
-
-  if (song.localAudioUrl) {
-    songControls.hidden = false;
-    songAudio.hidden = false;
-    songVideoWrap.hidden = true;
-    songVideo.removeAttribute("src");
-    songAudio.src = song.localAudioUrl;
-    songAudio.load();
-    songStatus.textContent = "本地音频";
-    return;
-  }
-
-  songControls.hidden = true;
+  songAudio.pause();
   songAudio.hidden = true;
-  songAudio.removeAttribute("src");
-  songAudio.load();
+  songControls.hidden = true;
   songVideoWrap.hidden = false;
-  
-  if (song.localVideoUrl) {
-    songVideo.src = song.localVideoUrl;
-    songVideo.load();
-    const subtitleTrack = document.querySelector("#songSubtitleTrack");
-    if (subtitleTrack && song.localSubtitleUrl) {
-      subtitleTrack.src = song.localSubtitleUrl;
+  songStatus.textContent = "准备播放";
+
+  if (!song.youtubeId) return;
+
+  if (typeof YT !== 'undefined' && YT.Player) {
+    if (!player) {
+      player = new YT.Player('ytPlayer', {
+        videoId: song.youtubeId,
+        playerVars: { playsinline: 1, rel: 0, hl: 'en', cc_load_policy: 1 },
+        events: {
+          onStateChange: (e) => {
+            if (e.data === YT.PlayerState.PLAYING) {
+              setSongPlayingState(true);
+              songStatus.textContent = "正在播放";
+            } else {
+              setSongPlayingState(false);
+              songStatus.textContent = "已暂停";
+            }
+          }
+        }
+      });
+    } else {
+      player.cueVideoById(song.youtubeId);
     }
   }
-  
-  songStatus.textContent = "正在播放本地视频";
 };
 
 const playSong = async () => {
   try {
-    if (!songVideoWrap.hidden && songVideo.src) {
-      await songVideo.play();
-    } else {
-      await songAudio.play();
+    if (player && typeof player.playVideo === 'function') {
+      player.playVideo();
     }
   } catch {
-    songStatus.textContent = "可点下方控件播放";
+    songStatus.textContent = "播放失败";
     setSongPlayingState(false);
   }
 };
 
+
+const renderLibrary = () => {
+  const libraryList = document.getElementById("libraryList");
+  const libraryAgeTitle = document.getElementById("libraryAgeTitle");
+  if (!libraryList || typeof songDatabase === 'undefined') return;
+  
+  const profile = getProfile();
+  let ageGroup = "0_to_18_months";
+  let ageTitle = "0-18 个月儿歌";
+  if (profile?.birthdate) {
+    const months = getAgeMonths(profile.birthdate);
+    if (months > 18 && months <= 36) {
+      ageGroup = "18_to_36_months";
+      ageTitle = "18-36 个月儿歌";
+    } else if (months > 36) {
+      ageGroup = "3_to_6_years";
+      ageTitle = "3-6 岁儿歌";
+    }
+  }
+  
+  if (libraryAgeTitle) libraryAgeTitle.textContent = ageTitle;
+  libraryList.innerHTML = "";
+  
+  const songs = songDatabase[ageGroup] || [];
+  songs.forEach((song, index) => {
+    const btn = document.createElement("button");
+    btn.className = "library-song-item";
+    btn.innerHTML = `<strong>${song.title}</strong><small>${song.source}</small>`;
+    btn.onclick = () => {
+      // Temporarily override today's song via a URL hash or global state?
+      // Simpler: just set the day index to match the song index since day = songIndex
+      // If we have more days than songs, we modulo it.
+      setDayIndex(index);
+      window.location.hash = "#today";
+    };
+    libraryList.append(btn);
+  });
+};
+
 const renderPlan = () => {
+  renderLibrary();
+
   const plan = getPlan();
   currentPhraseIndex = Number(localStorage.getItem(storageKeys.phraseIndex) || 0);
   currentPhraseIndex = Math.min(Math.max(currentPhraseIndex, 0), plan.phrases.length - 1);
@@ -1073,11 +1144,13 @@ speakCurrent.addEventListener("click", () => {
 });
 
 songPlayButton.addEventListener("click", () => {
-  const media = (!songVideoWrap.hidden && songVideo.src) ? songVideo : songAudio;
-  if (media.paused) {
-    playSong();
-  } else {
-    media.pause();
+  if (player && typeof player.getPlayerState === 'function') {
+    const state = player.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
   }
 });
 
@@ -1112,30 +1185,15 @@ songAudio.addEventListener("error", () => {
   setSongPlayingState(false);
 });
 
-songVideo.addEventListener("waiting", () => {
-  songStatus.textContent = "加载中";
-});
 
-songVideo.addEventListener("playing", () => {
-  songStatus.textContent = "正在播放";
-  setSongPlayingState(true);
-});
 
-songVideo.addEventListener("pause", () => {
-  if (songVideo.ended) return;
-  songStatus.textContent = songVideo.currentTime > 0 ? "已暂停" : "未播放";
-  setSongPlayingState(false);
-});
 
-songVideo.addEventListener("ended", () => {
-  songStatus.textContent = "播放结束";
-  setSongPlayingState(false);
-});
 
-songVideo.addEventListener("error", () => {
-  songStatus.textContent = "本地视频加载失败";
-  setSongPlayingState(false);
-});
+
+
+
+
+
 
 nextPhrase.addEventListener("click", () => {
   currentPhraseIndex = (currentPhraseIndex + 1) % getPlan().phrases.length;
@@ -1225,3 +1283,10 @@ const init = () => {
 };
 
 init();
+
+function onYouTubeIframeAPIReady() {
+  const plan = getPlan();
+  if (plan && plan.song) {
+    prepareSongMedia(plan.song);
+  }
+}

@@ -196,20 +196,22 @@
           </div>
           <audio id="songAudio" preload="none" controls></audio>
           <div class="song-video" id="songVideoWrap" hidden>
-            <video
-              id="songVideo"
-              controls
-              playsinline
-              preload="metadata"
-            >
-              <track id="songSubtitleTrack" kind="subtitles" srclang="zh" label="Bilingual" default />
-              您的浏览器不支持 HTML5 视频播放。
-            </video>
+            <div id="ytPlayer"></div>
           </div>
           <a href="#" id="songCreditLink" target="_blank" rel="noopener noreferrer">官方来源</a>
         </div>
       </section>
 
+      
+      <!-- 儿歌库 -->
+      <section class="library-card" id="library" style="display:none;">
+        <div class="section-title">
+          <span id="libraryAgeTitle">儿歌库</span>
+          <small>随心点播</small>
+        </div>
+        <div class="library-list" id="libraryList">
+        </div>
+      </section>
       <!-- 反应记录卡片 -->
       <section class="response-card" id="record">
         <div class="section-title">
@@ -287,6 +289,10 @@
           <svg><use href="#icon-note"></use></svg>
           <span>短句</span>
         </button>
+                <a href="#library" data-nav-target="library">
+          <svg><use href="#icon-music"></use></svg>
+          <span>儿歌</span>
+        </a>
         <a href="#record" data-nav-target="record">
           <svg><use href="#icon-heart"></use></svg>
           <span>记录</span>
@@ -390,6 +396,8 @@
       </div>
     </section>
 
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="songs_data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

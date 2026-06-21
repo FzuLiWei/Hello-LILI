@@ -18,6 +18,7 @@ The product is currently defined as:
 
 ## Recently Completed
 
+- Replaced 11 invalid or restricted YouTube URLs in `docs/songs/extended_songs.md` and `docs/songs/extended_youtube_urls.txt` with active video links.
 - Generated a standalone document `docs/songs/extended_youtube_urls.txt` containing only the YouTube URLs for the extended song list.
 - Curated an extended English nursery rhymes list `docs/songs/extended_songs.md` across various age groups, featuring Super Simple Songs, KidsTV123, Pinkfong, and Cocomelon.
 - Generated a standalone document `docs/songs/youtube_urls.txt` containing only the YouTube URLs, one per line.

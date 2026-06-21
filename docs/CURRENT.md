@@ -6,24 +6,22 @@ Homepage implementation phase.
 
 The project now has a mobile-first static web homepage for the 0-18 month parent assistant mode, along with an interactive visual style preview page.
 
-The local project is initialized as a git repository and synced to GitHub `FzuLiWei/Hello-LILI` on the `main` branch.
+**Phase**: Local Video Player and Files Organization
+- Successfully organized 54 video files into age-based folders.
+- Upgraded the app from YouTube embeds to a native `<video>` player supporting edge-to-edge UI and `.vtt` bilingual subtitles.
+- Python script running in background to download and generate bilingual `.vtt` for active songs.
 
 ## Active Task
 
-Validate the static MVP flow with onboarding, 14-day parent assistant content, response logging, weekly summary, compressed parent guidance, and in-page real song playback.
-
-The product is currently defined as:
-
-> A family-centered, age-aware, parent-child English growth system that starts as a parent assistant for 0-3 years and gradually evolves into child interaction, reading, and project-based English learning.
+- Generating `.vtt` subtitles.
+- Testing local playback UI and subtitles styling.
 
 ## Recently Completed
 
-- Replaced 11 invalid or restricted YouTube URLs in `docs/songs/extended_songs.md` and `docs/songs/extended_youtube_urls.txt` with active video links.
-- Generated a standalone document `docs/songs/extended_youtube_urls.txt` containing only the YouTube URLs for the extended song list.
-- Curated an extended English nursery rhymes list `docs/songs/extended_songs.md` across various age groups, featuring Super Simple Songs, KidsTV123, Pinkfong, and Cocomelon.
-- Generated a standalone document `docs/songs/youtube_urls.txt` containing only the YouTube URLs, one per line.
-- Fetched corresponding YouTube URLs for the 34 English songs in `docs/songs/儿歌.txt` and appended them to the file.
-
+- Found replacement URLs for 11 dead videos.
+- Updated `extended_songs.md` and URL lists.
+- Organized downloaded MP4s.
+- Switched to native HTML5 `<video>`.
 - Read `AGENTS.md`.
 - Confirmed required context documents were missing.
 - Created `docs/SPEC.md`.

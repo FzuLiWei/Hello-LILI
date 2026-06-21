@@ -12,6 +12,8 @@ const songSources = {
     title: "Row, Row, Row Your Boat",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[7otAJa3jui8] Row Row Row Your Boat ｜ Bedtime Lullaby ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[7otAJa3jui8] Row Row Row Your Boat ｜ Bedtime Lullaby ｜ Super Simple Songs.vtt",
     youtubeId: "7otAJa3jui8",
     sourceUrl: "https://supersimple.com/song/row-row-row-your-boat/",
     credit: "Official video",
@@ -20,6 +22,8 @@ const songSources = {
     title: "Good Morning, Mr. Rooster",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[1Ziku4FLka4] Good Morning, Mr. Rooster ｜ Greeting Song for Kids ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[1Ziku4FLka4] Good Morning, Mr. Rooster ｜ Greeting Song for Kids ｜ Super Simple Songs.vtt",
     youtubeId: "1Ziku4FLka4",
     sourceUrl: "https://supersimple.com/song/good-morning-mr-rooster/",
     credit: "Official video",
@@ -28,6 +32,8 @@ const songSources = {
     title: "Head Shoulders Knees & Toes",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[lMQcwNZVUO8] Head Shoulders Knees & Toes (Learn It) ｜ Follow Along ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[lMQcwNZVUO8] Head Shoulders Knees & Toes (Learn It) ｜ Follow Along ｜ Super Simple Songs.vtt",
     youtubeId: "lMQcwNZVUO8",
     sourceUrl: "https://supersimple.com/song/head-shoulders-knees-toes-learn-it/",
     credit: "Official video",
@@ -36,6 +42,8 @@ const songSources = {
     title: "Pat-A-Cake",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[jdg50KzCR9w] Pat-A-Cake ｜ Kids Songs ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[jdg50KzCR9w] Pat-A-Cake ｜ Kids Songs ｜ Super Simple Songs.vtt",
     youtubeId: "jdg50KzCR9w",
     sourceUrl: "https://supersimple.com/song/pat-a-cake/",
     credit: "Official video",
@@ -44,6 +52,8 @@ const songSources = {
     title: "This Is The Way",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[4XLQpRI_wOQ] This Is The Way ｜ Kids Songs ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[4XLQpRI_wOQ] This Is The Way ｜ Kids Songs ｜ Super Simple Songs.vtt",
     youtubeId: "4XLQpRI_wOQ",
     sourceUrl: "https://supersimple.com/song/this-is-the-way/",
     credit: "Official video",
@@ -52,6 +62,8 @@ const songSources = {
     title: "Twinkle Twinkle Little Star",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[yCjJyiqpAuU] Twinkle Twinkle Little Star ｜ Nursery Rhymes for Kids ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[yCjJyiqpAuU] Twinkle Twinkle Little Star ｜ Nursery Rhymes for Kids ｜ Super Simple Songs.vtt",
     youtubeId: "yCjJyiqpAuU",
     sourceUrl: "https://supersimple.com/song/twinkle-twinkle-little-star/",
     credit: "Official video",
@@ -60,6 +72,8 @@ const songSources = {
     title: "Hush Little Baby",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[f_raDpgx_3M] Hush Little Baby ｜ Lullaby for Babies ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[f_raDpgx_3M] Hush Little Baby ｜ Lullaby for Babies ｜ Super Simple Songs.vtt",
     youtubeId: "f_raDpgx_3M",
     sourceUrl: "https://supersimple.com/song/hush-little-baby/",
     credit: "Official video",
@@ -68,6 +82,8 @@ const songSources = {
     title: "The Wheels On The Bus",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[9UasekNr8KI] The Wheels On The Bus ｜ @SuperSimpleSongs Nursery Rhymes & Kids Songs ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[9UasekNr8KI] The Wheels On The Bus ｜ @SuperSimpleSongs Nursery Rhymes & Kids Songs ｜ Super Simple Songs.vtt",
     youtubeId: "9UasekNr8KI",
     sourceUrl: "https://supersimple.com/song/wheels-on-the-bus/",
     credit: "Official video",
@@ -76,6 +92,8 @@ const songSources = {
     title: "If You're Happy",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[wqvQAcloTRQ] If You're Happy ｜ Noodle & Pals ｜ Songs For Children.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[wqvQAcloTRQ] If You're Happy ｜ Noodle & Pals ｜ Songs For Children.vtt",
     youtubeId: "wqvQAcloTRQ",
     sourceUrl: "https://supersimple.com/song/if-youre-happy/",
     credit: "Official video",
@@ -84,7 +102,8 @@ const songSources = {
     title: "Open Shut Them",
     source: "Super Simple Songs",
     localAudioUrl: "",
-    youtubeId: "RNUZBHlRH4Y",
+    localVideoUrl: "songs/0_to_18_months/[rfLLlxgE8nk] Open Shut Them ｜ Noodle & Pals ｜ Songs For Children.mp4",
+    youtubeId: "rfLLlxgE8nk",
     sourceUrl: "https://supersimple.com/song/open-shut-them/",
     credit: "Official video",
   },
@@ -92,6 +111,8 @@ const songSources = {
     title: "Peekaboo",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[lVFj91Z1AfM] Peekaboo ｜ Original Children's Song ｜ Peek-a-boo Song for Kids ｜ Let's play Peek A Boo!.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[lVFj91Z1AfM] Peekaboo ｜ Original Children's Song ｜ Peek-a-boo Song for Kids ｜ Let's play Peek A Boo!.vtt",
     youtubeId: "lVFj91Z1AfM",
     sourceUrl: "https://supersimple.com/song/peekaboo/",
     credit: "Official video",
@@ -100,6 +121,8 @@ const songSources = {
     title: "This Is The Way We Get Dressed",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[1GDFa-nEzlg] This Is The Way We Get Dressed ｜ Kids Songs ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[1GDFa-nEzlg] This Is The Way We Get Dressed ｜ Kids Songs ｜ Super Simple Songs.vtt",
     youtubeId: "1GDFa-nEzlg",
     sourceUrl: "https://supersimple.com/song/this-is-the-way-we-get-dressed/",
     credit: "Official video",
@@ -108,6 +131,8 @@ const songSources = {
     title: "Driving In My Car",
     source: "Super Simple Songs",
     localAudioUrl: "",
+    localVideoUrl: "songs/0_to_18_months/[BdrZWu2dZ4c] Driving In My Car ｜ Vehicles Song ｜ Super Simple Songs.mp4",
+    localSubtitleUrl: "songs/0_to_18_months/[BdrZWu2dZ4c] Driving In My Car ｜ Vehicles Song ｜ Super Simple Songs.vtt",
     youtubeId: "BdrZWu2dZ4c",
     sourceUrl: "https://supersimple.com/song/driving-in-my-car/",
     credit: "Official video",
@@ -834,19 +859,6 @@ const setSongPlayingState = (isPlaying) => {
   );
 };
 
-const getSongEmbedUrl = (song) => {
-  if (!song.youtubeId) return "";
-  const params = new URLSearchParams({
-    rel: "0",
-    modestbranding: "1",
-    playsinline: "1",
-    cc_load_policy: "1",
-    cc_lang_pref: "en",
-    hl: "en",
-  });
-  return `https://www.youtube-nocookie.com/embed/${song.youtubeId}?${params.toString()}`;
-};
-
 const prepareSongMedia = (song) => {
   songAudio.pause();
   setSongPlayingState(false);
@@ -867,16 +879,28 @@ const prepareSongMedia = (song) => {
   songAudio.removeAttribute("src");
   songAudio.load();
   songVideoWrap.hidden = false;
-  songVideo.src = getSongEmbedUrl(song);
-  songVideo.title = `${song.title} 官方儿歌视频`;
-  songStatus.textContent = "官方视频";
+  
+  if (song.localVideoUrl) {
+    songVideo.src = song.localVideoUrl;
+    songVideo.load();
+    const subtitleTrack = document.querySelector("#songSubtitleTrack");
+    if (subtitleTrack && song.localSubtitleUrl) {
+      subtitleTrack.src = song.localSubtitleUrl;
+    }
+  }
+  
+  songStatus.textContent = "正在播放本地视频";
 };
 
 const playSong = async () => {
   try {
-    await songAudio.play();
+    if (!songVideoWrap.hidden && songVideo.src) {
+      await songVideo.play();
+    } else {
+      await songAudio.play();
+    }
   } catch {
-    songStatus.textContent = "可点下方音频控件";
+    songStatus.textContent = "可点下方控件播放";
     setSongPlayingState(false);
   }
 };
@@ -1049,10 +1073,11 @@ speakCurrent.addEventListener("click", () => {
 });
 
 songPlayButton.addEventListener("click", () => {
-  if (songAudio.paused) {
+  const media = (!songVideoWrap.hidden && songVideo.src) ? songVideo : songAudio;
+  if (media.paused) {
     playSong();
   } else {
-    songAudio.pause();
+    media.pause();
   }
 });
 
@@ -1084,6 +1109,31 @@ songAudio.addEventListener("ended", () => {
 
 songAudio.addEventListener("error", () => {
   songStatus.textContent = "本地音频加载失败";
+  setSongPlayingState(false);
+});
+
+songVideo.addEventListener("waiting", () => {
+  songStatus.textContent = "加载中";
+});
+
+songVideo.addEventListener("playing", () => {
+  songStatus.textContent = "正在播放";
+  setSongPlayingState(true);
+});
+
+songVideo.addEventListener("pause", () => {
+  if (songVideo.ended) return;
+  songStatus.textContent = songVideo.currentTime > 0 ? "已暂停" : "未播放";
+  setSongPlayingState(false);
+});
+
+songVideo.addEventListener("ended", () => {
+  songStatus.textContent = "播放结束";
+  setSongPlayingState(false);
+});
+
+songVideo.addEventListener("error", () => {
+  songStatus.textContent = "本地视频加载失败";
   setSongPlayingState(false);
 });
 

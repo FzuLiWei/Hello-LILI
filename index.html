@@ -196,13 +196,15 @@
           </div>
           <audio id="songAudio" preload="none" controls></audio>
           <div class="song-video" id="songVideoWrap" hidden>
-            <iframe
+            <video
               id="songVideo"
-              title="官方儿歌视频"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              controls
+              playsinline
+              preload="metadata"
+            >
+              <track id="songSubtitleTrack" kind="subtitles" srclang="zh" label="Bilingual" default />
+              您的浏览器不支持 HTML5 视频播放。
+            </video>
           </div>
           <a href="#" id="songCreditLink" target="_blank" rel="noopener noreferrer">官方来源</a>
         </div>

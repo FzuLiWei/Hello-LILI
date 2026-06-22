@@ -891,6 +891,41 @@ const setSongPlayingState = (isPlaying) => {
   );
 };
 
+
+let subtitleInterval;
+const overlay = document.getElementById('customSubtitleOverlay');
+const subEn = document.getElementById('customSubtitleEn');
+const subZh = document.getElementById('customSubtitleZh');
+
+const stopSubtitleSync = () => {
+  if (subtitleInterval) clearInterval(subtitleInterval);
+  if (overlay) overlay.style.display = 'none';
+};
+
+const startSubtitleSync = (youtubeId) => {
+  if (subtitleInterval) clearInterval(subtitleInterval);
+  const subtitles = typeof customSubtitlesData !== 'undefined' ? customSubtitlesData[youtubeId] : null;
+  
+  subtitleInterval = setInterval(() => {
+    if (!player || typeof player.getCurrentTime !== 'function') return;
+    const currentTime = player.getCurrentTime();
+    
+    if (subtitles && subtitles.length > 0) {
+      const cue = subtitles.find(c => currentTime >= c.start && currentTime < c.end);
+      if (cue) {
+        subEn.textContent = cue.en;
+        subZh.textContent = cue.zh;
+        overlay.style.display = 'flex';
+      } else {
+        overlay.style.display = 'none';
+      }
+    } else {
+      // If no subtitles available, show a fallback or just hide
+      overlay.style.display = 'none';
+    }
+  }, 100);
+};
+
 const prepareSongMedia = (song) => {
   setSongPlayingState(false);
   songAudio.pause();
@@ -898,6 +933,7 @@ const prepareSongMedia = (song) => {
   songControls.hidden = true;
   songVideoWrap.hidden = false;
   songStatus.textContent = "准备播放";
+  stopSubtitleSync();
 
   if (!song.youtubeId) return;
 
@@ -905,15 +941,17 @@ const prepareSongMedia = (song) => {
     if (!player) {
       player = new YT.Player('ytPlayer', {
         videoId: song.youtubeId,
-        playerVars: { playsinline: 1, rel: 0, hl: 'en', cc_load_policy: 1 },
+        playerVars: { playsinline: 1, rel: 0, hl: 'en', cc_load_policy: 0 },
         events: {
           onStateChange: (e) => {
             if (e.data === YT.PlayerState.PLAYING) {
               setSongPlayingState(true);
               songStatus.textContent = "正在播放";
+              startSubtitleSync(song.youtubeId);
             } else {
               setSongPlayingState(false);
               songStatus.textContent = "已暂停";
+              stopSubtitleSync();
             }
           }
         }
@@ -923,6 +961,7 @@ const prepareSongMedia = (song) => {
     }
   }
 };
+
 
 const playSong = async () => {
   try {

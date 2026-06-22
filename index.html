@@ -195,8 +195,12 @@
             <span id="songStatus" aria-live="polite">未播放</span>
           </div>
           <audio id="songAudio" preload="none" controls></audio>
-          <div class="song-video" id="songVideoWrap" hidden>
+          <div class="song-video" id="songVideoWrap" hidden style="position: relative;">
             <div id="ytPlayer"></div>
+            <div id="customSubtitleOverlay" class="custom-subtitle-overlay" style="display: none;">
+              <div id="customSubtitleEn" class="subtitle-en"></div>
+              <div id="customSubtitleZh" class="subtitle-zh"></div>
+            </div>
           </div>
           <a href="#" id="songCreditLink" target="_blank" rel="noopener noreferrer">官方来源</a>
         </div>
@@ -398,6 +402,7 @@
 
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="songs_data.js"></script>
+    <script src="subtitles_data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

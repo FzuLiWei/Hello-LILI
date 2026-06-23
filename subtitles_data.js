@@ -1,4 +1,4 @@
-const customSubtitlesData = {
+window.customSubtitlesData = {
   // 1. This Is The Way We Get Dressed
   "1GDFa-nEzlg": [
     { start: 0, end: 12, en: "This is the way we get dressed", zh: "这就是我们穿衣服的方法" },

@@ -1,4 +1,4 @@
-const songDatabase = {
+window.songDatabase = {
   "0_to_18_months": [
     {
       "youtubeId": "1GDFa-nEzlg",

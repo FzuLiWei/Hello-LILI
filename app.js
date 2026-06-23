@@ -616,7 +616,7 @@ const getSongForToday = () => {
     if (months > 18 && months <= 36) ageGroup = "18_to_36_months";
     else if (months > 36) ageGroup = "3_to_6_years";
   }
-  const db = typeof songDatabase !== 'undefined' ? songDatabase : {};
+  const db = typeof window.songDatabase !== 'undefined' ? window.songDatabase : {};
   const songs = db[ageGroup] || [];
   if (songs.length === 0) return null;
   const songIndex = currentDayIndex % songs.length;
@@ -690,7 +690,7 @@ const setActiveNav = (target) => {
 
 const syncNavFromHash = () => {
   const target = window.location.hash.replace("#", "") || "today";
-  if (["today", "record", "summary", "parent"].includes(target)) {
+  if (["today", "record", "summary", "parent", "library"].includes(target)) {
     setActiveNav(target);
   }
 };
@@ -904,7 +904,7 @@ const stopSubtitleSync = () => {
 
 const startSubtitleSync = (youtubeId) => {
   if (subtitleInterval) clearInterval(subtitleInterval);
-  const subtitles = typeof customSubtitlesData !== 'undefined' ? customSubtitlesData[youtubeId] : null;
+  const subtitles = typeof window.customSubtitlesData !== 'undefined' ? window.customSubtitlesData[youtubeId] : null;
   
   subtitleInterval = setInterval(() => {
     if (!player || typeof player.getCurrentTime !== 'function') return;

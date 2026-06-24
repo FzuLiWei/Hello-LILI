@@ -1,32 +1,20 @@
 # Current State
 
 ## Current Phase
-
-Homepage implementation phase.
-
-The project now has a mobile-first static web homepage for the 0-18 month parent assistant mode, along with an interactive visual style preview page.
-
-**Phase**: Local Video Player and Files Organization
-- Successfully organized 54 video files into age-based folders.
-- Upgraded the app from YouTube embeds to a native `<video>` player supporting edge-to-edge UI and `.vtt` bilingual subtitles.
-- Python script running in background to download and generate bilingual `.vtt` for active songs.
+IMPLEMENTATION -> VERIFY
 
 ## Active Task
-
-- Generating `.vtt` subtitles.
-- Testing local playback UI and subtitles styling.
+- (Completed) 彻底毁灭原先基于 YouTube IFrame 存在跨域锁死问题的 UI。
+- (Completed) 重构为纯本地、无边界、带有原生字幕监听的 HTML5 Video 播放器。
 
 ## Recently Completed
-
-- Found replacement URLs for 11 dead videos.
-- Updated `extended_songs.md` and URL lists.
-- Organized downloaded MP4s.
-- Switched to native HTML5 `<video>`.
-- Read `AGENTS.md`.
-- Confirmed required context documents were missing.
-- Created `docs/SPEC.md`.
-- Created `docs/TASKS.md`.
-- Created `docs/CURRENT.md`.
+- 移除了所有复杂的 `<section>` 路由。
+- 使用 `python` 重新扫描了 `songs` 目录并生成了带有本地路径的 `songs_data.js`。
+- 新增了一个极致简单的 `index.html`，只保留选歌和视频。
+- 使用 `videoPlayer.ontimeupdate` 替代定时器，实现原生的精确字幕同步。
+- 放大本地视频为满屏播放，移除外框缩小感。
+- 放大自定义双语字幕层，英文黄字、中文白字，移动端也保持大字号。
+- 为 54 首本地儿歌补齐字幕路径：3 首使用逐句双语字幕，51 首使用双语学习字幕兜底。
 - Defined MVP as a 0-3 parent-facing English enlightenment assistant.
 - Captured long-term roadmap from infancy to 12 years old.
 - Added detailed 0-18 month parent assistant mode task list to `docs/TASKS.md`.
@@ -66,6 +54,7 @@ The project now has a mobile-first static web homepage for the 0-18 month parent
 - Weekly summary is derived only from local daily completion and response data; it does not yet summarize song/book usage separately.
 - Compressed parent guidance and in-page official song video playback still need real parent readability, device playback, subtitle availability, and usability review.
 - YouTube caption display depends on the embedded video's available caption tracks and the YouTube player; the app requests English captions but cannot guarantee every video shows them automatically.
+- 目前并非所有本地歌曲都有逐句歌词字幕；缺逐句数据的歌曲显示双语学习字幕，需要后续用合法字幕文件逐步替换。
 - Codex Netlify connector OAuth callback is still blocked by the current Windows `codex://` protocol issue.
 - Netlify production deploys automatically from GitHub `FzuLiWei/Hello-LILI` after pushes to `main`.
 - Future task close-out should include GitHub commit, push result, Netlify deploy verification, and the live URL.
@@ -76,4 +65,4 @@ Validate the completed parent-assistant MVP slice:
 
 1. Test the full flow on physical iPhone and Android devices.
 2. Review the 14-day phrases, songs, books, and tasks for natural English and parent usability.
-3. Review the compressed guidance cards and in-page song playback, including whether requested English captions appear on real devices.
+3. Review the local full-screen song player on physical devices, especially video cropping, subtitle size, and whether learning-caption fallback is acceptable before full timed captions are prepared.

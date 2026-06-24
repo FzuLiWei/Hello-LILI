@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Hello LILI - Local Video Player</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,6 +14,7 @@
       <select id="songSelect">
         <option value="">请选择儿歌 (Select a song)</option>
       </select>
+      <div id="subtitleStatus">每首儿歌都有大号双语字幕</div>
     </div>
     
     <!-- Edge-to-Edge Local Video Player -->
@@ -20,7 +22,7 @@
     
     <!-- Custom Bilingual Subtitle Overlay -->
     <div id="subtitleOverlay" style="display:none;">
-      <div id="subEn" class="sub-en"></div><br>
+      <div id="subEn" class="sub-en"></div>
       <div id="subZh" class="sub-zh"></div>
     </div>
   </div>

@@ -5,13 +5,16 @@ body, html {
   height: 100%;
   background-color: #000;
   overflow: hidden;
+  overscroll-behavior: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 #playerContainer {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,19 +23,25 @@ body, html {
 
 /* Edge-to-Edge video */
 #videoPlayer {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Ensures the whole video is visible, no cropping */
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center center;
   background-color: #000;
 }
 
 /* Controls Dropdown Overlay */
 #controls {
   position: absolute;
-  top: 0;
+  top: env(safe-area-inset-top, 0);
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 12px 14px 34px;
   background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
   box-sizing: border-box;
   z-index: 10;
@@ -51,9 +60,18 @@ body, html {
   font-weight: bold;
 }
 
+#subtitleStatus {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.85);
+}
+
 /* Hide controls if hovering away or not interacting (Optional refinement) */
 #playerContainer.playing #controls {
-  opacity: 0.2;
+  opacity: 0.72;
 }
 #playerContainer.playing #controls:hover,
 #playerContainer.playing #controls:focus-within {
@@ -63,52 +81,93 @@ body, html {
 /* Custom Subtitle Overlay */
 #subtitleOverlay {
   position: absolute;
-  bottom: 12%; /* Keep it above the native video controls */
-  width: 100%;
+  left: 50%;
+  bottom: calc(9% + env(safe-area-inset-bottom, 0px));
+  width: min(96vw, 1100px);
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-align: center;
-  pointer-events: none; /* Let clicks pass through to the video */
+  pointer-events: none;
   z-index: 20;
 }
 
 .sub-en {
   color: #FFFF00; /* Bright Yellow */
-  font-size: 36px; /* VERY LARGE */
+  max-width: 100%;
+  font-size: clamp(42px, 6.5vw, 72px);
   font-weight: 900;
   /* Thick black stroke effect for maximum readability */
   text-shadow: 
-    3px 3px 0 #000, 
+    4px 4px 0 #000,
     -1px -1px 0 #000, 
     1px -1px 0 #000, 
     -1px 1px 0 #000,
     1px 1px 0 #000,
     0px 2px 5px rgba(0,0,0,0.8);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.72);
   display: inline-block;
-  padding: 5px 15px;
-  border-radius: 10px;
-  margin-bottom: 8px;
-  line-height: 1.2;
+  padding: 7px 18px 9px;
+  border-radius: 14px;
+  line-height: 1.08;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .sub-zh {
   color: #FFFFFF; /* Pure White */
-  font-size: 26px; /* LARGE */
-  font-weight: bold;
+  max-width: 100%;
+  font-size: clamp(28px, 4.6vw, 48px);
+  font-weight: 900;
   text-shadow: 
-    2px 2px 0 #000, 
+    3px 3px 0 #000,
     -1px -1px 0 #000, 
     1px -1px 0 #000, 
     -1px 1px 0 #000,
     1px 1px 0 #000;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.72);
   display: inline-block;
-  padding: 5px 15px;
-  border-radius: 8px;
-  line-height: 1.2;
+  padding: 6px 16px 8px;
+  border-radius: 12px;
+  line-height: 1.12;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+#subtitleOverlay.is-learning .sub-en,
+#subtitleOverlay.is-learning .sub-zh {
+  background-color: rgba(0, 0, 0, 0.58);
 }
 
 /* Mobile optimizations */
 @media (max-width: 600px) {
-  .sub-en { font-size: 26px; }
-  .sub-zh { font-size: 18px; }
+  #controls {
+    padding: 10px 10px 30px;
+  }
+
+  #songSelect {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #subtitleStatus {
+    font-size: 12px;
+  }
+
+  #subtitleOverlay {
+    bottom: calc(10% + env(safe-area-inset-bottom, 0px));
+    width: 94vw;
+    gap: 7px;
+  }
+
+  .sub-en {
+    font-size: clamp(34px, 9.2vw, 46px);
+    padding: 7px 12px 9px;
+  }
+
+  .sub-zh {
+    font-size: clamp(24px, 6.8vw, 34px);
+    padding: 6px 12px 8px;
+  }
 }

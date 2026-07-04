@@ -145,7 +145,7 @@ TTS limitation:
 - Timed subtitle import should use one structured subtitle file per song under `subtitles/` when available; the app must expose whether each song has imported timed captions or is still pending import.
 - Subtitle source tracking should stay separate from runtime subtitle completion: `subtitles/sources.js` records candidates and source review status, while `subtitles/catalog.js` only lists timed cue files that the app can actually load.
 - Browser TTS, low-quality instrumental clips, and low-confidence open audio sources should not be used as the primary song experience.
-- Temporary web deployment can store compressed local MP4 files in the GitHub repository and serve them through Netlify, but every MP4 under `songs/` must stay below 50 MB and should preferably stay in the 5-20 MB range. Longer compilation videos should be trimmed into child-appropriate single-song segments before commit.
+- Temporary web deployment can store compressed local MP4 files in the GitHub repository and serve them through Netlify, but every MP4 under `songs/` must stay below 10 MB for Netlify deployment reliability. Longer compilation videos should be trimmed into child-appropriate single-song segments before commit.
 - Original full-size local media backups should stay outside version control, such as under ignored `scratch/` folders. The repository should track code, subtitles, song metadata, and compressed deployable media only.
 
 Current local data model:

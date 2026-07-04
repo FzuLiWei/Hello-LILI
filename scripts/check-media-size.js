@@ -3,8 +3,8 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SONGS_DIR = path.join(ROOT, "songs");
-const MAX_MB = Number(process.env.MAX_MEDIA_MB || 50);
-const WARN_MB = Number(process.env.WARN_MEDIA_MB || 20);
+const MAX_MB = Number(process.env.MAX_MEDIA_MB || 10);
+const WARN_MB = Number(process.env.WARN_MEDIA_MB || 9);
 const BYTES_PER_MB = 1024 * 1024;
 
 function walk(dir, results = []) {

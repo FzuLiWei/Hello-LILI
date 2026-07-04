@@ -7,7 +7,7 @@ Compressed local media packaging for GitHub and Netlify
 ## Active Task
 
 - Publish the compressed local-media song player build through GitHub and Netlify.
-- Keep every deployable MP4 under `songs/` below 50 MB; prefer 5-20 MB per song.
+- Keep every deployable MP4 under `songs/` below 10 MB for Netlify reliability.
 - Preserve full-size local source media only in ignored backup folders such as `scratch/`.
 
 ## Recently Completed
@@ -22,7 +22,8 @@ Compressed local media packaging for GitHub and Netlify
 - Fixed the local-video subtitle overlay so large bilingual captions render above the native video layer on desktop and mobile viewports.
 - Replaced the 118.46 MB `The Itsy Bitsy Spider + More` local compilation with a 145-second, 4.43 MB deployable `The Itsy Bitsy Spider` clip while keeping the original under `scratch/original-songs-before-compression-20260704`.
 - Trimmed `subtitles/TbKI-jjpPx8.json` to the 145-second local clip and updated the displayed song title.
-- Added `scripts/check-media-size.js`; current local media validation reports 54 MP4 files, 319.27 MB total, no files above 20 MB, and no files above the 50 MB limit.
+- Added `scripts/check-media-size.js`; current local media validation reports 54 MP4 files, 288.46 MB total, no files above the 9 MB warning threshold, and no files above the 10 MB Netlify safety limit.
+- After Netlify rejected the first pushed media deploy for commit `3b23f92`, recompressed the 9 MP4 files above 9 MB so the largest deployable video is now 8.87 MB.
 - Cleaned `.gitignore` so compressed `songs/` media can be committed while `.netlify/`, `node_modules/`, `scratch/`, and temporary compression outputs stay ignored.
 
 ## Known Issues
@@ -36,6 +37,6 @@ Compressed local media packaging for GitHub and Netlify
 
 ## Next Step
 
-1. Commit only the task-related app, subtitle, script, and compressed `songs/` files.
-2. Push `main`, wait for the matching Netlify production deploy, and verify production HTTP 200 plus visible local video playback/subtitles.
+1. Commit and push the tightened Netlify-safe media compression update.
+2. Wait for the matching Netlify production deploy, and verify production HTTP 200 plus visible local video playback/subtitles.
 3. After this media publish is verified, restore the parent-assistant homepage as the main entry and keep the song player as a separate route or tab.

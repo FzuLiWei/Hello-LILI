@@ -9,7 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentSubtitles = null;
   let currentSubtitleMode = 'none';
+  let currentSong = null;
+  let learningSubtitleTimer = null;
+  let learningSubtitleStartedAt = 0;
   const songsByPath = new Map();
+  const subtitleCatalog = window.subtitleCatalog || {};
+  const importedSubtitleCatalog = subtitleCatalog.imported || {};
+  const exactSubtitleData = window.customSubtitlesData || {};
+
+  const toLocalMediaUrl = (localPath) => String(localPath || "")
+    .split("/")
+    .map(segment => encodeURIComponent(segment))
+    .join("/");
 
   const titleTranslations = {
     "1GDFa-nEzlg": "穿衣歌",
@@ -125,29 +136,133 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   };
 
-  const buildLearningSubtitles = (song) => {
+  const getSongFocus = (song) => {
+    const title = normalizeTitle(song.title);
+    const lowerTitle = title.toLowerCase();
+
+    if (/sleep|bed|hush|lullaby|dream|nap|rock|twinkle/.test(lowerTitle)) {
+      return {
+        en: "Focus: soft listening",
+        zh: "重点：安静听、轻轻哼",
+      };
+    }
+
+    if (/bath|wash|brush|clean|dressed|get dressed|way/.test(lowerTitle)) {
+      return {
+        en: "Focus: daily routine words",
+        zh: "重点：日常动作词",
+      };
+    }
+
+    if (/finger|thumbkin|pat-a-cake|open shut|itsy|spider|pinocchio/.test(lowerTitle)) {
+      return {
+        en: "Focus: hand actions",
+        zh: "重点：手部动作",
+      };
+    }
+
+    if (/farm|animal|duck|bear|teddy|hear|shark|sheep|macdonald/.test(lowerTitle)) {
+      return {
+        en: "Focus: animals and sounds",
+        zh: "重点：动物和声音",
+      };
+    }
+
+    if (/wheels|bus|car|train|walk|foot|fall|jungle|bear hunt|shake|row/.test(lowerTitle)) {
+      return {
+        en: "Focus: movement and rhythm",
+        zh: "重点：动作和节奏",
+      };
+    }
+
+    if (/color|blue|shape|abc|phonics|say it|vegetables|broccoli/.test(lowerTitle)) {
+      return {
+        en: "Focus: one clear word",
+        zh: "重点：一个清楚的词",
+      };
+    }
+
+    return {
+      en: "Focus: listen and repeat",
+      zh: "重点：先听，再重复",
+    };
+  };
+
+  const buildLearningSubtitlePattern = (song) => {
     const title = normalizeTitle(song.title);
     const hint = getSongHint(song);
+    const focus = getSongFocus(song);
+    const zhTitle = titleTranslations[song.youtubeId] || `儿歌：${title}`;
+
     return [
       {
-        start: 0,
-        end: 4,
         en: title,
-        zh: titleTranslations[song.youtubeId] || `儿歌：${title}`,
+        zh: zhTitle,
         type: "learning",
       },
       {
-        start: 4,
-        end: Number.POSITIVE_INFINITY,
+        en: "Listen first. No need to translate every word.",
+        zh: "先听声音，不用每个词都翻译。",
+        type: "learning",
+      },
+      {
         en: hint.en,
         zh: hint.zh,
+        type: "learning",
+      },
+      {
+        en: focus.en,
+        zh: focus.zh,
+        type: "learning",
+      },
+      {
+        en: "Sing one tiny part with your baby.",
+        zh: "只陪宝宝跟一小段就好。",
+        type: "learning",
+      },
+      {
+        en: "Pause, smile, and repeat softly.",
+        zh: "停一下、笑一笑、轻轻重复。",
+        type: "learning",
+      },
+      {
+        en: "Let the song play. Keep the subtitles big.",
+        zh: "让儿歌继续播放，大字幕一直保留。",
         type: "learning",
       },
     ];
   };
 
+  const buildLearningSubtitles = (song, duration) => {
+    const pattern = buildLearningSubtitlePattern(song);
+    const targetDuration = Number.isFinite(duration)
+      ? Math.min(Math.max(Math.ceil(duration) + 8, 120), 3600)
+      : 3600;
+    const cues = [];
+    let start = 0;
+
+    while (start < targetDuration) {
+      pattern.forEach((cue, index) => {
+        const cueDuration = index === 0 && start === 0 ? 5 : 8;
+        cues.push({
+          ...cue,
+          start,
+          end: start + cueDuration,
+        });
+        start += cueDuration;
+      });
+    }
+
+    if (cues.length > 0) {
+      cues[cues.length - 1].end = Number.POSITIVE_INFINITY;
+    }
+
+    return cues;
+  };
+
   const renderSubtitleCue = (cue) => {
     if (!cue) {
+      subtitleOverlay.classList.remove('is-visible');
       subtitleOverlay.style.display = 'none';
       return;
     }
@@ -155,15 +270,120 @@ document.addEventListener('DOMContentLoaded', () => {
     subEn.textContent = cue.en;
     subZh.textContent = cue.zh;
     subtitleOverlay.classList.toggle('is-learning', cue.type === 'learning');
-    subtitleOverlay.style.display = 'flex';
+    subtitleOverlay.style.display = '';
+    subtitleOverlay.classList.add('is-visible');
   };
 
-  const updateSubtitleStatus = (mode) => {
+  const findSubtitleCue = (time) => {
+    if (!currentSubtitles) return null;
+    return currentSubtitles.find(cue => time >= cue.start && time < cue.end) || null;
+  };
+
+  const renderSubtitleAt = (time) => {
+    renderSubtitleCue(findSubtitleCue(time));
+  };
+
+  const stopLearningSubtitleTimer = () => {
+    if (learningSubtitleTimer) {
+      window.clearInterval(learningSubtitleTimer);
+      learningSubtitleTimer = null;
+    }
+  };
+
+  const startLearningSubtitleTimer = () => {
+    stopLearningSubtitleTimer();
+    learningSubtitleStartedAt = window.performance.now();
+    learningSubtitleTimer = window.setInterval(() => {
+      if (currentSubtitleMode !== 'pending' || !currentSubtitles) {
+        stopLearningSubtitleTimer();
+        return;
+      }
+      const elapsed = (window.performance.now() - learningSubtitleStartedAt) / 1000;
+      renderSubtitleAt(elapsed);
+    }, 1000);
+  };
+
+  const normalizeImportedCues = (payload) => {
+    if (Array.isArray(payload)) return payload;
+    if (payload && Array.isArray(payload.cues)) return payload.cues;
+    return null;
+  };
+
+  const loadTimedSubtitles = async (song) => {
+    const youtubeId = song && song.youtubeId;
+    if (!youtubeId) return null;
+
+    if (exactSubtitleData[youtubeId]) {
+      return exactSubtitleData[youtubeId];
+    }
+
+    const catalogEntry = importedSubtitleCatalog[youtubeId];
+    if (!catalogEntry || !catalogEntry.file) {
+      return null;
+    }
+
+    if (catalogEntry.cues) {
+      return catalogEntry.cues;
+    }
+
+    try {
+      const response = await fetch(catalogEntry.file, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Subtitle file HTTP ${response.status}`);
+      }
+      const payload = await response.json();
+      const cues = normalizeImportedCues(payload);
+      if (!cues) {
+        throw new Error("Subtitle file does not contain a cues array");
+      }
+      catalogEntry.cues = cues;
+      return cues;
+    } catch (error) {
+      console.warn(`Failed to load timed subtitles for ${youtubeId}:`, error);
+      return null;
+    }
+  };
+
+  const getSubtitleState = (song) => {
+    const youtubeId = song && song.youtubeId;
+    const catalogEntry = youtubeId ? importedSubtitleCatalog[youtubeId] : null;
+    const hasTimedSubtitles = Boolean(
+      youtubeId &&
+      (exactSubtitleData[youtubeId] || (catalogEntry && catalogEntry.status === "timed" && catalogEntry.file))
+    );
+
+    if (hasTimedSubtitles) {
+      return {
+        mode: "exact",
+        optionLabel: "逐句歌词字幕",
+        statusText: "逐句大号双语字幕",
+        catalogEntry,
+      };
+    }
+
+    return {
+      mode: "pending",
+      optionLabel: "大字幕已覆盖·逐句待导入",
+      statusText: "大号中英学习字幕 - 逐句歌词待导入",
+      catalogEntry: null,
+    };
+  };
+
+  const updateSubtitleStatus = (mode, detailText) => {
     if (!subtitleStatus) return;
-    subtitleStatus.textContent =
-      mode === 'exact'
-        ? '逐句大号双语字幕'
-        : '大号双语学习字幕';
+    if (detailText) {
+      subtitleStatus.textContent = detailText;
+      return;
+    }
+    if (mode === 'exact') {
+      subtitleStatus.textContent = '逐句大号双语字幕';
+      return;
+    }
+    if (mode === 'pending') {
+      subtitleStatus.textContent = '大号中英学习字幕 - 逐句歌词待导入';
+      return;
+    }
+    subtitleStatus.textContent = '逐句字幕状态待选择';
   };
 
   // Populate Dropdown
@@ -187,10 +407,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const option = document.createElement('option');
         option.value = song.localPath;
         songsByPath.set(song.localPath, song);
-        // Check if we have subtitles for this song
-        const hasExactSub = window.customSubtitlesData && window.customSubtitlesData[song.youtubeId];
-        option.textContent = `${song.title} [${hasExactSub ? '逐句双语字幕' : '双语学习字幕'}]`;
+        const subtitleState = getSubtitleState(song);
+        option.textContent = `${song.title} [${subtitleState.optionLabel}]`;
         option.dataset.ytid = song.youtubeId;
+        option.dataset.subtitleMode = subtitleState.mode;
         optgroup.appendChild(option);
         songCount++;
       });
@@ -202,17 +422,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorOpt = document.createElement('option');
     errorOpt.textContent = "未发现本地视频！请检查 songs 目录。";
     songSelect.appendChild(errorOpt);
+  } else if (subtitleStatus) {
+    const timedCount = Object.values(db)
+      .flat()
+      .filter(song => getSubtitleState(song).mode === 'exact').length;
+    subtitleStatus.textContent = `大号中英字幕 ${songCount}/${songCount} 已覆盖；逐句歌词 ${timedCount}/${songCount}`;
   }
 
   // Handle Selection
-  songSelect.addEventListener('change', (e) => {
+  songSelect.addEventListener('change', async (e) => {
     const path = e.target.value;
     if (!path) {
       videoPlayer.pause();
       currentSubtitles = null;
       currentSubtitleMode = 'none';
+      currentSong = null;
+      stopLearningSubtitleTimer();
+      subtitleOverlay.classList.remove('is-visible');
       subtitleOverlay.style.display = 'none';
-      if (subtitleStatus) subtitleStatus.textContent = '每首儿歌都有大号双语字幕';
+      const timedCount = Object.values(db)
+        .flat()
+        .filter(song => getSubtitleState(song).mode === 'exact').length;
+      if (subtitleStatus) subtitleStatus.textContent = `大号中英字幕 ${songCount}/${songCount} 已覆盖；逐句歌词 ${timedCount}/${songCount}`;
       return;
     }
 
@@ -222,24 +453,31 @@ document.addEventListener('DOMContentLoaded', () => {
       youtubeId: ytid,
       title: option.textContent.replace(/\s*\[[^\]]+\]\s*$/, ''),
     };
+    currentSong = song;
 
     // Load and play video
-    videoPlayer.src = path;
+    videoPlayer.src = toLocalMediaUrl(path);
     videoPlayer.play().catch(err => {
       console.log("Auto-play prevented or failed:", err);
     });
 
-    // Check subtitles
-    if (window.customSubtitlesData && window.customSubtitlesData[ytid]) {
-      currentSubtitles = window.customSubtitlesData[ytid];
+    const subtitleState = getSubtitleState(song);
+    const timedSubtitles = await loadTimedSubtitles(song);
+    if (timedSubtitles) {
+      currentSubtitles = timedSubtitles;
       currentSubtitleMode = 'exact';
-      updateSubtitleStatus('exact');
-      renderSubtitleCue(currentSubtitles.find(c => videoPlayer.currentTime >= c.start && videoPlayer.currentTime < c.end));
+      stopLearningSubtitleTimer();
+      updateSubtitleStatus('exact', '逐句大号双语字幕');
+      renderSubtitleAt(videoPlayer.currentTime);
     } else {
-      currentSubtitles = buildLearningSubtitles(song);
-      currentSubtitleMode = 'learning';
-      updateSubtitleStatus('learning');
+      currentSubtitles = buildLearningSubtitles(song, videoPlayer.duration);
+      currentSubtitleMode = 'pending';
+      const pendingStatusText = subtitleState.mode === 'exact'
+        ? '逐句字幕文件加载失败 - 改用大号中英学习字幕'
+        : subtitleState.statusText;
+      updateSubtitleStatus('pending', pendingStatusText);
       renderSubtitleCue(currentSubtitles[0]);
+      startLearningSubtitleTimer();
     }
   });
 
@@ -256,14 +494,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!currentSubtitles) return;
     
     const t = videoPlayer.currentTime;
-    const cue = currentSubtitles.find(c => t >= c.start && t < c.end);
-    
-    renderSubtitleCue(cue);
+    if (currentSubtitleMode === 'pending' && t === 0) return;
+    renderSubtitleAt(t);
   });
 
   videoPlayer.addEventListener('loadedmetadata', () => {
-    if (currentSubtitleMode === 'learning' && currentSubtitles) {
+    if (currentSubtitleMode === 'pending' && currentSong) {
+      currentSubtitles = buildLearningSubtitles(currentSong, videoPlayer.duration);
       renderSubtitleCue(currentSubtitles[0]);
+      startLearningSubtitleTimer();
     }
   });
 });

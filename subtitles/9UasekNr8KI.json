@@ -1,0 +1,278 @@
+{
+  "youtubeId": "9UasekNr8KI",
+  "title": "The Wheels On The Bus",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 0.552,
+      "end": 3.219,
+      "en": "(chiming music)",
+      "zh": "铃声音乐"
+    },
+    {
+      "start": 5.981,
+      "end": 8.564,
+      "en": "(cars revving)",
+      "zh": "汽车发动声"
+    },
+    {
+      "start": 10.856,
+      "end": 13.606,
+      "en": "(charming music)",
+      "zh": "轻快的音乐"
+    },
+    {
+      "start": 26.655,
+      "end": 29.832,
+      "en": "♪ The wheels on the bus go round and round ♪",
+      "zh": "公交车的轮子转呀转"
+    },
+    {
+      "start": 29.832,
+      "end": 31.261,
+      "en": "♪ Round and round ♪",
+      "zh": "转呀转"
+    },
+    {
+      "start": 31.261,
+      "end": 32.24,
+      "en": "♪ Round and round ♪",
+      "zh": "转呀转"
+    },
+    {
+      "start": 32.24,
+      "end": 35.461,
+      "en": "♪ The wheels on the bus go round and round ♪",
+      "zh": "公交车的轮子转呀转"
+    },
+    {
+      "start": 35.461,
+      "end": 38.31,
+      "en": "♪ Round and round ♪",
+      "zh": "转呀转"
+    },
+    {
+      "start": 38.31,
+      "end": 40.893,
+      "en": "(cheery music)",
+      "zh": "欢快的音乐"
+    },
+    {
+      "start": 43.555,
+      "end": 46.759,
+      "en": "♪ The door on the bus goes open and shut ♪",
+      "zh": "公交车的门开开关关"
+    },
+    {
+      "start": 46.759,
+      "end": 48.2,
+      "en": "♪ Open and shut ♪",
+      "zh": "开开关关"
+    },
+    {
+      "start": 48.2,
+      "end": 49.229,
+      "en": "♪ Open and shut ♪",
+      "zh": "开开关关"
+    },
+    {
+      "start": 49.229,
+      "end": 52.439,
+      "en": "♪ The door on the bus goes open and shut ♪",
+      "zh": "公交车的门开开关关"
+    },
+    {
+      "start": 52.439,
+      "end": 55.301,
+      "en": "♪ Open and shut ♪",
+      "zh": "开开关关"
+    },
+    {
+      "start": 55.301,
+      "end": 57.884,
+      "en": "(cheery music)",
+      "zh": "欢快的音乐"
+    },
+    {
+      "start": 60.55,
+      "end": 63.682,
+      "en": "♪ The wipers on the bus go swish, swish, swish ♪",
+      "zh": "公交车的雨刷刷，刷，刷"
+    },
+    {
+      "start": 63.682,
+      "end": 65.043,
+      "en": "♪ Swish, swish, swish ♪",
+      "zh": "刷，刷，刷"
+    },
+    {
+      "start": 65.043,
+      "end": 66.15,
+      "en": "♪ Swish, swish, swish ♪",
+      "zh": "刷，刷，刷"
+    },
+    {
+      "start": 66.15,
+      "end": 69.331,
+      "en": "♪ The wipers on the bus go swish, swish, swish ♪",
+      "zh": "公交车的雨刷刷，刷，刷"
+    },
+    {
+      "start": 69.331,
+      "end": 72.181,
+      "en": "♪ Swish, swish, swish ♪",
+      "zh": "刷，刷，刷"
+    },
+    {
+      "start": 72.181,
+      "end": 74.764,
+      "en": "(cheery music)",
+      "zh": "欢快的音乐"
+    },
+    {
+      "start": 77.481,
+      "end": 80.67099999999999,
+      "en": "♪ The horn on the bus goes beep, beep, beep ♪",
+      "zh": "公交车的喇叭嘟，嘟，嘟"
+    },
+    {
+      "start": 80.67099999999999,
+      "end": 82.072,
+      "en": "♪ Beep, beep, beep ♪",
+      "zh": "嘟，嘟，嘟"
+    },
+    {
+      "start": 82.072,
+      "end": 83.112,
+      "en": "♪ Beep, beep, beep ♪",
+      "zh": "嘟，嘟，嘟"
+    },
+    {
+      "start": 83.112,
+      "end": 86.282,
+      "en": "♪ The horn on the bus goes beep, beep, beep ♪",
+      "zh": "公交车的喇叭嘟，嘟，嘟"
+    },
+    {
+      "start": 86.282,
+      "end": 89.131,
+      "en": "♪ Beep, beep, beep ♪",
+      "zh": "嘟，嘟，嘟"
+    },
+    {
+      "start": 89.131,
+      "end": 91.714,
+      "en": "(cheery music)",
+      "zh": "欢快的音乐"
+    },
+    {
+      "start": 94.459,
+      "end": 97.60900000000001,
+      "en": "♪ The people on the bus go up and down ♪",
+      "zh": "公交车上的人上上下下"
+    },
+    {
+      "start": 97.60900000000001,
+      "end": 98.981,
+      "en": "♪ Up and down ♪",
+      "zh": "上上下下"
+    },
+    {
+      "start": 98.981,
+      "end": 99.99199999999999,
+      "en": "♪ Up and down ♪",
+      "zh": "上上下下"
+    },
+    {
+      "start": 99.99199999999999,
+      "end": 103.24799999999999,
+      "en": "♪ The people on the bus go up and down ♪",
+      "zh": "公交车上的人上上下下"
+    },
+    {
+      "start": 103.24799999999999,
+      "end": 106.112,
+      "en": "♪ Up and down ♪",
+      "zh": "上上下下"
+    },
+    {
+      "start": 106.112,
+      "end": 108.695,
+      "en": "(cheery music)",
+      "zh": "欢快的音乐"
+    },
+    {
+      "start": 111.41,
+      "end": 114.512,
+      "en": "♪ The babies on the bus go wah, wah, wah ♪",
+      "zh": "公交车上的宝宝哇，哇，哇"
+    },
+    {
+      "start": 114.512,
+      "end": 115.952,
+      "en": "♪ Wah, wah, wah ♪",
+      "zh": "哇，哇，哇"
+    },
+    {
+      "start": 115.952,
+      "end": 117.011,
+      "en": "♪ Wah, wah, wah ♪",
+      "zh": "哇，哇，哇"
+    },
+    {
+      "start": 117.011,
+      "end": 120.171,
+      "en": "♪ The babies on the bus go wah, wah, wah ♪",
+      "zh": "公交车上的宝宝哇，哇，哇"
+    },
+    {
+      "start": 120.171,
+      "end": 123.021,
+      "en": "♪ Wah, wah, wah ♪",
+      "zh": "哇，哇，哇"
+    },
+    {
+      "start": 123.021,
+      "end": 125.604,
+      "en": "(cheery music)",
+      "zh": "欢快的音乐"
+    },
+    {
+      "start": 129.409,
+      "end": 133.672,
+      "en": "♪ The mommies on the bus go shh, shh, shh ♪",
+      "zh": "公交车上的妈妈嘘，嘘，嘘"
+    },
+    {
+      "start": 133.672,
+      "end": 135.531,
+      "en": "♪ Shh, shh, shh ♪",
+      "zh": "嘘，嘘，嘘"
+    },
+    {
+      "start": 135.531,
+      "end": 137.032,
+      "en": "♪ Shh, shh, shh ♪",
+      "zh": "嘘，嘘，嘘"
+    },
+    {
+      "start": 137.032,
+      "end": 141.291,
+      "en": "♪ The daddies on the bus go shh, shh, shh ♪",
+      "zh": "公交车上的爸爸嘘，嘘，嘘"
+    },
+    {
+      "start": 141.291,
+      "end": 143.958,
+      "en": "♪ Shh, shh, shh ♪",
+      "zh": "嘘，嘘，嘘"
+    },
+    {
+      "start": 145.341,
+      "end": 148.008,
+      "en": "(chiming music)",
+      "zh": "铃声音乐"
+    }
+  ]
+}

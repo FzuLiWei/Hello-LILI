@@ -1,0 +1,248 @@
+{
+  "youtubeId": "HGgsklW-mtg",
+  "title": "Hickory Dickory Dock",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 6.889,
+      "end": 9.037,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 9.065,
+      "end": 11.48,
+      "en": "The mouse went up the clock",
+      "zh": "小老鼠爬上了时钟"
+    },
+    {
+      "start": 11.564,
+      "end": 13.648,
+      "en": "The clock struck one",
+      "zh": "时钟敲了一下"
+    },
+    {
+      "start": 14.815,
+      "end": 17.114,
+      "en": "The mouse went down",
+      "zh": "小老鼠爬下来了"
+    },
+    {
+      "start": 17.614,
+      "end": 19.366,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 19.435,
+      "end": 24.346,
+      "en": "Tick tock. Tick tock. Tick tock. Tick tock.",
+      "zh": "滴答，滴答。滴答，滴答。"
+    },
+    {
+      "start": 27.651,
+      "end": 29.443,
+      "en": "A snake",
+      "zh": "一条蛇"
+    },
+    {
+      "start": 31.388,
+      "end": 33.682,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 33.888,
+      "end": 36.071,
+      "en": "The snake went up the clock",
+      "zh": "蛇爬上了时钟"
+    },
+    {
+      "start": 36.208,
+      "end": 38.208,
+      "en": "The clock struck two",
+      "zh": "时钟敲了两下"
+    },
+    {
+      "start": 40.666,
+      "end": 42.99,
+      "en": "The snake went down",
+      "zh": "蛇爬下来了"
+    },
+    {
+      "start": 43.282,
+      "end": 45.059,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 45.128,
+      "end": 49.915,
+      "en": "Tick tock. Tick tock. Tick tock. Tick tock.",
+      "zh": "滴答，滴答。滴答，滴答。"
+    },
+    {
+      "start": 53.35,
+      "end": 55.041,
+      "en": "A squirrel",
+      "zh": "一只松鼠"
+    },
+    {
+      "start": 57.387,
+      "end": 59.387,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 59.595,
+      "end": 61.79,
+      "en": "The squirrel went up the clock",
+      "zh": "松鼠爬上了时钟"
+    },
+    {
+      "start": 61.929,
+      "end": 63.929,
+      "en": "The clock struck three",
+      "zh": "时钟敲了三下"
+    },
+    {
+      "start": 67.512,
+      "end": 69.512,
+      "en": "The squirrel went down",
+      "zh": "松鼠爬下来了"
+    },
+    {
+      "start": 70.012,
+      "end": 72.012,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 72.095,
+      "end": 76.912,
+      "en": "Tick tock. Tick tock. Tick tock. Tick tock.",
+      "zh": "滴答，滴答。滴答，滴答。"
+    },
+    {
+      "start": 80.383,
+      "end": 81.856,
+      "en": "A cat",
+      "zh": "一只猫"
+    },
+    {
+      "start": 84.148,
+      "end": 86.162,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 86.315,
+      "end": 88.804,
+      "en": "The cat went up the clock",
+      "zh": "小猫爬上了时钟"
+    },
+    {
+      "start": 88.929,
+      "end": 90.929,
+      "en": "The clock struck four",
+      "zh": "时钟敲了四下"
+    },
+    {
+      "start": 95.721,
+      "end": 97.721,
+      "en": "The cat went down",
+      "zh": "小猫爬下来了"
+    },
+    {
+      "start": 98.221,
+      "end": 100.221,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 100.263,
+      "end": 105.195,
+      "en": "Tick tock. Tick tock. Tick tock. Tick tock.",
+      "zh": "滴答，滴答。滴答，滴答。"
+    },
+    {
+      "start": 108.709,
+      "end": 110,
+      "en": "A monkey",
+      "zh": "一只猴子"
+    },
+    {
+      "start": 112.25,
+      "end": 114.25,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 114.75,
+      "end": 116.986,
+      "en": "The monkey went up the clock",
+      "zh": "猴子爬上了时钟"
+    },
+    {
+      "start": 117.111,
+      "end": 119.111,
+      "en": "The clock struck five",
+      "zh": "时钟敲了五下"
+    },
+    {
+      "start": 125,
+      "end": 127,
+      "en": "The monkey went down",
+      "zh": "猴子爬下来了"
+    },
+    {
+      "start": 127.625,
+      "end": 129.625,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 129.667,
+      "end": 134.371,
+      "en": "Tick tock. Tick tock. Tick tock. Tick tock.",
+      "zh": "滴答，滴答。滴答，滴答。"
+    },
+    {
+      "start": 137.537,
+      "end": 140.015,
+      "en": "An elephant?!",
+      "zh": "一头大象？！"
+    },
+    {
+      "start": 140.515,
+      "end": 142.151,
+      "en": "Oh no!",
+      "zh": "糟糕！"
+    },
+    {
+      "start": 142.707,
+      "end": 145.068,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    },
+    {
+      "start": 145.18,
+      "end": 148.006,
+      "en": "The elephant went up the clock",
+      "zh": "大象爬上了时钟"
+    },
+    {
+      "start": 151.483,
+      "end": 157.435,
+      "en": "Oh...Oh...Oh no!",
+      "zh": "哦……哦……糟糕！"
+    },
+    {
+      "start": 161.852,
+      "end": 164.089,
+      "en": "Hickory dickory dock",
+      "zh": "滴答滴答，大钟响"
+    }
+  ]
+}

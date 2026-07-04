@@ -1,0 +1,80 @@
+{
+  "youtubeId": "nrv495corBc",
+  "title": "Humpty Dumpty",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 10.84,
+      "end": 13.78,
+      "en": "Humpty Dumpty sat on a wall",
+      "zh": "矮胖先生坐在墙上"
+    },
+    {
+      "start": 14,
+      "end": 16.94,
+      "en": "Humpty Dumpty had a great fall",
+      "zh": "矮胖先生重重地摔了下来"
+    },
+    {
+      "start": 17.2,
+      "end": 20.38,
+      "en": "All the kings' horses and all the kings' men",
+      "zh": "国王所有的马和所有的人"
+    },
+    {
+      "start": 20.38,
+      "end": 23.7,
+      "en": "Couldn't put Humpty together again",
+      "zh": "都没办法把矮胖先生重新拼好"
+    },
+    {
+      "start": 26.64,
+      "end": 29.7,
+      "en": "Humpty Dumpty sat on a wall",
+      "zh": "矮胖先生坐在墙上"
+    },
+    {
+      "start": 29.9,
+      "end": 32.84,
+      "en": "Humpty Dumpty had a great fall",
+      "zh": "矮胖先生重重地摔了下来"
+    },
+    {
+      "start": 33.02,
+      "end": 36,
+      "en": "All the kings' horses and all the kings' men",
+      "zh": "国王所有的马和所有的人"
+    },
+    {
+      "start": 36.14,
+      "end": 39.5,
+      "en": "Couldn't put Humpty together again",
+      "zh": "都没办法把矮胖先生重新拼好"
+    },
+    {
+      "start": 58.16,
+      "end": 61.26,
+      "en": "Humpty Dumpty sat on a wall",
+      "zh": "矮胖先生坐在墙上"
+    },
+    {
+      "start": 61.42,
+      "end": 64.18,
+      "en": "Humpty Dumpty had a great fall",
+      "zh": "矮胖先生重重地摔了下来"
+    },
+    {
+      "start": 64.34,
+      "end": 67.44,
+      "en": "All the kings' horses and all the kings' men",
+      "zh": "国王所有的马和所有的人"
+    },
+    {
+      "start": 67.7,
+      "end": 70.7,
+      "en": "Couldn't put Humpty together again",
+      "zh": "都没办法把矮胖先生重新拼好"
+    }
+  ]
+}

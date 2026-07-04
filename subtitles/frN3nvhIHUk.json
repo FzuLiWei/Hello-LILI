@@ -1,0 +1,224 @@
+{
+  "youtubeId": "frN3nvhIHUk",
+  "title": "Do You Like Broccoli Ice Cream?",
+  "source": "YouTube English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 11.516,
+      "end": 13.843,
+      "en": "Do you like broccoli?",
+      "zh": "你喜欢西兰花吗？"
+    },
+    {
+      "start": 15.853,
+      "end": 17.763,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 17.828,
+      "end": 19.738,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 19.832,
+      "end": 22.071,
+      "en": "Do you like ice cream?",
+      "zh": "你喜欢冰淇淋吗？"
+    },
+    {
+      "start": 23.819,
+      "end": 25.759,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 25.824,
+      "end": 27.824,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 28.469,
+      "end": 31.505,
+      "en": "Do you like broccoli ice cream?",
+      "zh": "你喜欢西兰花冰淇淋吗？"
+    },
+    {
+      "start": 34.705,
+      "end": 36.656,
+      "en": "No, I don't.",
+      "zh": "不，我不喜欢。"
+    },
+    {
+      "start": 36.953,
+      "end": 37.82,
+      "en": "Yucky!",
+      "zh": "真难吃！"
+    },
+    {
+      "start": 43.691,
+      "end": 46.374,
+      "en": "Do you like donuts?",
+      "zh": "你喜欢甜甜圈吗？"
+    },
+    {
+      "start": 47.977,
+      "end": 49.774,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 49.809,
+      "end": 51.719,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 51.784,
+      "end": 54.452,
+      "en": "Do you like juice?",
+      "zh": "你喜欢果汁吗？"
+    },
+    {
+      "start": 55.852,
+      "end": 57.704,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 57.798,
+      "end": 59.798,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 60.472,
+      "end": 63.153,
+      "en": "Do you like donut juice?",
+      "zh": "你喜欢甜甜圈果汁吗？"
+    },
+    {
+      "start": 66.788,
+      "end": 68.64,
+      "en": "No, I don't.",
+      "zh": "不，我不喜欢。"
+    },
+    {
+      "start": 68.824,
+      "end": 69.687,
+      "en": "Yucky!",
+      "zh": "真难吃！"
+    },
+    {
+      "start": 75.5,
+      "end": 78.316,
+      "en": "Do you like popcorn?",
+      "zh": "你喜欢爆米花吗？"
+    },
+    {
+      "start": 79.89,
+      "end": 81.773,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 81.80799999999999,
+      "end": 83.72,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 83.785,
+      "end": 85.785,
+      "en": "Do you like pizza?",
+      "zh": "你喜欢比萨吗？"
+    },
+    {
+      "start": 87.723,
+      "end": 89.654,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 89.833,
+      "end": 91.833,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 92.333,
+      "end": 95.357,
+      "en": "Do you like popcorn pizza?",
+      "zh": "你喜欢爆米花比萨吗？"
+    },
+    {
+      "start": 98.824,
+      "end": 100.65899999999999,
+      "en": "No, I don't.",
+      "zh": "不，我不喜欢。"
+    },
+    {
+      "start": 100.838,
+      "end": 101.946,
+      "en": "Yucky!",
+      "zh": "真难吃！"
+    },
+    {
+      "start": 107.69800000000001,
+      "end": 110.38499999999999,
+      "en": "Do you like bananas?",
+      "zh": "你喜欢香蕉吗？"
+    },
+    {
+      "start": 111.74000000000001,
+      "end": 113.74000000000001,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 113.812,
+      "end": 115.812,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 115.884,
+      "end": 117.884,
+      "en": "Do you like soup?",
+      "zh": "你喜欢汤吗？"
+    },
+    {
+      "start": 119.86699999999999,
+      "end": 121.745,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 121.804,
+      "end": 123.804,
+      "en": "Yes, I do.",
+      "zh": "是的，我喜欢。"
+    },
+    {
+      "start": 124.504,
+      "end": 127.418,
+      "en": "Do you like banana soup?",
+      "zh": "你喜欢香蕉汤吗？"
+    },
+    {
+      "start": 130.805,
+      "end": 132.724,
+      "en": "No, I don't.",
+      "zh": "不，我不喜欢。"
+    },
+    {
+      "start": 132.903,
+      "end": 133.675,
+      "en": "Yuck!",
+      "zh": "真难吃！"
+    }
+  ]
+}

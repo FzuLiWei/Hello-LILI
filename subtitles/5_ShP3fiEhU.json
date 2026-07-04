@@ -1,0 +1,626 @@
+{
+  "youtubeId": "5_ShP3fiEhU",
+  "title": "Going on a Bear Hunt",
+  "source": "YouTube English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 6.44,
+      "end": 8.62,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 8.88,
+      "end": 11.04,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 11.04,
+      "end": 13.12,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 13.12,
+      "end": 15.06,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 15.2,
+      "end": 16.82,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 17.08,
+      "end": 18.72,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 18.72,
+      "end": 21.38,
+      "en": "Oh look at that tall wavy grass!",
+      "zh": "哦，看那片又高又摇摆的草！"
+    },
+    {
+      "start": 21.38,
+      "end": 23.12,
+      "en": "It's so tall!",
+      "zh": "它好高啊！"
+    },
+    {
+      "start": 23.46,
+      "end": 25.56,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 25.56,
+      "end": 27.48,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 27.48,
+      "end": 29.58,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 29.66,
+      "end": 31.46,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 31.46,
+      "end": 33.48,
+      "en": "We're just gonna have to go through it!",
+      "zh": "我们只好从中间穿过去！"
+    },
+    {
+      "start": 33.48,
+      "end": 35.68,
+      "en": "We're gonna have to go through it!",
+      "zh": "我们得从中间穿过去！"
+    },
+    {
+      "start": 35.88,
+      "end": 36.6,
+      "en": "Swish!",
+      "zh": "唰！"
+    },
+    {
+      "start": 36.86,
+      "end": 37.56,
+      "en": "Swish!",
+      "zh": "唰！"
+    },
+    {
+      "start": 37.84,
+      "end": 38.56,
+      "en": "Swish!",
+      "zh": "唰！"
+    },
+    {
+      "start": 38.86,
+      "end": 39.56,
+      "en": "Swish!",
+      "zh": "唰！"
+    },
+    {
+      "start": 39.86,
+      "end": 42,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 42.08,
+      "end": 43.94,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 44.08,
+      "end": 46.08,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 46.38,
+      "end": 48.14,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 48.44,
+      "end": 49.82,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 50.3,
+      "end": 52.3,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 52.3,
+      "end": 54.3,
+      "en": "Uh-oh. There's a big river!",
+      "zh": "糟了，有一条大河！"
+    },
+    {
+      "start": 54.52,
+      "end": 55.44,
+      "en": "Ooh!",
+      "zh": "哦！"
+    },
+    {
+      "start": 56.32,
+      "end": 58.42,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 58.68,
+      "end": 60.68,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 60.68,
+      "end": 62.68,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 62.68,
+      "end": 64.36,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 64.38,
+      "end": 66.82,
+      "en": "We're just gonna have to swim it!",
+      "zh": "我们只好游过去！"
+    },
+    {
+      "start": 67.02,
+      "end": 68.88,
+      "en": "I hope it's not too chilly!",
+      "zh": "希望水不要太冷！"
+    },
+    {
+      "start": 69.1,
+      "end": 69.9,
+      "en": "Splash!",
+      "zh": "哗啦！"
+    },
+    {
+      "start": 70.14,
+      "end": 70.82,
+      "en": "Splash!",
+      "zh": "哗啦！"
+    },
+    {
+      "start": 71.16,
+      "end": 72.06,
+      "en": "Splash!",
+      "zh": "哗啦！"
+    },
+    {
+      "start": 72.34,
+      "end": 73.02,
+      "en": "Splash!",
+      "zh": "哗啦！"
+    },
+    {
+      "start": 73.22,
+      "end": 75.08,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 75.32,
+      "end": 77.42,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 77.42,
+      "end": 79.42,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 79.62,
+      "end": 81.28,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 81.6,
+      "end": 83.08,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 83.24,
+      "end": 85.1,
+      "en": "I'm not scared either!",
+      "zh": "我也不害怕！"
+    },
+    {
+      "start": 85.48,
+      "end": 87.32,
+      "en": "Eww look at all that mud!",
+      "zh": "呃，看那一大片泥巴！"
+    },
+    {
+      "start": 87.44,
+      "end": 89.44,
+      "en": "Eww it's so muddy!",
+      "zh": "呃，好泥泞啊！"
+    },
+    {
+      "start": 89.82,
+      "end": 91.56,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 91.86,
+      "end": 93.64,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 94.02000000000001,
+      "end": 95.64,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 95.94,
+      "end": 97.14,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 97.68,
+      "end": 100,
+      "en": "We're just gonna have to go through it!",
+      "zh": "我们只好从中间穿过去！"
+    },
+    {
+      "start": 100,
+      "end": 101.75999999999999,
+      "en": "Urgh, if I have to?!",
+      "zh": "呃，真的非去不可吗？！"
+    },
+    {
+      "start": 101.82,
+      "end": 102.6,
+      "en": "Squish!",
+      "zh": "噗叽！"
+    },
+    {
+      "start": 103.06,
+      "end": 103.78,
+      "en": "Squish!",
+      "zh": "噗叽！"
+    },
+    {
+      "start": 104.28,
+      "end": 105.06,
+      "en": "Squish!",
+      "zh": "噗叽！"
+    },
+    {
+      "start": 105.47999999999999,
+      "end": 106.25999999999999,
+      "en": "Squish!",
+      "zh": "噗叽！"
+    },
+    {
+      "start": 106.53999999999999,
+      "end": 108.03999999999999,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 108.36,
+      "end": 109.9,
+      "en": "We're going on a bear hunt!",
+      "zh": "我们要去猎熊！"
+    },
+    {
+      "start": 110.46000000000001,
+      "end": 112.14,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 112.46000000000001,
+      "end": 114,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 114.56,
+      "end": 115.72,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 116.5,
+      "end": 118.25999999999999,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 118.75999999999999,
+      "end": 120.54,
+      "en": "Uh-oh, what's that?",
+      "zh": "糟了，那是什么？"
+    },
+    {
+      "start": 120.8,
+      "end": 122.3,
+      "en": "Oh, it's a cave!",
+      "zh": "哦，是一个洞穴！"
+    },
+    {
+      "start": 122.74,
+      "end": 124.04,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 124.42,
+      "end": 126.34,
+      "en": "We can't go over it!",
+      "zh": "我们不能从上面过去！"
+    },
+    {
+      "start": 126.6,
+      "end": 128.24,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 128.5,
+      "end": 130.22,
+      "en": "We can't go under it!",
+      "zh": "我们不能从下面过去！"
+    },
+    {
+      "start": 130.58,
+      "end": 133.32,
+      "en": "We're just gonna have to go into it!",
+      "zh": "我们只好走进去！"
+    },
+    {
+      "start": 133.58,
+      "end": 135.12,
+      "en": "Are you sure?",
+      "zh": "你确定吗？"
+    },
+    {
+      "start": 135.34,
+      "end": 136.07999999999998,
+      "en": "Step!",
+      "zh": "踏！"
+    },
+    {
+      "start": 136.34,
+      "end": 137.07999999999998,
+      "en": "Step!",
+      "zh": "踏！"
+    },
+    {
+      "start": 137.38,
+      "end": 138.14,
+      "en": "Step!",
+      "zh": "踏！"
+    },
+    {
+      "start": 138.28,
+      "end": 139,
+      "en": "Step!",
+      "zh": "踏！"
+    },
+    {
+      "start": 139.28,
+      "end": 141.28,
+      "en": "(trembling) / Oh we're going on a bear hunt!",
+      "zh": "（发抖）哦，我们要去猎熊！"
+    },
+    {
+      "start": 141.5,
+      "end": 143.46,
+      "en": "(trembling more) / Oh we're going on a bear hunt!",
+      "zh": "（更害怕地发抖）哦，我们要去猎熊！"
+    },
+    {
+      "start": 143.72,
+      "end": 145.2,
+      "en": "I've got my binoculars!",
+      "zh": "我拿好望远镜了！"
+    },
+    {
+      "start": 145.5,
+      "end": 147.42000000000002,
+      "en": "I've got my binoculars too!",
+      "zh": "我也拿好望远镜了！"
+    },
+    {
+      "start": 147.82,
+      "end": 148.68,
+      "en": "I'm not scared!",
+      "zh": "我不害怕！"
+    },
+    {
+      "start": 148.94,
+      "end": 150.94,
+      "en": "I'm a little scared!",
+      "zh": "我有点害怕！"
+    },
+    {
+      "start": 151.68,
+      "end": 153.44,
+      "en": "Sure is dark in here!",
+      "zh": "这里真黑啊！"
+    },
+    {
+      "start": 153.96,
+      "end": 155.34,
+      "en": "What's that in the corner?",
+      "zh": "角落里那是什么？"
+    },
+    {
+      "start": 155.94,
+      "end": 157.86,
+      "en": "I feel two big ears!",
+      "zh": "我摸到两只大耳朵！"
+    },
+    {
+      "start": 158.16,
+      "end": 160.16,
+      "en": "I feel two big ears!",
+      "zh": "我摸到两只大耳朵！"
+    },
+    {
+      "start": 160.16,
+      "end": 162.16,
+      "en": "I feel one wet nose!",
+      "zh": "我摸到一个湿湿的鼻子！"
+    },
+    {
+      "start": 162.16,
+      "end": 164.16,
+      "en": "I feel one wet nose!",
+      "zh": "我摸到一个湿湿的鼻子！"
+    },
+    {
+      "start": 164.36,
+      "end": 165.86,
+      "en": "I feel two sharp teeth!",
+      "zh": "我摸到两颗尖尖的牙！"
+    },
+    {
+      "start": 166.88,
+      "end": 168.86,
+      "en": "(gulp) I know what that is!",
+      "zh": "（咽口水）我知道那是什么了！"
+    },
+    {
+      "start": 169.2,
+      "end": 169.9,
+      "en": "What?!",
+      "zh": "什么？！"
+    },
+    {
+      "start": 170.12,
+      "end": 171.28,
+      "en": "It's a bear!",
+      "zh": "是熊！"
+    },
+    {
+      "start": 171.52,
+      "end": 173.36,
+      "en": "Let's get outta here!",
+      "zh": "我们快离开这里！"
+    },
+    {
+      "start": 173.48,
+      "end": 174.5,
+      "en": "Let's run back through the cave!",
+      "zh": "我们跑回洞穴那边！"
+    },
+    {
+      "start": 174.76,
+      "end": 176.07999999999998,
+      "en": "Step step step!",
+      "zh": "踏踏踏！"
+    },
+    {
+      "start": 176.44,
+      "end": 178.02,
+      "en": "OK quickly, back through the mud!",
+      "zh": "好，快点，穿过泥巴回去！"
+    },
+    {
+      "start": 178.24,
+      "end": 179.44,
+      "en": "Squish squish squish!",
+      "zh": "噗叽噗叽噗叽！"
+    },
+    {
+      "start": 179.44,
+      "end": 181.1,
+      "en": "OK, let's cross the river!",
+      "zh": "好，我们过河！"
+    },
+    {
+      "start": 181.1,
+      "end": 182.9,
+      "en": "Splash splash splash!",
+      "zh": "哗啦哗啦哗啦！"
+    },
+    {
+      "start": 182.9,
+      "end": 184.28,
+      "en": "Quick, through the tall grass!",
+      "zh": "快，穿过高高的草！"
+    },
+    {
+      "start": 184.28,
+      "end": 185.68,
+      "en": "Swish swish swish!",
+      "zh": "唰唰唰！"
+    },
+    {
+      "start": 185.68,
+      "end": 187.68,
+      "en": "Quick, through the yard, up the stairs!",
+      "zh": "快，穿过院子，跑上楼梯！"
+    },
+    {
+      "start": 187.86,
+      "end": 189.78,
+      "en": "Into the house, close the door!",
+      "zh": "进屋，关门！"
+    },
+    {
+      "start": 189.78,
+      "end": 191.58,
+      "en": "Ooh, we're safe!",
+      "zh": "哦，我们安全了！"
+    },
+    {
+      "start": 191.58,
+      "end": 192.7,
+      "en": "That was a close one!",
+      "zh": "刚才好险啊！"
+    },
+    {
+      "start": 192.7,
+      "end": 194.64,
+      "en": "Let's not go bear hunting any more!",
+      "zh": "我们以后别再去猎熊了！"
+    },
+    {
+      "start": 194.72,
+      "end": 198,
+      "en": "(somber Trumpet sounds)",
+      "zh": "（低沉的小号声）"
+    }
+  ]
+}

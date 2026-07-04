@@ -1,0 +1,206 @@
+{
+  "youtubeId": "jYAWf8Y91hA",
+  "title": "I See Something Blue",
+  "source": "YouTube English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 10.84,
+      "end": 12.38,
+      "en": "Blue!",
+      "zh": "蓝色！"
+    },
+    {
+      "start": 13.24,
+      "end": 15.26,
+      "en": "I see something blue.",
+      "zh": "我看见蓝色的东西。"
+    },
+    {
+      "start": 15.36,
+      "end": 16.8,
+      "en": "Blue!",
+      "zh": "蓝色！"
+    },
+    {
+      "start": 17.64,
+      "end": 19.8,
+      "en": "I see something blue.",
+      "zh": "我看见蓝色的东西。"
+    },
+    {
+      "start": 19.96,
+      "end": 22.14,
+      "en": "Blue, blue, blue, blue.",
+      "zh": "蓝色，蓝色，蓝色，蓝色。"
+    },
+    {
+      "start": 22.28,
+      "end": 24.2,
+      "en": "I see something blue.",
+      "zh": "我看见蓝色的东西。"
+    },
+    {
+      "start": 24.72,
+      "end": 26.36,
+      "en": "Find something blue!",
+      "zh": "找一找蓝色的东西！"
+    },
+    {
+      "start": 46.44,
+      "end": 47.94,
+      "en": "Yellow!",
+      "zh": "黄色！"
+    },
+    {
+      "start": 48.82,
+      "end": 50.76,
+      "en": "I see something yellow.",
+      "zh": "我看见黄色的东西。"
+    },
+    {
+      "start": 51,
+      "end": 52.26,
+      "en": "Yellow!",
+      "zh": "黄色！"
+    },
+    {
+      "start": 53.02,
+      "end": 55.08,
+      "en": "I see something yellow.",
+      "zh": "我看见黄色的东西。"
+    },
+    {
+      "start": 55.36,
+      "end": 57.68,
+      "en": "Yellow, yellow.",
+      "zh": "黄色，黄色。"
+    },
+    {
+      "start": 57.78,
+      "end": 60.08,
+      "en": "I see something yellow.",
+      "zh": "我看见黄色的东西。"
+    },
+    {
+      "start": 60.22,
+      "end": 61.84,
+      "en": "Find something yellow!",
+      "zh": "找一找黄色的东西！"
+    },
+    {
+      "start": 81.92,
+      "end": 82.72,
+      "en": "Red!",
+      "zh": "红色！"
+    },
+    {
+      "start": 84.36,
+      "end": 86.44,
+      "en": "I see something red.",
+      "zh": "我看见红色的东西。"
+    },
+    {
+      "start": 86.6,
+      "end": 87.56,
+      "en": "Red!",
+      "zh": "红色！"
+    },
+    {
+      "start": 88.64,
+      "end": 90.88,
+      "en": "I see something red.",
+      "zh": "我看见红色的东西。"
+    },
+    {
+      "start": 91.02,
+      "end": 93.06,
+      "en": "Red, red, red, red.",
+      "zh": "红色，红色，红色，红色。"
+    },
+    {
+      "start": 93.24000000000001,
+      "end": 95.75999999999999,
+      "en": "I see something red.",
+      "zh": "我看见红色的东西。"
+    },
+    {
+      "start": 95.92,
+      "end": 97.62,
+      "en": "Find something red!",
+      "zh": "找一找红色的东西！"
+    },
+    {
+      "start": 117.56,
+      "end": 118.74000000000001,
+      "en": "Purple!",
+      "zh": "紫色！"
+    },
+    {
+      "start": 119.78,
+      "end": 121.88,
+      "en": "I see something purple.",
+      "zh": "我看见紫色的东西。"
+    },
+    {
+      "start": 122.06,
+      "end": 123.02,
+      "en": "Purple!",
+      "zh": "紫色！"
+    },
+    {
+      "start": 124.3,
+      "end": 126.5,
+      "en": "I see something purple!",
+      "zh": "我看见紫色的东西！"
+    },
+    {
+      "start": 126.56,
+      "end": 128.7,
+      "en": "Purple, purple.",
+      "zh": "紫色，紫色。"
+    },
+    {
+      "start": 128.98,
+      "end": 131.14,
+      "en": "I see something purple.",
+      "zh": "我看见紫色的东西。"
+    },
+    {
+      "start": 131.46,
+      "end": 132.96,
+      "en": "Find something purple!",
+      "zh": "找一找紫色的东西！"
+    },
+    {
+      "start": 153.16,
+      "end": 154.16,
+      "en": "Blue.",
+      "zh": "蓝色。"
+    },
+    {
+      "start": 155.3,
+      "end": 156.78,
+      "en": "Yellow.",
+      "zh": "黄色。"
+    },
+    {
+      "start": 157.68,
+      "end": 159,
+      "en": "Red.",
+      "zh": "红色。"
+    },
+    {
+      "start": 159.9,
+      "end": 161.26,
+      "en": "Purple.",
+      "zh": "紫色。"
+    },
+    {
+      "start": 162.14,
+      "end": 166.57999999999998,
+      "en": "I see colors everywhere.",
+      "zh": "我到处都看见颜色。"
+    }
+  ]
+}

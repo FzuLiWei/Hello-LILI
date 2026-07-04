@@ -1,0 +1,351 @@
+{
+  "youtubeId": "TbKI-jjpPx8",
+  "title": "The Itsy Bitsy Spider",
+  "source": "Trimmed local Itsy Bitsy Spider segment with checked YouTube auto English captions and local Chinese translation",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 1.6,
+      "end": 13.87,
+      "en": "[Music]",
+      "zh": "（音乐）"
+    },
+    {
+      "start": 13.88,
+      "end": 19.67,
+      "en": "the itsy bitsy spider went up the water",
+      "zh": "这只小蜘蛛爬上了水面"
+    },
+    {
+      "start": 19.67,
+      "end": 19.68,
+      "en": "the itsy bitsy spider went up the water",
+      "zh": "这只小蜘蛛爬上了水面"
+    },
+    {
+      "start": 19.68,
+      "end": 24.63,
+      "en": "the itsy bitsy spider went up the water / spout down came the rain and washed the",
+      "zh": "这只小蜘蛛顺着水流上升/喷水下降，雨水冲刷了"
+    },
+    {
+      "start": 24.63,
+      "end": 24.64,
+      "en": "spout down came the rain and washed the",
+      "zh": "雨水倾盆而下，冲刷了"
+    },
+    {
+      "start": 24.64,
+      "end": 26.15,
+      "en": "spout down came the rain and washed the / spider",
+      "zh": "雨水从喷口落下，冲刷了/蜘蛛"
+    },
+    {
+      "start": 26.15,
+      "end": 26.16,
+      "en": "spider",
+      "zh": "蜘蛛"
+    },
+    {
+      "start": 26.16,
+      "end": 31.63,
+      "en": "spider / out out came the Sun and dried up all",
+      "zh": "蜘蛛/太阳出来了，把一切都晒干了"
+    },
+    {
+      "start": 31.63,
+      "end": 31.64,
+      "en": "out out came the Sun and dried up all",
+      "zh": "太阳出来了，把一切都晒干了"
+    },
+    {
+      "start": 31.64,
+      "end": 37.15,
+      "en": "out out came the Sun and dried up all / the rain then the itsy bitsy spider went",
+      "zh": "太阳出来了，把一切都晒干了/雨水然后它的小蜘蛛就走了"
+    },
+    {
+      "start": 37.15,
+      "end": 37.16,
+      "en": "the rain then the itsy bitsy spider went",
+      "zh": "下雨了，然后小蜘蛛就走了"
+    },
+    {
+      "start": 37.16,
+      "end": 41.389,
+      "en": "the rain then the itsy bitsy spider went / up the spout",
+      "zh": "下雨了，然后那只小蜘蛛就爬上了壶嘴"
+    },
+    {
+      "start": 41.399,
+      "end": 46.31,
+      "en": "again okay put your fingers together",
+      "zh": "再次，好吧，把你的手指放在一起"
+    },
+    {
+      "start": 46.31,
+      "end": 46.32,
+      "en": "again okay put your fingers together",
+      "zh": "再次，好吧，把你的手指放在一起"
+    },
+    {
+      "start": 46.32,
+      "end": 50.51,
+      "en": "again okay put your fingers together / let's do the itsy bitsy",
+      "zh": "再次，好吧，把你的手指放在一起/让我们做点小事"
+    },
+    {
+      "start": 50.52,
+      "end": 55.389,
+      "en": "spider the Itsy Bitsy Spider went up the",
+      "zh": "蜘蛛 Itsy Bitsy 蜘蛛爬上了"
+    },
+    {
+      "start": 55.389,
+      "end": 55.399,
+      "en": "spider the Itsy Bitsy Spider went up the",
+      "zh": "蜘蛛 Itsy Bitsy 蜘蛛爬上了"
+    },
+    {
+      "start": 55.399,
+      "end": 56.47,
+      "en": "spider the Itsy Bitsy Spider went up the / water",
+      "zh": "蜘蛛 Itsy Bitsy 蜘蛛爬上了/水"
+    },
+    {
+      "start": 56.47,
+      "end": 56.48,
+      "en": "water",
+      "zh": "水"
+    },
+    {
+      "start": 56.48,
+      "end": 60.869,
+      "en": "water / spout down came the rain and washed the",
+      "zh": "水/喷口落下，雨水冲刷了"
+    },
+    {
+      "start": 60.869,
+      "end": 60.879,
+      "en": "spout down came the rain and washed the",
+      "zh": "雨水倾盆而下，冲刷了"
+    },
+    {
+      "start": 60.879,
+      "end": 66.55,
+      "en": "spout down came the rain and washed the / spider out out came the Sun and dried up",
+      "zh": "喷水落下，雨水冲走了蜘蛛/蜘蛛出来了，太阳晒干了"
+    },
+    {
+      "start": 66.55,
+      "end": 66.56,
+      "en": "spider out out came the Sun and dried up",
+      "zh": "蜘蛛出来了，太阳出来了，干了"
+    },
+    {
+      "start": 66.56,
+      "end": 71.03,
+      "en": "spider out out came the Sun and dried up / all the rain then the itsy bitsy spider",
+      "zh": "蜘蛛出来了，太阳晒干了/所有的雨，然后是它的小蜘蛛"
+    },
+    {
+      "start": 71.03,
+      "end": 71.03999999999999,
+      "en": "all the rain then the itsy bitsy spider",
+      "zh": "所有的雨然后是它的小蜘蛛"
+    },
+    {
+      "start": 71.03999999999999,
+      "end": 73.39,
+      "en": "all the rain then the itsy bitsy spider / went up the spout",
+      "zh": "所有的雨然后它的小蜘蛛/上升到水嘴"
+    },
+    {
+      "start": 73.39,
+      "end": 73.4,
+      "en": "went up the spout",
+      "zh": "上升到壶嘴"
+    },
+    {
+      "start": 73.4,
+      "end": 78.19,
+      "en": "went up the spout / again a little faster now the itsy bitsy",
+      "zh": "上升到喷嘴/现在又快一点了"
+    },
+    {
+      "start": 78.19,
+      "end": 78.2,
+      "en": "again a little faster now the itsy bitsy",
+      "zh": "现在又快一点了"
+    },
+    {
+      "start": 78.2,
+      "end": 82.39,
+      "en": "again a little faster now the itsy bitsy / spider went up the water spout down came",
+      "zh": "再次快一点，现在它的小/蜘蛛上升了，水龙卷下来了"
+    },
+    {
+      "start": 82.39,
+      "end": 82.4,
+      "en": "spider went up the water spout down came",
+      "zh": "蜘蛛上升了，喷水口下来了"
+    },
+    {
+      "start": 82.4,
+      "end": 86.469,
+      "en": "spider went up the water spout down came / the rain and washed the spider out out",
+      "zh": "蜘蛛上升了，水管下来了/雨水把蜘蛛冲走了"
+    },
+    {
+      "start": 86.469,
+      "end": 86.479,
+      "en": "the rain and washed the spider out out",
+      "zh": "雨把蜘蛛冲走了"
+    },
+    {
+      "start": 86.479,
+      "end": 89.749,
+      "en": "the rain and washed the spider out out / came the Sun and dried up all the rain",
+      "zh": "雨水把蜘蛛冲走了/太阳出来了，把所有的雨水都晒干了"
+    },
+    {
+      "start": 89.749,
+      "end": 89.759,
+      "en": "came the Sun and dried up all the rain",
+      "zh": "太阳出来了，把所有的雨水都晒干了"
+    },
+    {
+      "start": 89.759,
+      "end": 92.91,
+      "en": "came the Sun and dried up all the rain / then and the itsy bitsy spider went up",
+      "zh": "太阳出来了，把所有的雨都晒干了/然后小蜘蛛就升了起来"
+    },
+    {
+      "start": 92.91,
+      "end": 92.92,
+      "en": "then and the itsy bitsy spider went up",
+      "zh": "然后那只小蜘蛛就爬了起来"
+    },
+    {
+      "start": 92.92,
+      "end": 94.38900000000001,
+      "en": "then and the itsy bitsy spider went up / the spout",
+      "zh": "然后那只小蜘蛛就上升了/喷口"
+    },
+    {
+      "start": 94.38900000000001,
+      "end": 94.399,
+      "en": "the spout",
+      "zh": "喷口"
+    },
+    {
+      "start": 94.399,
+      "end": 99.149,
+      "en": "the spout / again now let's try it slow with a low",
+      "zh": "喷嘴/现在让我们再次尝试用低速缓慢地进行"
+    },
+    {
+      "start": 99.149,
+      "end": 99.15899999999999,
+      "en": "again now let's try it slow with a low",
+      "zh": "现在让我们再次尝试以较低的速度缓慢地进行"
+    },
+    {
+      "start": 99.15899999999999,
+      "end": 103.50999999999999,
+      "en": "again now let's try it slow with a low / voice and a big big",
+      "zh": "现在让我们再次尝试用低/声音和大的声音慢慢地"
+    },
+    {
+      "start": 103.50999999999999,
+      "end": 103.52000000000001,
+      "en": "voice and a big big",
+      "zh": "声音和大"
+    },
+    {
+      "start": 103.52000000000001,
+      "end": 108.27000000000001,
+      "en": "voice and a big big / spider the big big spider went up the",
+      "zh": "声音和一只大蜘蛛/大蜘蛛爬上了"
+    },
+    {
+      "start": 108.27000000000001,
+      "end": 108.28,
+      "en": "spider the big big spider went up the",
+      "zh": "蜘蛛，大蜘蛛爬上了"
+    },
+    {
+      "start": 108.28,
+      "end": 112.789,
+      "en": "spider the big big spider went up the / water spout down came the rain and",
+      "zh": "蜘蛛，大蜘蛛爬上来/水龙卷下来，雨来了，"
+    },
+    {
+      "start": 112.789,
+      "end": 112.799,
+      "en": "water spout down came the rain and",
+      "zh": "雨水倾盆而下"
+    },
+    {
+      "start": 112.799,
+      "end": 117.789,
+      "en": "water spout down came the rain and / washed the spider out out came the Sun",
+      "zh": "雨水倾盆而下，/太阳出来了，把蜘蛛冲了出来"
+    },
+    {
+      "start": 117.789,
+      "end": 117.799,
+      "en": "washed the spider out out came the Sun",
+      "zh": "太阳出来了，把蜘蛛冲了出来"
+    },
+    {
+      "start": 117.799,
+      "end": 120.51,
+      "en": "washed the spider out out came the Sun / and dried up all the rain",
+      "zh": "太阳出来了，把蜘蛛冲走了/把所有的雨水都晒干了"
+    },
+    {
+      "start": 120.51,
+      "end": 120.52,
+      "en": "and dried up all the rain",
+      "zh": "并把所有的雨水都吸干了"
+    },
+    {
+      "start": 120.52,
+      "end": 124.35,
+      "en": "and dried up all the rain / then the big big spider went up the",
+      "zh": "并把所有的雨都干了/然后大蜘蛛就爬上去了"
+    },
+    {
+      "start": 124.35,
+      "end": 124.36,
+      "en": "then the big big spider went up the",
+      "zh": "然后大蜘蛛就爬上了"
+    },
+    {
+      "start": 124.36,
+      "end": 125.74,
+      "en": "then the big big spider went up the / spout",
+      "zh": "然后那只大蜘蛛爬上/喷口"
+    },
+    {
+      "start": 125.74,
+      "end": 125.75,
+      "en": "spout",
+      "zh": "喷口"
+    },
+    {
+      "start": 125.75,
+      "end": 142.41,
+      "en": "spout / [Music]",
+      "zh": "喷水/[音乐]"
+    },
+    {
+      "start": 142.42000000000002,
+      "end": 145,
+      "en": "[Music]",
+      "zh": "（音乐）"
+    }
+  ],
+  "trimmedToSeconds": 145
+}

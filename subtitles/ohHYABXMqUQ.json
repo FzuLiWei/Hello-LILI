@@ -1,0 +1,260 @@
+{
+  "youtubeId": "ohHYABXMqUQ",
+  "title": "Yes Yes Vegetables Song",
+  "source": "YouTube English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 9.152,
+      "end": 14.108,
+      "en": "(playful music) / (giggles)",
+      "zh": "（欢快的音乐，咯咯笑）"
+    },
+    {
+      "start": 14.108,
+      "end": 18.06,
+      "en": "Peas, peas, it's time to eat your peas",
+      "zh": "豌豆，豌豆，该吃豌豆了。"
+    },
+    {
+      "start": 18.06,
+      "end": 22.866,
+      "en": "Yes, yes, yes, I want to eat my peas",
+      "zh": "好，好，好，我想吃我的豌豆。"
+    },
+    {
+      "start": 22.866,
+      "end": 27.773,
+      "en": "Good, good, the peas are good for you",
+      "zh": "好，好，豌豆对你有好处。"
+    },
+    {
+      "start": 27.773,
+      "end": 32.773,
+      "en": "Yay, yay, yay, I love them, ooh",
+      "zh": "耶，耶，耶，我喜欢它们，哦。"
+    },
+    {
+      "start": 35.354,
+      "end": 39.657,
+      "en": "See, see, teddy likes them too",
+      "zh": "看，看，小熊也喜欢它们。"
+    },
+    {
+      "start": 39.657,
+      "end": 44.657,
+      "en": "One, two, three, he ate them up, you see",
+      "zh": "一、二、三，你看，他把它们吃完了。"
+    },
+    {
+      "start": 44.861,
+      "end": 49.511,
+      "en": "Ha, ha, ha, the peas are all gone now",
+      "zh": "哈，哈，哈，豌豆现在都吃完了。"
+    },
+    {
+      "start": 49.511,
+      "end": 54.511,
+      "en": "Yum, yum, yum, we like them, wow",
+      "zh": "嗯，嗯，嗯，我们喜欢它们，哇。"
+    },
+    {
+      "start": 56.882,
+      "end": 61.285,
+      "en": "Carrots, carrots, it's time to eat your carrots",
+      "zh": "胡萝卜，胡萝卜，该吃胡萝卜了。"
+    },
+    {
+      "start": 61.285,
+      "end": 66.285,
+      "en": "Yes, yes, yes, I want to eat the carrots",
+      "zh": "好，好，好，我想吃胡萝卜。"
+    },
+    {
+      "start": 66.318,
+      "end": 71.072,
+      "en": "Good, good, the carrots are good for you",
+      "zh": "好，好，胡萝卜对你有好处。"
+    },
+    {
+      "start": 71.072,
+      "end": 76.072,
+      "en": "Yay, yay, yay, I love them, ooh",
+      "zh": "耶，耶，耶，我喜欢它们，哦。"
+    },
+    {
+      "start": 78.517,
+      "end": 82.82,
+      "en": "See, see, elephant likes them too",
+      "zh": "看，看，大象也喜欢它们。"
+    },
+    {
+      "start": 82.82,
+      "end": 87.741,
+      "en": "One, two, three, he ate them up, you see",
+      "zh": "一、二、三，你看，他把它们吃完了。"
+    },
+    {
+      "start": 87.741,
+      "end": 92.35900000000001,
+      "en": "Ha, ha, ha, the carrots are all gone now",
+      "zh": "哈，哈，哈，胡萝卜现在都吃完了。"
+    },
+    {
+      "start": 92.35900000000001,
+      "end": 97.35900000000001,
+      "en": "Yum, yum, yum, we like them, wow",
+      "zh": "嗯，嗯，嗯，我们喜欢它们，哇。"
+    },
+    {
+      "start": 100.047,
+      "end": 104.45,
+      "en": "Squash, squash, it's time to eat your squash",
+      "zh": "南瓜，南瓜，该吃南瓜了。"
+    },
+    {
+      "start": 104.45,
+      "end": 109.356,
+      "en": "Yes, yes, yes, I want to eat the squash",
+      "zh": "好，好，好，我想吃南瓜。"
+    },
+    {
+      "start": 109.356,
+      "end": 114.211,
+      "en": "Good, good, the squash is good for you",
+      "zh": "好，好，南瓜对你有好处。"
+    },
+    {
+      "start": 114.211,
+      "end": 119.211,
+      "en": "Yay, yay, yay, I love it, ooh",
+      "zh": "耶，耶，耶，我喜欢它，哦。"
+    },
+    {
+      "start": 121.671,
+      "end": 125.953,
+      "en": "See, see, monkey likes it too",
+      "zh": "看，看，小猴子也喜欢它。"
+    },
+    {
+      "start": 125.953,
+      "end": 130.953,
+      "en": "One, two, three, he ate it up, you see",
+      "zh": "一、二、三，你看，他把它吃完了。"
+    },
+    {
+      "start": 131.01,
+      "end": 135.864,
+      "en": "Ha, ha, ha, the squash is all gone now",
+      "zh": "哈，哈，哈，南瓜现在都吃完了。"
+    },
+    {
+      "start": 135.864,
+      "end": 140.864,
+      "en": "Yum, yum, yum, we like it, wow",
+      "zh": "嗯，嗯，嗯，我们喜欢它，哇。"
+    },
+    {
+      "start": 143.708,
+      "end": 147.849,
+      "en": "Beans, beans, it's time to eat your beans",
+      "zh": "豆子，豆子，该吃豆子了。"
+    },
+    {
+      "start": 147.849,
+      "end": 152.727,
+      "en": "Yes, yes, yes, I want to eat the beans",
+      "zh": "好，好，好，我想吃豆子。"
+    },
+    {
+      "start": 152.727,
+      "end": 157.167,
+      "en": "Good, good, the beans are good for you",
+      "zh": "好，好，豆子对你有好处。"
+    },
+    {
+      "start": 157.167,
+      "end": 162.167,
+      "en": "Yay, yay, yay, I love them, ooh",
+      "zh": "耶，耶，耶，我喜欢它们，哦。"
+    },
+    {
+      "start": 164.814,
+      "end": 169.275,
+      "en": "See, see, mousie likes them too",
+      "zh": "看，看，小老鼠也喜欢它们。"
+    },
+    {
+      "start": 169.275,
+      "end": 174.222,
+      "en": "One, two, three, he ate them up, you see",
+      "zh": "一、二、三，你看，他把它们吃完了。"
+    },
+    {
+      "start": 174.222,
+      "end": 178.764,
+      "en": "Ha, ha, ha, the beans are all gone now",
+      "zh": "哈，哈，哈，豆子现在都吃完了。"
+    },
+    {
+      "start": 178.764,
+      "end": 183.764,
+      "en": "Yum, yum, yum, I like them, wow",
+      "zh": "嗯，嗯，嗯，我喜欢它们，哇。"
+    },
+    {
+      "start": 186.129,
+      "end": 190.911,
+      "en": "Broccoli, broccoli, it's time to eat your broccoli",
+      "zh": "西兰花，西兰花，该吃西兰花了。"
+    },
+    {
+      "start": 190.911,
+      "end": 195.632,
+      "en": "Yes, yes, yes, I want to eat the broccoli",
+      "zh": "好，好，好，我想吃西兰花。"
+    },
+    {
+      "start": 195.632,
+      "end": 200.451,
+      "en": "Good, good, the broccoli's good for you",
+      "zh": "好，好，西兰花对你有好处。"
+    },
+    {
+      "start": 200.451,
+      "end": 205.451,
+      "en": "Yay, yay, yay, I love it, ooh",
+      "zh": "耶，耶，耶，我喜欢它，哦。"
+    },
+    {
+      "start": 207.784,
+      "end": 212.54500000000002,
+      "en": "See, see, teddy likes it too",
+      "zh": "看，看，小熊也喜欢它。"
+    },
+    {
+      "start": 212.54500000000002,
+      "end": 217.54500000000002,
+      "en": "One, two, three, he ate it up, you see",
+      "zh": "一、二、三，你看，他把它吃完了。"
+    },
+    {
+      "start": 217.54500000000002,
+      "end": 222.016,
+      "en": "Ha, ha, ha, the broccoli's all gone now",
+      "zh": "哈，哈，哈，西兰花现在都吃完了。"
+    },
+    {
+      "start": 222.016,
+      "end": 226.099,
+      "en": "Yum, yum, yum, we like it, wow",
+      "zh": "嗯，嗯，嗯，我们喜欢它，哇。"
+    },
+    {
+      "start": 227.611,
+      "end": 232.611,
+      "en": "(laughing) / (playful music)",
+      "zh": "（笑声，欢快的音乐）"
+    }
+  ]
+}

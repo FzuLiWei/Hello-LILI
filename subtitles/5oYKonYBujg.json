@@ -1,0 +1,542 @@
+{
+  "youtubeId": "5oYKonYBujg",
+  "title": "Old MacDonald Had A Farm",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 6.278,
+      "end": 9.26,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 9.432,
+      "end": 11.529,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 11.591,
+      "end": 14.465,
+      "en": "And on that farm he had a cow",
+      "zh": "农场里他养了一头奶牛"
+    },
+    {
+      "start": 14.534,
+      "end": 16.484,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 16.926,
+      "end": 18.761,
+      "en": "What does a cow say?",
+      "zh": "奶牛怎么叫？"
+    },
+    {
+      "start": 19.41,
+      "end": 20.387,
+      "en": "Meow?",
+      "zh": "喵喵？"
+    },
+    {
+      "start": 22.116,
+      "end": 22.887,
+      "en": "Oink?",
+      "zh": "哼哼？"
+    },
+    {
+      "start": 24.507,
+      "end": 25.545,
+      "en": "Moo?",
+      "zh": "哞哞？"
+    },
+    {
+      "start": 26.886,
+      "end": 28.235,
+      "en": "With a moo moo here",
+      "zh": "这里哞哞叫"
+    },
+    {
+      "start": 28.27,
+      "end": 29.634,
+      "en": "And a moo moo there",
+      "zh": "那里也哞哞叫"
+    },
+    {
+      "start": 29.818,
+      "end": 30.438,
+      "en": "Here a moo",
+      "zh": "这里一声哞"
+    },
+    {
+      "start": 30.475,
+      "end": 31.094,
+      "en": "There a moo",
+      "zh": "那里一声哞"
+    },
+    {
+      "start": 31.12,
+      "end": 32.388,
+      "en": "Everywhere a moo moo",
+      "zh": "到处都在哞哞叫"
+    },
+    {
+      "start": 32.414,
+      "end": 34.891,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 34.946,
+      "end": 37.457,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 40.04,
+      "end": 42.575,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 42.608,
+      "end": 44.654,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 44.745,
+      "end": 47.593,
+      "en": "And on that farm he had a horse",
+      "zh": "农场里他养了一匹马"
+    },
+    {
+      "start": 47.712,
+      "end": 50.079,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 50.219,
+      "end": 51.941,
+      "en": "What does a horse say?",
+      "zh": "马怎么叫？"
+    },
+    {
+      "start": 52.8,
+      "end": 53.517,
+      "en": "Woof woof?",
+      "zh": "汪汪？"
+    },
+    {
+      "start": 55.225,
+      "end": 56.183,
+      "en": "Moo?",
+      "zh": "哞哞？"
+    },
+    {
+      "start": 57.883,
+      "end": 58.703,
+      "en": "Neigh?",
+      "zh": "咴咴？"
+    },
+    {
+      "start": 60.13,
+      "end": 61.417,
+      "en": "With a neigh neigh here",
+      "zh": "这里咴咴叫"
+    },
+    {
+      "start": 61.45,
+      "end": 62.831,
+      "en": "And a neigh neigh there",
+      "zh": "那里也咴咴叫"
+    },
+    {
+      "start": 63.008,
+      "end": 63.649,
+      "en": "Here a neigh",
+      "zh": "这里一声咴"
+    },
+    {
+      "start": 63.696,
+      "end": 64.272,
+      "en": "There a neigh",
+      "zh": "那里一声咴"
+    },
+    {
+      "start": 64.312,
+      "end": 65.593,
+      "en": "Everywhere a neigh neigh",
+      "zh": "到处都在咴咴叫"
+    },
+    {
+      "start": 65.604,
+      "end": 68.07300000000001,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 68.127,
+      "end": 70.545,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 73.19200000000001,
+      "end": 75.806,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 75.81700000000001,
+      "end": 78.01,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 78.071,
+      "end": 80.895,
+      "en": "And on that farm he had a pig",
+      "zh": "农场里他养了一头猪"
+    },
+    {
+      "start": 80.92099999999999,
+      "end": 83.381,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 83.464,
+      "end": 85.327,
+      "en": "What does a pig say?",
+      "zh": "猪怎么叫？"
+    },
+    {
+      "start": 85.827,
+      "end": 86.713,
+      "en": "Quack?",
+      "zh": "嘎嘎？"
+    },
+    {
+      "start": 88.307,
+      "end": 89.306,
+      "en": "Tweet tweet?",
+      "zh": "啾啾？"
+    },
+    {
+      "start": 91.013,
+      "end": 91.866,
+      "en": "Oink?",
+      "zh": "哼哼？"
+    },
+    {
+      "start": 93.193,
+      "end": 94.648,
+      "en": "With an oink oink here",
+      "zh": "这里哼哼叫"
+    },
+    {
+      "start": 94.65299999999999,
+      "end": 96.009,
+      "en": "And an oink oink there",
+      "zh": "那里也哼哼叫"
+    },
+    {
+      "start": 96.23599999999999,
+      "end": 96.833,
+      "en": "Here an oink",
+      "zh": "这里一声哼"
+    },
+    {
+      "start": 96.85900000000001,
+      "end": 97.443,
+      "en": "There an oink",
+      "zh": "那里一声哼"
+    },
+    {
+      "start": 97.462,
+      "end": 98.789,
+      "en": "Everywhere an oink oink",
+      "zh": "到处都在哼哼叫"
+    },
+    {
+      "start": 98.815,
+      "end": 101.261,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 101.315,
+      "end": 103.872,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 106.412,
+      "end": 108.989,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 109.007,
+      "end": 111.007,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 111.148,
+      "end": 114.044,
+      "en": "And on that farm he had a sheep",
+      "zh": "农场里他养了一只绵羊"
+    },
+    {
+      "start": 114.09100000000001,
+      "end": 116.63300000000001,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 116.667,
+      "end": 118.57300000000001,
+      "en": "What does a sheep say?",
+      "zh": "绵羊怎么叫？"
+    },
+    {
+      "start": 119.05199999999999,
+      "end": 119.90100000000001,
+      "en": "Cluck cluck?",
+      "zh": "咯咯？"
+    },
+    {
+      "start": 121.688,
+      "end": 122.468,
+      "en": "Oink?",
+      "zh": "哼哼？"
+    },
+    {
+      "start": 124.247,
+      "end": 125.026,
+      "en": "Baaa?",
+      "zh": "咩咩？"
+    },
+    {
+      "start": 126.517,
+      "end": 127.818,
+      "en": "With a baaa baaa here",
+      "zh": "这里咩咩叫"
+    },
+    {
+      "start": 127.836,
+      "end": 129.3,
+      "en": "And a baaa baaa there",
+      "zh": "那里也咩咩叫"
+    },
+    {
+      "start": 129.405,
+      "end": 130.035,
+      "en": "Here a baaa",
+      "zh": "这里一声咩"
+    },
+    {
+      "start": 130.068,
+      "end": 130.713,
+      "en": "There a baaa",
+      "zh": "那里一声咩"
+    },
+    {
+      "start": 130.732,
+      "end": 132.007,
+      "en": "Everywhere a baaa baaa",
+      "zh": "到处都在咩咩叫"
+    },
+    {
+      "start": 132.026,
+      "end": 134.47,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 134.539,
+      "end": 137.043,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 139.619,
+      "end": 142.129,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 142.191,
+      "end": 144.399,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 144.425,
+      "end": 147.262,
+      "en": "And on that farm he had a duck",
+      "zh": "农场里他养了一只鸭子"
+    },
+    {
+      "start": 147.288,
+      "end": 149.799,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 149.832,
+      "end": 151.738,
+      "en": "What does a duck say?",
+      "zh": "鸭子怎么叫？"
+    },
+    {
+      "start": 152.173,
+      "end": 153.107,
+      "en": "Meow?",
+      "zh": "喵喵？"
+    },
+    {
+      "start": 154.8,
+      "end": 155.755,
+      "en": "Moo?",
+      "zh": "哞哞？"
+    },
+    {
+      "start": 157.426,
+      "end": 158.285,
+      "en": "Quack quack?",
+      "zh": "嘎嘎？"
+    },
+    {
+      "start": 159.719,
+      "end": 160.99099999999999,
+      "en": "With a quack quack here",
+      "zh": "这里嘎嘎叫"
+    },
+    {
+      "start": 161.024,
+      "end": 162.402,
+      "en": "And quack quack there",
+      "zh": "那里也嘎嘎叫"
+    },
+    {
+      "start": 162.6,
+      "end": 163.23,
+      "en": "Here a quack",
+      "zh": "这里一声嘎"
+    },
+    {
+      "start": 163.277,
+      "end": 163.874,
+      "en": "There a quack",
+      "zh": "那里一声嘎"
+    },
+    {
+      "start": 163.893,
+      "end": 165.156,
+      "en": "Everywhere a quack quack",
+      "zh": "到处都在嘎嘎叫"
+    },
+    {
+      "start": 165.189,
+      "end": 167.636,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 167.721,
+      "end": 170.136,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 172.726,
+      "end": 175.369,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 175.395,
+      "end": 177.53199999999998,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 177.579,
+      "end": 180.456,
+      "en": "And on that farm he had a rooster",
+      "zh": "农场里他养了一只公鸡"
+    },
+    {
+      "start": 180.489,
+      "end": 182.829,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 182.963,
+      "end": 185.006,
+      "en": "What does a rooster say?",
+      "zh": "公鸡怎么叫？"
+    },
+    {
+      "start": 185.413,
+      "end": 186.192,
+      "en": "Ribbit?",
+      "zh": "呱呱？"
+    },
+    {
+      "start": 187.978,
+      "end": 188.932,
+      "en": "Meow?",
+      "zh": "喵喵？"
+    },
+    {
+      "start": 190.668,
+      "end": 191.985,
+      "en": "Cock-a-doodle-doo?",
+      "zh": "喔喔喔？"
+    },
+    {
+      "start": 192.88,
+      "end": 194.269,
+      "en": "With a cock-a-doodle-doo",
+      "zh": "这里喔喔喔叫"
+    },
+    {
+      "start": 194.46,
+      "end": 195.608,
+      "en": "Cock-a-doodle-doo",
+      "zh": "喔喔喔"
+    },
+    {
+      "start": 195.756,
+      "end": 198.132,
+      "en": "Cock-a-doodle-doodle-doodle-doodle-doodle-doo",
+      "zh": "喔喔喔，长长地叫"
+    },
+    {
+      "start": 198.28,
+      "end": 200.805,
+      "en": "Old McDonald had a farm",
+      "zh": "老麦克唐纳有个农场"
+    },
+    {
+      "start": 200.888,
+      "end": 203.313,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    },
+    {
+      "start": 203.432,
+      "end": 206.024,
+      "en": "E - I - E - I - O",
+      "zh": "咿呀咿呀哟"
+    }
+  ]
+}

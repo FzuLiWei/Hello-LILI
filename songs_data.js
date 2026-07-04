@@ -116,7 +116,7 @@ window.songDatabase = {
     },
     {
       "youtubeId": "TbKI-jjpPx8",
-      "title": "The Itsy Bitsy Spider + More",
+      "title": "The Itsy Bitsy Spider",
       "source": "Super Simple Songs",
       "localPath": "songs/0_to_18_months/[TbKI-jjpPx8] The Itsy Bitsy Spider + More ｜ Kids Songs ｜ Super Simple Songs.mp4"
     },

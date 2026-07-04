@@ -1,0 +1,128 @@
+{
+  "youtubeId": "XqZsoesa55w",
+  "title": "Baby Shark Dance",
+  "source": "Manual bilingual lyric cues based on checked local video timing and common Pinkfong Baby Shark structure",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 0,
+      "end": 10.16,
+      "en": "(intro music)",
+      "zh": "（开场音乐）"
+    },
+    {
+      "start": 10.16,
+      "end": 18.609,
+      "en": "Baby Shark, doo doo doo doo doo doo",
+      "zh": "鲨鱼宝宝，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 18.609,
+      "end": 21.894,
+      "en": "Baby Shark",
+      "zh": "鲨鱼宝宝。"
+    },
+    {
+      "start": 21.894,
+      "end": 30.343,
+      "en": "Mommy Shark, doo doo doo doo doo doo",
+      "zh": "鲨鱼妈妈，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 30.343,
+      "end": 33.629,
+      "en": "Mommy Shark",
+      "zh": "鲨鱼妈妈。"
+    },
+    {
+      "start": 33.629,
+      "end": 42.078,
+      "en": "Daddy Shark, doo doo doo doo doo doo",
+      "zh": "鲨鱼爸爸，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 42.078,
+      "end": 45.363,
+      "en": "Daddy Shark",
+      "zh": "鲨鱼爸爸。"
+    },
+    {
+      "start": 45.363,
+      "end": 53.812,
+      "en": "Grandma Shark, doo doo doo doo doo doo",
+      "zh": "鲨鱼奶奶，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 53.812,
+      "end": 57.098,
+      "en": "Grandma Shark",
+      "zh": "鲨鱼奶奶。"
+    },
+    {
+      "start": 57.098,
+      "end": 65.547,
+      "en": "Grandpa Shark, doo doo doo doo doo doo",
+      "zh": "鲨鱼爷爷，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 65.547,
+      "end": 68.832,
+      "en": "Grandpa Shark",
+      "zh": "鲨鱼爷爷。"
+    },
+    {
+      "start": 68.832,
+      "end": 77.281,
+      "en": "Let's go hunt, doo doo doo doo doo doo",
+      "zh": "我们去捕猎，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 77.281,
+      "end": 80.56700000000001,
+      "en": "Let's go hunt",
+      "zh": "我们去捕猎。"
+    },
+    {
+      "start": 80.56700000000001,
+      "end": 89.015,
+      "en": "Run away, doo doo doo doo doo doo",
+      "zh": "快跑开，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 89.015,
+      "end": 92.301,
+      "en": "Run away",
+      "zh": "快跑开。"
+    },
+    {
+      "start": 92.301,
+      "end": 100.75,
+      "en": "Safe at last, doo doo doo doo doo doo",
+      "zh": "终于安全了，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 100.75,
+      "end": 104.036,
+      "en": "Safe at last",
+      "zh": "终于安全了。"
+    },
+    {
+      "start": 104.036,
+      "end": 112.48400000000001,
+      "en": "It's the end, doo doo doo doo doo doo",
+      "zh": "歌曲结束了，嘟嘟嘟嘟嘟嘟。"
+    },
+    {
+      "start": 112.48400000000001,
+      "end": 115.77000000000001,
+      "en": "It's the end",
+      "zh": "歌曲结束了。"
+    },
+    {
+      "start": 115.77000000000001,
+      "end": 136.04,
+      "en": "(ending music)",
+      "zh": "（结束音乐）"
+    }
+  ]
+}

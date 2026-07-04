@@ -1,0 +1,314 @@
+{
+  "youtubeId": "BdrZWu2dZ4c",
+  "title": "Driving In My Car",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 0.129,
+      "end": 2.962,
+      "en": "(xylophone music)",
+      "zh": "木琴音乐。"
+    },
+    {
+      "start": 5.467,
+      "end": 8.134,
+      "en": "(playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 9.332,
+      "end": 11.325,
+      "en": "♪ Driving in my car ♪",
+      "zh": "开着我的小汽车。"
+    },
+    {
+      "start": 11.325,
+      "end": 13.325,
+      "en": "♪ Vroom, vroom, vroom ♪",
+      "zh": "嗡，嗡，嗡。"
+    },
+    {
+      "start": 13.325,
+      "end": 15.449,
+      "en": "♪ Driving in my car ♪",
+      "zh": "开着我的小汽车。"
+    },
+    {
+      "start": 15.449,
+      "end": 17.435,
+      "en": "♪ Vroom, vroom, vroom ♪",
+      "zh": "嗡，嗡，嗡。"
+    },
+    {
+      "start": 17.435,
+      "end": 19.189,
+      "en": "♪ Driving very fast ♪",
+      "zh": "开得很快。"
+    },
+    {
+      "start": 19.189,
+      "end": 20.816,
+      "en": "♪ Vroom, vroom, vroom ♪",
+      "zh": "嗡，嗡，嗡。"
+    },
+    {
+      "start": 20.816,
+      "end": 23.539,
+      "en": "♪ Driving very slow ♪",
+      "zh": "开得很慢。"
+    },
+    {
+      "start": 23.539,
+      "end": 27.698,
+      "en": "♪ Vroom, vroom, vroom ♪",
+      "zh": "嗡，嗡，嗡。"
+    },
+    {
+      "start": 27.698,
+      "end": 32.031,
+      "en": "♪ I like driving, driving in my car ♪",
+      "zh": "我喜欢开车，开着我的小汽车。"
+    },
+    {
+      "start": 33.414,
+      "end": 34.915,
+      "en": "(car horn honking)",
+      "zh": "汽车喇叭声。"
+    },
+    {
+      "start": 34.915,
+      "end": 36.779,
+      "en": "♪ Riding on my bike ♪",
+      "zh": "骑着我的自行车。"
+    },
+    {
+      "start": 36.779,
+      "end": 38.721,
+      "en": "♪ Pedal, pedal, pedal ♪",
+      "zh": "踩踏板，踩踏板，踩踏板。"
+    },
+    {
+      "start": 38.721,
+      "end": 40.72,
+      "en": "♪ Riding on my bike ♪",
+      "zh": "骑着我的自行车。"
+    },
+    {
+      "start": 40.72,
+      "end": 42.679,
+      "en": "♪ Pedal, pedal, pedal ♪",
+      "zh": "踩踏板，踩踏板，踩踏板。"
+    },
+    {
+      "start": 42.679,
+      "end": 44.392,
+      "en": "♪ Riding very fast ♪",
+      "zh": "坐得很快。"
+    },
+    {
+      "start": 44.392,
+      "end": 46.058,
+      "en": "♪ Pedal, pedal, pedal ♪",
+      "zh": "踩踏板，踩踏板，踩踏板。"
+    },
+    {
+      "start": 46.058,
+      "end": 48.864,
+      "en": "♪ Riding very slow ♪",
+      "zh": "坐得很慢。"
+    },
+    {
+      "start": 48.864,
+      "end": 52.957,
+      "en": "♪ Pedal, pedal, pedal ♪",
+      "zh": "踩踏板，踩踏板，踩踏板。"
+    },
+    {
+      "start": 52.957,
+      "end": 57.207,
+      "en": "♪ I like riding, riding on my bike ♪",
+      "zh": "我喜欢骑车，骑着我的自行车。"
+    },
+    {
+      "start": 58.947,
+      "end": 60.009,
+      "en": "(bike bell chiming)",
+      "zh": "自行车铃声。"
+    },
+    {
+      "start": 60.009,
+      "end": 61.883,
+      "en": "♪ Rowing in my boat ♪",
+      "zh": "划着我的小船。"
+    },
+    {
+      "start": 61.883,
+      "end": 63.925,
+      "en": "♪ Splash, splash, splash ♪",
+      "zh": "哗啦，哗啦，哗啦。"
+    },
+    {
+      "start": 63.925,
+      "end": 65.866,
+      "en": "♪ Rowing in my boat ♪",
+      "zh": "划着我的小船。"
+    },
+    {
+      "start": 65.866,
+      "end": 67.825,
+      "en": "♪ Splash, splash, splash ♪",
+      "zh": "哗啦，哗啦，哗啦。"
+    },
+    {
+      "start": 67.825,
+      "end": 69.524,
+      "en": "♪ Rowing very fast ♪",
+      "zh": "划得很快。"
+    },
+    {
+      "start": 69.524,
+      "end": 71.223,
+      "en": "♪ Splash, splash, splash ♪",
+      "zh": "哗啦，哗啦，哗啦。"
+    },
+    {
+      "start": 71.223,
+      "end": 73.924,
+      "en": "♪ Rowing very slow ♪",
+      "zh": "划得很慢。"
+    },
+    {
+      "start": 73.924,
+      "end": 78.18299999999999,
+      "en": "♪ Splash, splash, splash ♪",
+      "zh": "哗啦，哗啦，哗啦。"
+    },
+    {
+      "start": 78.18299999999999,
+      "end": 82.43299999999999,
+      "en": "♪ I like rowing, rowing in my boat ♪",
+      "zh": "我喜欢划船，划着我的小船。"
+    },
+    {
+      "start": 83.943,
+      "end": 85.212,
+      "en": "(water splashing)",
+      "zh": "水花声。"
+    },
+    {
+      "start": 85.212,
+      "end": 87.083,
+      "en": "♪ Riding on my train ♪",
+      "zh": "坐着我的小火车。"
+    },
+    {
+      "start": 87.083,
+      "end": 89.133,
+      "en": "♪ Choo, choo, choo ♪",
+      "zh": "呜，呜，呜。"
+    },
+    {
+      "start": 89.133,
+      "end": 91.074,
+      "en": "♪ Riding on my train ♪",
+      "zh": "坐着我的小火车。"
+    },
+    {
+      "start": 91.074,
+      "end": 93.07300000000001,
+      "en": "♪ Choo, choo, choo ♪",
+      "zh": "呜，呜，呜。"
+    },
+    {
+      "start": 93.07300000000001,
+      "end": 94.914,
+      "en": "♪ Riding very fast ♪",
+      "zh": "坐得很快。"
+    },
+    {
+      "start": 94.914,
+      "end": 96.37299999999999,
+      "en": "♪ Choo, choo, choo ♪",
+      "zh": "呜，呜，呜。"
+    },
+    {
+      "start": 96.37299999999999,
+      "end": 99.19200000000001,
+      "en": "♪ Riding very slow ♪",
+      "zh": "坐得很慢。"
+    },
+    {
+      "start": 99.19200000000001,
+      "end": 103.344,
+      "en": "♪ Choo, choo, choo ♪",
+      "zh": "呜，呜，呜。"
+    },
+    {
+      "start": 103.344,
+      "end": 107.67699999999999,
+      "en": "♪ I like riding, riding on my train ♪",
+      "zh": "我喜欢乘车，坐着我的小火车。"
+    },
+    {
+      "start": 109.093,
+      "end": 110.756,
+      "en": "(train whistle blowing)",
+      "zh": "火车汽笛声。"
+    },
+    {
+      "start": 110.756,
+      "end": 113.68,
+      "en": "♪ Flying in my airplane ♪",
+      "zh": "坐着我的飞机飞翔。"
+    },
+    {
+      "start": 113.68,
+      "end": 116.193,
+      "en": "♪ Whoosh, whoosh ♪",
+      "zh": "呼，呼。"
+    },
+    {
+      "start": 116.193,
+      "end": 118.682,
+      "en": "♪ Flying in my airplane ♪",
+      "zh": "坐着我的飞机飞翔。"
+    },
+    {
+      "start": 118.682,
+      "end": 121.371,
+      "en": "♪ Whoosh, whoosh ♪",
+      "zh": "呼，呼。"
+    },
+    {
+      "start": 121.371,
+      "end": 124.015,
+      "en": "♪ Flying very high ♪",
+      "zh": "飞得很高。"
+    },
+    {
+      "start": 124.015,
+      "end": 126.506,
+      "en": "♪ Whoosh, whoosh ♪",
+      "zh": "呼，呼。"
+    },
+    {
+      "start": 126.506,
+      "end": 129.072,
+      "en": "♪ Flying very low ♪",
+      "zh": "飞得很低。"
+    },
+    {
+      "start": 129.072,
+      "end": 131.791,
+      "en": "♪ Whoosh, whoosh ♪",
+      "zh": "呼，呼。"
+    },
+    {
+      "start": 131.791,
+      "end": 136.458,
+      "en": "♪ I like flying, flying in my airplane ♪",
+      "zh": "我喜欢飞翔，坐着我的飞机飞翔。"
+    }
+  ]
+}

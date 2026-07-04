@@ -1,0 +1,80 @@
+{
+  "youtubeId": "CRHvTTOR8Ns",
+  "title": "Baa Baa Black Sheep",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 4,
+      "end": 8,
+      "en": "Baa, baa, black sheep, have you any wool?",
+      "zh": "咩咩，黑绵羊，你有羊毛吗？"
+    },
+    {
+      "start": 8,
+      "end": 12,
+      "en": "Yes, sir, yes, sir, three bags full",
+      "zh": "有的，先生，有的，先生，满满三袋。"
+    },
+    {
+      "start": 12,
+      "end": 15.5,
+      "en": "One for my master and one for my dame",
+      "zh": "一袋给我的主人，一袋给女主人。"
+    },
+    {
+      "start": 15.5,
+      "end": 19.9,
+      "en": "And one for the little boy who lives down the lane",
+      "zh": "还有一袋给住在小路那边的小男孩。"
+    },
+    {
+      "start": 31.5,
+      "end": 35.5,
+      "en": "Baa, baa, black sheep, have you any wool?",
+      "zh": "咩咩，黑绵羊，你有羊毛吗？"
+    },
+    {
+      "start": 35.5,
+      "end": 39.5,
+      "en": "Yes, sir, yes, sir, three bags full",
+      "zh": "有的，先生，有的，先生，满满三袋。"
+    },
+    {
+      "start": 39.5,
+      "end": 43.5,
+      "en": "One for my master, and one for my dame",
+      "zh": "一袋给我的主人，一袋给女主人。"
+    },
+    {
+      "start": 43.5,
+      "end": 48,
+      "en": "And one for the little boy who lives down the lane",
+      "zh": "还有一袋给住在小路那边的小男孩。"
+    },
+    {
+      "start": 60,
+      "end": 64,
+      "en": "Baa, baa, black sheep, have you any wool?",
+      "zh": "咩咩，黑绵羊，你有羊毛吗？"
+    },
+    {
+      "start": 64,
+      "end": 68,
+      "en": "Yes, sir, yes, sir, three bags full",
+      "zh": "有的，先生，有的，先生，满满三袋。"
+    },
+    {
+      "start": 68,
+      "end": 71.5,
+      "en": "One for my master and one for my dame",
+      "zh": "一袋给我的主人，一袋给女主人。"
+    },
+    {
+      "start": 71.5,
+      "end": 75.8,
+      "en": "And one for the little boy who lives down the lane",
+      "zh": "还有一袋给住在小路那边的小男孩。"
+    }
+  ]
+}

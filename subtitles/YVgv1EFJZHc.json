@@ -1,0 +1,314 @@
+{
+  "youtubeId": "YVgv1EFJZHc",
+  "title": "What Do You Hear?",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 4.181,
+      "end": 6.101,
+      "en": "Oooh, a duck",
+      "zh": "哦，一只鸭子。"
+    },
+    {
+      "start": 7.581,
+      "end": 9.181,
+      "en": "An elephant",
+      "zh": "一头大象。"
+    },
+    {
+      "start": 11.061,
+      "end": 12.941,
+      "en": "Hey, a rooster",
+      "zh": "嘿，一只公鸡。"
+    },
+    {
+      "start": 14.381,
+      "end": 16.181,
+      "en": "I hear a cat",
+      "zh": "我听到一只猫。"
+    },
+    {
+      "start": 16.821,
+      "end": 18.341,
+      "en": "That's a pig",
+      "zh": "那是一头猪。"
+    },
+    {
+      "start": 20.301,
+      "end": 21.421,
+      "en": "A dog",
+      "zh": "一只狗。"
+    },
+    {
+      "start": 30.181,
+      "end": 31.661,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 32.181,
+      "end": 33.661,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 34.661,
+      "end": 37.621,
+      "en": "What do you hear?",
+      "zh": "你听到了什么？"
+    },
+    {
+      "start": 39.421,
+      "end": 42.541,
+      "en": "I hear a dog, dog, dog, dog, dog",
+      "zh": "我听到一只狗，狗，狗，狗，狗。"
+    },
+    {
+      "start": 43.501,
+      "end": 44.941,
+      "en": "I hear a dog",
+      "zh": "我听到一只狗。"
+    },
+    {
+      "start": 52.101,
+      "end": 53.581,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 54.141,
+      "end": 55.581,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 56.661,
+      "end": 59.661,
+      "en": "What do you hear?",
+      "zh": "你听到了什么？"
+    },
+    {
+      "start": 61.501,
+      "end": 64.661,
+      "en": "I hear a cat, cat, cat, cat, cat",
+      "zh": "我听到一只猫，猫，猫，猫，猫。"
+    },
+    {
+      "start": 65.501,
+      "end": 67.141,
+      "en": "I hear a cat",
+      "zh": "我听到一只猫。"
+    },
+    {
+      "start": 74.101,
+      "end": 75.661,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 75.941,
+      "end": 77.661,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 78.621,
+      "end": 81.581,
+      "en": "What do you hear?",
+      "zh": "你听到了什么？"
+    },
+    {
+      "start": 83.461,
+      "end": 86.581,
+      "en": "I hear a duck, duck, duck, duck, duck",
+      "zh": "我听到一只鸭子，鸭子，鸭子，鸭子，鸭子。"
+    },
+    {
+      "start": 87.42099999999999,
+      "end": 88.861,
+      "en": "I hear a duck",
+      "zh": "我听到一只鸭子。"
+    },
+    {
+      "start": 88.941,
+      "end": 90.181,
+      "en": "A duck",
+      "zh": "一只鸭子。"
+    },
+    {
+      "start": 90.861,
+      "end": 92.661,
+      "en": "There's a dog",
+      "zh": "那里有一只狗。"
+    },
+    {
+      "start": 93.181,
+      "end": 94.90100000000001,
+      "en": "There's a cat",
+      "zh": "那里有一只猫。"
+    },
+    {
+      "start": 96.581,
+      "end": 98.581,
+      "en": "A dog again",
+      "zh": "又是一只狗。"
+    },
+    {
+      "start": 99.661,
+      "end": 101.221,
+      "en": "There's a duck",
+      "zh": "那里有一只鸭子。"
+    },
+    {
+      "start": 104.061,
+      "end": 105.541,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 106.14099999999999,
+      "end": 107.62100000000001,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 108.661,
+      "end": 111.62100000000001,
+      "en": "What do you hear?",
+      "zh": "你听到了什么？"
+    },
+    {
+      "start": 113.381,
+      "end": 116.90100000000001,
+      "en": "I hear a rooster, rooster, rooster, rooster, rooster",
+      "zh": "我听到一只公鸡，公鸡，公鸡，公鸡，公鸡。"
+    },
+    {
+      "start": 117.461,
+      "end": 119.061,
+      "en": "I hear a rooster",
+      "zh": "我听到一只公鸡。"
+    },
+    {
+      "start": 126.061,
+      "end": 127.541,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 128.061,
+      "end": 129.541,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 130.621,
+      "end": 133.581,
+      "en": "What do you hear?",
+      "zh": "你听到了什么？"
+    },
+    {
+      "start": 135.421,
+      "end": 138.941,
+      "en": "I hear a pig, pig, pig, pig, pig",
+      "zh": "我听到一头猪，猪，猪，猪，猪。"
+    },
+    {
+      "start": 139.461,
+      "end": 140.941,
+      "en": "I hear a pig",
+      "zh": "我听到一头猪。"
+    },
+    {
+      "start": 148.061,
+      "end": 149.541,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 150.061,
+      "end": 151.541,
+      "en": "Listen",
+      "zh": "听。"
+    },
+    {
+      "start": 152.621,
+      "end": 155.58100000000002,
+      "en": "What do you hear?",
+      "zh": "你听到了什么？"
+    },
+    {
+      "start": 157.421,
+      "end": 160.901,
+      "en": "I hear an elephant, elephant, elephant, elephant, elephant",
+      "zh": "我听到一头大象，大象，大象，大象，大象。"
+    },
+    {
+      "start": 161.461,
+      "end": 162.861,
+      "en": "I hear an elephant",
+      "zh": "我听到一头大象。"
+    },
+    {
+      "start": 162.96,
+      "end": 164.9,
+      "en": "An elephant?!",
+      "zh": "一头大象？！"
+    },
+    {
+      "start": 165.661,
+      "end": 167.141,
+      "en": "Oooh, a pig",
+      "zh": "哦，一头猪。"
+    },
+    {
+      "start": 167.821,
+      "end": 169.58100000000002,
+      "en": "Hey, a rooster",
+      "zh": "嘿，一只公鸡。"
+    },
+    {
+      "start": 170.621,
+      "end": 171.661,
+      "en": "A cat",
+      "zh": "一只猫。"
+    },
+    {
+      "start": 172.74099999999999,
+      "end": 173.941,
+      "en": "I hear a duck",
+      "zh": "我听到一只鸭子。"
+    },
+    {
+      "start": 174.461,
+      "end": 176.221,
+      "en": "Oooh, there's a dog",
+      "zh": "哦，那里有一只狗。"
+    },
+    {
+      "start": 177.701,
+      "end": 178.74099999999999,
+      "en": "Hey, a cat",
+      "zh": "嘿，一只猫。"
+    },
+    {
+      "start": 179.861,
+      "end": 180.941,
+      "en": "That's a dog",
+      "zh": "那是一只狗。"
+    },
+    {
+      "start": 181.381,
+      "end": 182.141,
+      "en": "A cat",
+      "zh": "一只猫。"
+    },
+    {
+      "start": 182.301,
+      "end": 184.181,
+      "en": "Dog",
+      "zh": "狗。"
+    }
+  ]
+}

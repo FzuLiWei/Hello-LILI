@@ -140,8 +140,13 @@ TTS limitation:
 - Official song video embeds should request English captions by default when the video provides caption tracks; the static prototype should not store full copyrighted song lyrics.
 - The local video player variant uses full-viewport HTML5 video with a large custom bilingual subtitle overlay.
 - Songs with verified subtitle data can show timed English/Chinese lyric captions; songs without verified timed data should still show bilingual learning captions rather than an empty subtitle area.
+- Every local song must have large bilingual subtitle coverage during playback: either verified timed lyric captions or generated bilingual learning captions.
 - New timed lyric captions should come from verified local subtitle files or user-provided assets, not ad hoc copied copyrighted lyrics.
+- Timed subtitle import should use one structured subtitle file per song under `subtitles/` when available; the app must expose whether each song has imported timed captions or is still pending import.
+- Subtitle source tracking should stay separate from runtime subtitle completion: `subtitles/sources.js` records candidates and source review status, while `subtitles/catalog.js` only lists timed cue files that the app can actually load.
 - Browser TTS, low-quality instrumental clips, and low-confidence open audio sources should not be used as the primary song experience.
+- Temporary web deployment can store compressed local MP4 files in the GitHub repository and serve them through Netlify, but every MP4 under `songs/` must stay below 50 MB and should preferably stay in the 5-20 MB range. Longer compilation videos should be trimmed into child-appropriate single-song segments before commit.
+- Original full-size local media backups should stay outside version control, such as under ignored `scratch/` folders. The repository should track code, subtitles, song metadata, and compressed deployable media only.
 
 Current local data model:
 

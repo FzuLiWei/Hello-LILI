@@ -1,0 +1,404 @@
+{
+  "youtubeId": "EqVHR2vIwIE",
+  "title": "One Little Finger",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 6.356,
+      "end": 9.023,
+      "en": "(playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 10.362,
+      "end": 12.086,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 12.086,
+      "end": 13.95,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 13.95,
+      "end": 15.842,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 15.842,
+      "end": 17.615,
+      "en": "♪ Tap tap tap ♪",
+      "zh": "点点点。"
+    },
+    {
+      "start": 17.615,
+      "end": 19.412,
+      "en": "♪ Point your finger up ♪",
+      "zh": "把手指向上指。"
+    },
+    {
+      "start": 19.412,
+      "end": 21.189,
+      "en": "♪ Point your finger down ♪",
+      "zh": "把手指向下指。"
+    },
+    {
+      "start": 21.189,
+      "end": 23.767,
+      "en": "♪ Put it on your head ♪",
+      "zh": "把它放在你的头上。"
+    },
+    {
+      "start": 23.767,
+      "end": 24.6,
+      "en": "♪ Head ♪",
+      "zh": "头。"
+    },
+    {
+      "start": 24.6,
+      "end": 27.267,
+      "en": "(Playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 28.521,
+      "end": 30.143,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 30.143,
+      "end": 32.067,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 32.067,
+      "end": 33.807,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 33.807,
+      "end": 35.656,
+      "en": "♪ Tap tap tap ♪",
+      "zh": "点点点。"
+    },
+    {
+      "start": 35.656,
+      "end": 37.406,
+      "en": "♪ Point your finger up ♪",
+      "zh": "把手指向上指。"
+    },
+    {
+      "start": 37.406,
+      "end": 39.148,
+      "en": "♪ Point your finger down ♪",
+      "zh": "把手指向下指。"
+    },
+    {
+      "start": 39.148,
+      "end": 41.826,
+      "en": "♪ Put it on your nose ♪",
+      "zh": "把它放在你的鼻子上。"
+    },
+    {
+      "start": 41.826,
+      "end": 42.659,
+      "en": "♪ Nose ♪",
+      "zh": "鼻子。"
+    },
+    {
+      "start": 42.659,
+      "end": 45.326,
+      "en": "(playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 46.482,
+      "end": 48.337,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 48.337,
+      "end": 50.119,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 50.119,
+      "end": 51.842,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 51.842,
+      "end": 53.724,
+      "en": "♪ Tap tap tap ♪",
+      "zh": "点点点。"
+    },
+    {
+      "start": 53.724,
+      "end": 55.489,
+      "en": "♪ Point your finger up ♪",
+      "zh": "把手指向上指。"
+    },
+    {
+      "start": 55.489,
+      "end": 57.312,
+      "en": "♪ Point your finger down ♪",
+      "zh": "把手指向下指。"
+    },
+    {
+      "start": 57.312,
+      "end": 59.977,
+      "en": "♪ Put it on your chin ♪",
+      "zh": "把它放在你的下巴上。"
+    },
+    {
+      "start": 59.977,
+      "end": 60.81,
+      "en": "♪ Chin ♪",
+      "zh": "下巴。"
+    },
+    {
+      "start": 60.81,
+      "end": 63.477,
+      "en": "(playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 64.562,
+      "end": 66.333,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 66.333,
+      "end": 68.162,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 68.162,
+      "end": 69.843,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 69.843,
+      "end": 71.801,
+      "en": "♪ Tap tap tap ♪",
+      "zh": "点点点。"
+    },
+    {
+      "start": 71.801,
+      "end": 73.499,
+      "en": "♪ Point your finger up ♪",
+      "zh": "把手指向上指。"
+    },
+    {
+      "start": 73.499,
+      "end": 75.347,
+      "en": "♪ Point your finger down ♪",
+      "zh": "把手指向下指。"
+    },
+    {
+      "start": 75.347,
+      "end": 78.021,
+      "en": "♪ Put it on your arm ♪",
+      "zh": "把它放在你的胳膊上。"
+    },
+    {
+      "start": 78.021,
+      "end": 78.854,
+      "en": "♪ Arm ♪",
+      "zh": "胳膊。"
+    },
+    {
+      "start": 78.854,
+      "end": 81.521,
+      "en": "(playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 82.446,
+      "end": 84.395,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 84.395,
+      "end": 86.201,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 86.201,
+      "end": 87.869,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 87.869,
+      "end": 89.866,
+      "en": "♪ Tap tap tap ♪",
+      "zh": "点点点。"
+    },
+    {
+      "start": 89.866,
+      "end": 91.607,
+      "en": "♪ Point your finger up ♪",
+      "zh": "把手指向上指。"
+    },
+    {
+      "start": 91.607,
+      "end": 93.434,
+      "en": "♪ Point your finger down ♪",
+      "zh": "把手指向下指。"
+    },
+    {
+      "start": 93.434,
+      "end": 96.11099999999999,
+      "en": "♪ Put it on your leg ♪",
+      "zh": "把它放在你的腿上。"
+    },
+    {
+      "start": 96.11099999999999,
+      "end": 96.944,
+      "en": "♪ Leg ♪",
+      "zh": "腿。"
+    },
+    {
+      "start": 96.944,
+      "end": 99.61099999999999,
+      "en": "(playful music)",
+      "zh": "欢快的音乐。"
+    },
+    {
+      "start": 100.669,
+      "end": 102.388,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 102.388,
+      "end": 104.227,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 104.227,
+      "end": 106.018,
+      "en": "♪ One little finger ♪",
+      "zh": "一根小手指。"
+    },
+    {
+      "start": 106.018,
+      "end": 107.80799999999999,
+      "en": "♪ Tap tap tap ♪",
+      "zh": "点点点。"
+    },
+    {
+      "start": 107.80799999999999,
+      "end": 109.681,
+      "en": "♪ Point your finger up ♪",
+      "zh": "把手指向上指。"
+    },
+    {
+      "start": 109.681,
+      "end": 111.44,
+      "en": "♪ Point your finger down ♪",
+      "zh": "把手指向下指。"
+    },
+    {
+      "start": 111.44,
+      "end": 114.093,
+      "en": "♪ Put it on your foot ♪",
+      "zh": "把它放在你的脚上。"
+    },
+    {
+      "start": 114.093,
+      "end": 115.072,
+      "en": "♪ Foot ♪",
+      "zh": "脚。"
+    },
+    {
+      "start": 115.072,
+      "end": 117.719,
+      "en": "♪ Put it on your leg ♪",
+      "zh": "把它放在你的腿上。"
+    },
+    {
+      "start": 117.719,
+      "end": 118.719,
+      "en": "♪ Leg ♪",
+      "zh": "腿。"
+    },
+    {
+      "start": 118.719,
+      "end": 121.459,
+      "en": "♪ Put it on your arm ♪",
+      "zh": "把它放在你的胳膊上。"
+    },
+    {
+      "start": 121.459,
+      "end": 122.387,
+      "en": "♪ Arm ♪",
+      "zh": "胳膊。"
+    },
+    {
+      "start": 122.387,
+      "end": 124.821,
+      "en": "♪ Put it on your chin ♪",
+      "zh": "把它放在你的下巴上。"
+    },
+    {
+      "start": 124.821,
+      "end": 125.972,
+      "en": "♪ Chin ♪",
+      "zh": "下巴。"
+    },
+    {
+      "start": 125.972,
+      "end": 128.581,
+      "en": "♪ Put it on your nose ♪",
+      "zh": "把它放在你的鼻子上。"
+    },
+    {
+      "start": 128.581,
+      "end": 129.529,
+      "en": "♪ Nose ♪",
+      "zh": "鼻子。"
+    },
+    {
+      "start": 129.529,
+      "end": 132.202,
+      "en": "♪ Put it on your head ♪",
+      "zh": "把它放在你的头上。"
+    },
+    {
+      "start": 132.202,
+      "end": 133.21,
+      "en": "♪ Head ♪",
+      "zh": "头。"
+    },
+    {
+      "start": 133.21,
+      "end": 135.592,
+      "en": "♪ Now let's wave goodbye ♪",
+      "zh": "现在我们挥手说再见。"
+    },
+    {
+      "start": 135.592,
+      "end": 137.84199999999998,
+      "en": "♪ Goodbye ♪",
+      "zh": "再见。"
+    }
+  ]
+}

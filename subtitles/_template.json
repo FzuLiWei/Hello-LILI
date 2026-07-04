@@ -1,0 +1,14 @@
+{
+  "youtubeId": "VIDEO_ID",
+  "title": "Song title",
+  "source": "Subtitle source or note",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 0,
+      "end": 4,
+      "en": "English line",
+      "zh": "Chinese translation"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "youtubeId": "WQtbFDPOdT8",
+  "title": "Super Simple Lullaby Medley",
+  "source": "Timed bilingual descriptive captions for no-lyrics lofi lullaby medley",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 0,
+      "end": 45,
+      "en": "(relaxing lofi lullaby music)",
+      "zh": "（舒缓的低保真摇篮曲音乐）"
+    },
+    {
+      "start": 45,
+      "end": 105,
+      "en": "(instrumental bedtime music, no sung lyrics)",
+      "zh": "（睡前纯音乐，没有演唱歌词）"
+    },
+    {
+      "start": 105,
+      "end": 165,
+      "en": "(soft sensory lullaby continues)",
+      "zh": "（轻柔的感官安抚摇篮曲继续）"
+    },
+    {
+      "start": 165,
+      "end": 225,
+      "en": "(calm music for winding down)",
+      "zh": "（帮助平静下来的舒缓音乐）"
+    },
+    {
+      "start": 225,
+      "end": 254.18,
+      "en": "(music fades out)",
+      "zh": "（音乐渐弱结束）"
+    }
+  ]
+}

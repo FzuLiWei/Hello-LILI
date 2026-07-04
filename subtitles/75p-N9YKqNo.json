@@ -1,0 +1,110 @@
+{
+  "youtubeId": "75p-N9YKqNo",
+  "title": "The ABC Song",
+  "source": "Manual segmented bilingual ABC cues based on checked local video timing",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 6.14,
+      "end": 9.64,
+      "en": "(music)",
+      "zh": "（音乐）"
+    },
+    {
+      "start": 9.64,
+      "end": 14.4,
+      "en": "A, B, C, D, E, F, G",
+      "zh": "A、B、C、D、E、F、G。"
+    },
+    {
+      "start": 14.4,
+      "end": 19.2,
+      "en": "H, I, J, K, L, M, N, O, P",
+      "zh": "H、I、J、K、L、M、N、O、P。"
+    },
+    {
+      "start": 19.2,
+      "end": 24.2,
+      "en": "Q, R, S, T, U, and V",
+      "zh": "Q、R、S、T、U，还有 V。"
+    },
+    {
+      "start": 24.2,
+      "end": 29,
+      "en": "W, X, Y, and Z",
+      "zh": "W、X、Y，还有 Z。"
+    },
+    {
+      "start": 29,
+      "end": 33.5,
+      "en": "Now I know my ABCs",
+      "zh": "现在我认识我的 ABC 了。"
+    },
+    {
+      "start": 33.5,
+      "end": 38.2,
+      "en": "Twenty-six letters from A to Z",
+      "zh": "从 A 到 Z，一共有二十六个字母。"
+    },
+    {
+      "start": 38.2,
+      "end": 43,
+      "en": "A, B, C, D, E, F, G",
+      "zh": "A、B、C、D、E、F、G。"
+    },
+    {
+      "start": 43,
+      "end": 49,
+      "en": "H, I, J, K, L, M, N, O, P",
+      "zh": "H、I、J、K、L、M、N、O、P。"
+    },
+    {
+      "start": 49,
+      "end": 54.5,
+      "en": "Q, R, S, T, U, and V",
+      "zh": "Q、R、S、T、U，还有 V。"
+    },
+    {
+      "start": 54.5,
+      "end": 60.5,
+      "en": "W, X, Y, and Z",
+      "zh": "W、X、Y，还有 Z。"
+    },
+    {
+      "start": 60.5,
+      "end": 64.5,
+      "en": "Now I know my ABCs",
+      "zh": "现在我认识我的 ABC 了。"
+    },
+    {
+      "start": 64.5,
+      "end": 68.68,
+      "en": "Twenty-six letters from A to Z",
+      "zh": "从 A 到 Z，一共有二十六个字母。"
+    },
+    {
+      "start": 68.68,
+      "end": 75,
+      "en": "Now I know my ABCs",
+      "zh": "现在我认识我的 ABC 了。"
+    },
+    {
+      "start": 75,
+      "end": 83.5,
+      "en": "Twenty-six letters from A to Z",
+      "zh": "从 A 到 Z，一共有二十六个字母。"
+    },
+    {
+      "start": 83.5,
+      "end": 89.92,
+      "en": "Z",
+      "zh": "Z。"
+    },
+    {
+      "start": 89.92,
+      "end": 132.32,
+      "en": "(music)",
+      "zh": "（音乐）"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "youtubeId": "ffeZXPtTGC4",
+  "title": "Phonics Song 2",
+  "source": "Manual segmented bilingual phonics cues based on checked local video timing",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 0,
+      "end": 7.32,
+      "en": "(music)",
+      "zh": "（音乐）"
+    },
+    {
+      "start": 7.32,
+      "end": 10.87,
+      "en": "A is for apple, a, a, apple",
+      "zh": "A 是 apple，发 /a/ 的音，苹果。"
+    },
+    {
+      "start": 10.87,
+      "end": 14.42,
+      "en": "B is for ball, b, b, ball",
+      "zh": "B 是 ball，发 /b/ 的音，球。"
+    },
+    {
+      "start": 14.42,
+      "end": 17.97,
+      "en": "C is for cat, c, c, cat",
+      "zh": "C 是 cat，发 /c/ 的音，猫。"
+    },
+    {
+      "start": 17.97,
+      "end": 21.52,
+      "en": "D is for dog, d, d, dog",
+      "zh": "D 是 dog，发 /d/ 的音，狗。"
+    },
+    {
+      "start": 21.52,
+      "end": 26.25,
+      "en": "E is for elephant, e, e, elephant",
+      "zh": "E 是 elephant，发 /e/ 的音，大象。"
+    },
+    {
+      "start": 26.25,
+      "end": 30.98,
+      "en": "F is for fish, f, f, fish",
+      "zh": "F 是 fish，发 /f/ 的音，鱼。"
+    },
+    {
+      "start": 30.98,
+      "end": 35.71,
+      "en": "G is for gorilla, g, g, gorilla",
+      "zh": "G 是 gorilla，发 /g/ 的音，大猩猩。"
+    },
+    {
+      "start": 35.71,
+      "end": 40.44,
+      "en": "H is for hat, h, h, hat",
+      "zh": "H 是 hat，发 /h/ 的音，帽子。"
+    },
+    {
+      "start": 40.44,
+      "end": 46.04,
+      "en": "I is for igloo, i, i, igloo",
+      "zh": "I 是 igloo，发 /i/ 的音，冰屋。"
+    },
+    {
+      "start": 46.04,
+      "end": 51.64,
+      "en": "J is for juice, j, j, juice",
+      "zh": "J 是 juice，发 /j/ 的音，果汁。"
+    },
+    {
+      "start": 51.64,
+      "end": 55.78,
+      "en": "K is for kangaroo, k, k, kangaroo",
+      "zh": "K 是 kangaroo，发 /k/ 的音，袋鼠。"
+    },
+    {
+      "start": 55.78,
+      "end": 59.92,
+      "en": "L is for lion, l, l, lion",
+      "zh": "L 是 lion，发 /l/ 的音，狮子。"
+    },
+    {
+      "start": 64.04,
+      "end": 68.21000000000001,
+      "en": "M is for monkey, m, m, monkey",
+      "zh": "M 是 monkey，发 /m/ 的音，猴子。"
+    },
+    {
+      "start": 68.21000000000001,
+      "end": 72.38,
+      "en": "N is for nose, n, n, nose",
+      "zh": "N 是 nose，发 /n/ 的音，鼻子。"
+    },
+    {
+      "start": 72.38,
+      "end": 76.55,
+      "en": "O is for octopus, o, o, octopus",
+      "zh": "O 是 octopus，发 /o/ 的音，章鱼。"
+    },
+    {
+      "start": 76.55,
+      "end": 80.72,
+      "en": "P is for pig, p, p, pig",
+      "zh": "P 是 pig，发 /p/ 的音，猪。"
+    },
+    {
+      "start": 80.72,
+      "end": 86.02,
+      "en": "Q is for question, q, q, question",
+      "zh": "Q 是 question，发 /q/ 的音，问题。"
+    },
+    {
+      "start": 86.02,
+      "end": 91.32,
+      "en": "R is for ring, r, r, ring",
+      "zh": "R 是 ring，发 /r/ 的音，戒指。"
+    },
+    {
+      "start": 91.32,
+      "end": 96.62,
+      "en": "S is for sun, s, s, sun",
+      "zh": "S 是 sun，发 /s/ 的音，太阳。"
+    },
+    {
+      "start": 96.62,
+      "end": 101.92,
+      "en": "T is for tiger, t, t, tiger",
+      "zh": "T 是 tiger，发 /t/ 的音，老虎。"
+    },
+    {
+      "start": 101.92,
+      "end": 105.47999999999999,
+      "en": "U is for umbrella, u, u, umbrella",
+      "zh": "U 是 umbrella，发 /u/ 的音，雨伞。"
+    },
+    {
+      "start": 105.47999999999999,
+      "end": 109.03999999999999,
+      "en": "V is for van, v, v, van",
+      "zh": "V 是 van，发 /v/ 的音，厢式车。"
+    },
+    {
+      "start": 109.03999999999999,
+      "end": 112.6,
+      "en": "W is for watch, w, w, watch",
+      "zh": "W 是 watch，发 /w/ 的音，手表。"
+    },
+    {
+      "start": 112.6,
+      "end": 116.16,
+      "en": "X is for box, x, x, box",
+      "zh": "X 是 box，发 /x/ 的音，盒子。"
+    },
+    {
+      "start": 116.16,
+      "end": 121.78,
+      "en": "Y is for yellow, y, y, yellow",
+      "zh": "Y 是 yellow，发 /y/ 的音，黄色。"
+    },
+    {
+      "start": 121.78,
+      "end": 127.4,
+      "en": "Z is for zoo, z, z, zoo",
+      "zh": "Z 是 zoo，发 /z/ 的音，动物园。"
+    },
+    {
+      "start": 127.4,
+      "end": 135,
+      "en": "So many things for you to learn about",
+      "zh": "有好多东西等你去学习。"
+    },
+    {
+      "start": 135,
+      "end": 141.84,
+      "en": "So many ways to sing your song",
+      "zh": "有好多方式可以唱出你的歌。"
+    },
+    {
+      "start": 141.84,
+      "end": 149.88,
+      "en": "So many things for you to learn about",
+      "zh": "有好多东西等你去学习。"
+    },
+    {
+      "start": 149.88,
+      "end": 172.92000000000002,
+      "en": "(music)",
+      "zh": "（音乐）"
+    }
+  ]
+}

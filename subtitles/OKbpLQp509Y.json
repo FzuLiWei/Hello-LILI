@@ -1,0 +1,44 @@
+{
+  "youtubeId": "OKbpLQp509Y",
+  "title": "Sweet Dreams (Goodnight Song)",
+  "source": "YouTube official English captions checked locally; Chinese translation added for HelloLILI",
+  "status": "timed",
+  "cues": [
+    {
+      "start": 32.461,
+      "end": 35.822,
+      "en": "Goodnight to you.",
+      "zh": "祝你晚安。"
+    },
+    {
+      "start": 35.876,
+      "end": 38.646,
+      "en": "Goodnight to me.",
+      "zh": "祝我晚安。"
+    },
+    {
+      "start": 38.774,
+      "end": 44.741,
+      "en": "Now close your eyes and go to sleep.",
+      "zh": "现在闭上眼睛，睡觉吧。"
+    },
+    {
+      "start": 44.844,
+      "end": 50.708,
+      "en": "Goodnight. Sleep tight. Sweet dreams tonight.",
+      "zh": "晚安，睡个好觉，今晚做个甜甜的梦。"
+    },
+    {
+      "start": 50.911,
+      "end": 57.222,
+      "en": "Goodnight. I love you.",
+      "zh": "晚安，我爱你。"
+    },
+    {
+      "start": 71.23,
+      "end": 74.758,
+      "en": "[Lullaby music]",
+      "zh": "摇篮曲音乐。"
+    }
+  ]
+}

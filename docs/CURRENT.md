@@ -8,6 +8,7 @@ Compressed local media packaging for GitHub and Netlify
 
 - Publish the compressed local-media song player build through GitHub and Netlify.
 - Keep every deployable MP4 under `songs/` below 10 MB for Netlify reliability.
+- Do not publish `songs/` through Netlify; production should load video files from GitHub raw URLs while Netlify serves the app shell and subtitle files.
 - Preserve full-size local source media only in ignored backup folders such as `scratch/`.
 
 ## Recently Completed
@@ -24,6 +25,7 @@ Compressed local media packaging for GitHub and Netlify
 - Trimmed `subtitles/TbKI-jjpPx8.json` to the 145-second local clip and updated the displayed song title.
 - Added `scripts/check-media-size.js`; current local media validation reports 54 MP4 files, 288.46 MB total, no files above the 9 MB warning threshold, and no files above the 10 MB Netlify safety limit.
 - After Netlify rejected the first pushed media deploy for commit `3b23f92`, recompressed the 9 MP4 files above 9 MB so the largest deployable video is now 8.87 MB.
+- After Netlify still rejected the 288 MB direct media deploy for commit `497fca6`, added `.netlifyignore` and changed the player so Netlify production maps `songs/...` paths to GitHub raw media URLs.
 - Cleaned `.gitignore` so compressed `songs/` media can be committed while `.netlify/`, `node_modules/`, `scratch/`, and temporary compression outputs stay ignored.
 
 ## Known Issues
@@ -37,6 +39,6 @@ Compressed local media packaging for GitHub and Netlify
 
 ## Next Step
 
-1. Commit and push the tightened Netlify-safe media compression update.
-2. Wait for the matching Netlify production deploy, and verify production HTTP 200 plus visible local video playback/subtitles.
+1. Commit and push the GitHub-raw media routing update.
+2. Wait for the matching Netlify production deploy, and verify production HTTP 200 plus visible video playback/subtitles.
 3. After this media publish is verified, restore the parent-assistant homepage as the main entry and keep the song player as a separate route or tab.

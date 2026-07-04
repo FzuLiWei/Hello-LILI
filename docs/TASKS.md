@@ -18,7 +18,7 @@ Status:
 - Lightweight parent guidance area is implemented and compressed into short, action-first cards.
 - Daily song support now prioritizes local audio files when available and otherwise embeds official high-quality vocal song videos in-page with English captions requested by default.
 - Local song playback now uses a full-screen HTML5 video player with a large bilingual subtitle layer; all 54 local songs have registered timed bilingual caption files.
-- Local song media is now prepared for temporary GitHub + Netlify hosting: all deployable MP4 files under `songs/` are below 10 MB, with the former 42-minute `The Itsy Bitsy Spider + More` compilation trimmed to a 145-second single-song clip.
+- Local song media is now prepared for temporary GitHub + Netlify hosting: all deployable MP4 files under `songs/` are below 10 MB, with the former 42-minute `The Itsy Bitsy Spider + More` compilation trimmed to a 145-second single-song clip. Netlify publishes the app and subtitles, while production video playback loads the compressed MP4 files from GitHub raw URLs.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 - Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.

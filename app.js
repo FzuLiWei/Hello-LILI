@@ -16,11 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const subtitleCatalog = window.subtitleCatalog || {};
   const importedSubtitleCatalog = subtitleCatalog.imported || {};
   const exactSubtitleData = window.customSubtitlesData || {};
+  const remoteMediaBaseUrl = "https://raw.githubusercontent.com/FzuLiWei/Hello-LILI/main/";
 
-  const toLocalMediaUrl = (localPath) => String(localPath || "")
+  const encodeMediaPath = (localPath) => String(localPath || "")
     .split("/")
     .map(segment => encodeURIComponent(segment))
     .join("/");
+
+  const shouldUseRemoteMedia = () => {
+    const hostname = window.location.hostname;
+    return hostname === "cheerful-mooncake-bf41c5.netlify.app" || hostname.endsWith(".netlify.app");
+  };
+
+  const toMediaUrl = (localPath) => {
+    const encodedPath = encodeMediaPath(localPath);
+    const configuredBase = window.HELLOLILI_MEDIA_BASE_URL;
+    const mediaBaseUrl = configuredBase || (shouldUseRemoteMedia() ? remoteMediaBaseUrl : "");
+
+    if (!mediaBaseUrl) return encodedPath;
+    return new URL(encodedPath, mediaBaseUrl).toString();
+  };
 
   const titleTranslations = {
     "1GDFa-nEzlg": "穿衣歌",
@@ -456,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentSong = song;
 
     // Load and play video
-    videoPlayer.src = toLocalMediaUrl(path);
+    videoPlayer.src = toMediaUrl(path);
     videoPlayer.play().catch(err => {
       console.log("Auto-play prevented or failed:", err);
     });

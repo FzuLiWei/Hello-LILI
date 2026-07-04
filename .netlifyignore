@@ -1,0 +1,7 @@
+songs/
+scratch/
+node_modules/
+
+# Local-only package files created during browser QA are not required for the static deploy.
+package.json
+package-lock.json

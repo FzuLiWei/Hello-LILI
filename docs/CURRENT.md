@@ -2,15 +2,14 @@
 
 ## Current Phase
 
-Compressed local media packaging for GitHub and Netlify
+Parent assistant homepage restoration and standalone song player publish
 
 ## Active Task
 
-- Publish the compressed local-media song player build through GitHub and Netlify.
-- Keep every deployable MP4 under `songs/` below 10 MB for Netlify reliability.
-- Do not publish `songs/` through Netlify; production should load video files from GitHub raw URLs while Netlify serves the app shell and subtitle files.
-- Current `main` should not track `songs/`; local media files remain on disk for local preview and are ignored by Git. Production video URLs are pinned to media commit `77cfa628291d531c2e5d9c28dc5ad2906e8ded5c`.
-- Preserve full-size local source media only in ignored backup folders such as `scratch/`.
+- Publish the restored parent-assistant homepage as the default entry while keeping the 54-song video player as a separate "儿歌" entrance.
+- Keep the song player using the existing GitHub raw media routing for Netlify production and local `songs/...` files during local preview.
+- Keep loop playback enabled by default on the song player video element.
+- After production is verified, shift focus to physical phone QA for the restored parent flow and video playback.
 
 ## Recently Completed
 
@@ -28,6 +27,10 @@ Compressed local media packaging for GitHub and Netlify
 - After Netlify rejected the first pushed media deploy for commit `3b23f92`, recompressed the 9 MP4 files above 9 MB so the largest deployable video is now 8.87 MB.
 - After Netlify still rejected the 288 MB direct media deploy for commit `497fca6`, added `.netlifyignore` and changed the player so Netlify production maps `songs/...` paths to GitHub raw media URLs.
 - After Netlify also rejected `77cfa62`, pinned production video URLs to that media commit and removed `songs/` from the current Git tree while keeping local files ignored for local preview.
+- Restored the parent-assistant homepage from the previous Toy Box static app shell and embedded the current local video player as an independent `#songs` view.
+- Added a bottom navigation "儿歌" entrance and changed the daily song card action to open the standalone player and auto-select the matching recommended song when possible.
+- Split player logic into `song-player.js`, kept parent-assistant workflow in `app.js`, and updated subtitle validation to look for runtime fallback title translations in the new player file.
+- Local browser QA verified root page defaults to the parent assistant, the song player opens from both entrances, 54 song options are present, `video.loop` is true, a selected local video reaches `readyState=4`, and the return button restores the homepage.
 
 ## Known Issues
 
@@ -36,10 +39,10 @@ Compressed local media packaging for GitHub and Netlify
 - `Super Simple Lullaby Medley` appears to be a no-lyrics lofi lullaby video and uses timed descriptive music captions rather than lyric captions.
 - Browser/system TTS quality varies by device and remains limited to short parent phrase pronunciation.
 - Homepage state is stored only in browser `localStorage`; no backend or account sync exists.
-- The current entry UI is still the song player view; the earlier parent-assistant homepage should be restored as the main app shell with the song player as a separate entrance.
+- Browser autoplay policies can still require the parent to tap the video play control once before audio/video starts; once started, the current song loops by default.
 
 ## Next Step
 
-1. Commit and push the current-tree media removal update.
-2. Wait for the matching Netlify production deploy, and verify production HTTP 200 plus visible video playback/subtitles.
-3. After this media publish is verified, restore the parent-assistant homepage as the main entry and keep the song player as a separate route or tab.
+1. Commit and push the restored homepage and standalone looping song player integration to `origin/main`.
+2. Wait for the matching Netlify production deploy and verify the public URL returns HTTP 200 with the restored homepage.
+3. After production verification, test the song player on physical iPhone/Android devices, including manual play, subtitles, looping, and return-to-home behavior.

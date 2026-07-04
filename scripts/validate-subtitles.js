@@ -22,18 +22,30 @@ function loadWindowData() {
   return context.window;
 }
 
-function loadAppTitleTranslations() {
-  const appPath = path.join(root, "app.js");
-  const appSource = fs.readFileSync(appPath, "utf8");
-  const match = appSource.match(/const titleTranslations = (\{[\s\S]*?\n  \});/);
-  if (!match) return { translations: {}, errors: ["app.js: missing titleTranslations map"] };
+function loadRuntimeTitleTranslations() {
+  const candidateFiles = ["song-player.js", "app.js"];
+  let lastError = "runtime: missing titleTranslations map";
 
-  try {
-    const translations = vm.runInNewContext(`(${match[1]})`);
-    return { translations, errors: [] };
-  } catch (error) {
-    return { translations: {}, errors: [`app.js: could not parse titleTranslations: ${error.message}`] };
+  for (const fileName of candidateFiles) {
+    const filePath = path.join(root, fileName);
+    if (!fs.existsSync(filePath)) continue;
+
+    const source = fs.readFileSync(filePath, "utf8");
+    const match = source.match(/const titleTranslations = (\{[\s\S]*?\n  \});/);
+    if (!match) {
+      lastError = `${fileName}: missing titleTranslations map`;
+      continue;
+    }
+
+    try {
+      const translations = vm.runInNewContext(`(${match[1]})`);
+      return { translations, errors: [] };
+    } catch (error) {
+      return { translations: {}, errors: [`${fileName}: could not parse titleTranslations: ${error.message}`] };
+    }
   }
+
+  return { translations: {}, errors: [lastError] };
 }
 
 function loadImportedCueFile(entry) {
@@ -89,7 +101,7 @@ function main() {
   const sourceEntries = sources.songs || {};
   const sourceDefaults = sources.defaults || {};
   const priorityQueue = Array.isArray(sources.priorityQueue) ? sources.priorityQueue : [];
-  const titleTranslationResult = loadAppTitleTranslations();
+  const titleTranslationResult = loadRuntimeTitleTranslations();
   const titleTranslations = titleTranslationResult.translations;
 
   const errors = [...titleTranslationResult.errors];

@@ -19,6 +19,7 @@ Status:
 - Daily song support now prioritizes local audio files when available and otherwise embeds official high-quality vocal song videos in-page with English captions requested by default.
 - Local song playback now uses a full-screen HTML5 video player with a large bilingual subtitle layer; all 54 local songs have registered timed bilingual caption files.
 - Local song media is now prepared for temporary GitHub + Netlify hosting: all deployable MP4 files were compressed below 10 MB in media commit `77cfa628291d531c2e5d9c28dc5ad2906e8ded5c`, with the former 42-minute `The Itsy Bitsy Spider + More` compilation trimmed to a 145-second single-song clip. Current `main` does not track `songs/`; Netlify publishes the app and subtitles, while production video playback loads the compressed MP4 files from the pinned GitHub raw media commit.
+- The parent-assistant homepage has been restored as the default entry, and the 54-song local video player now lives behind a separate "儿歌" entrance with loop playback enabled by default.
 - Project repository is now initialized and synced to GitHub `FzuLiWei/Hello-LILI` on `main`.
 - Gamified visual style "Toy Box" (游戏化玩偶盒) defined and documented.
 - Current static site is deployed to Netlify at `https://cheerful-mooncake-bf41c5.netlify.app`.
@@ -31,7 +32,7 @@ Current tasks:
 - Validate the weekly summary during real parent use and refine its next-step suggestion copy.
 - Validate the compressed parent guidance and in-page real song playback with requested English captions during real parent use.
 - QA and polish the completed 54-song timed bilingual subtitle set; source quality notes are tracked in `subtitles/sources.js`, and coverage is checked by `node scripts/validate-subtitles.js`.
-- Publish the compressed local media build to GitHub and Netlify, then verify production playback and subtitles on the public URL.
+- Validate the restored parent-assistant homepage and standalone looping song player on production and physical phones.
 - Test browser TTS on physical iPhone and Android devices for short phrase pronunciation only.
 - Keep the current implementation static until the core flow is validated.
 

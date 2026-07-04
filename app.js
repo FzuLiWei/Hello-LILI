@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const subtitleCatalog = window.subtitleCatalog || {};
   const importedSubtitleCatalog = subtitleCatalog.imported || {};
   const exactSubtitleData = window.customSubtitlesData || {};
-  const remoteMediaBaseUrl = "https://raw.githubusercontent.com/FzuLiWei/Hello-LILI/main/";
+  const remoteMediaRevision = "77cfa628291d531c2e5d9c28dc5ad2906e8ded5c";
+  const remoteMediaBaseUrl = `https://raw.githubusercontent.com/FzuLiWei/Hello-LILI/${remoteMediaRevision}/`;
 
   const encodeMediaPath = (localPath) => String(localPath || "")
     .split("/")

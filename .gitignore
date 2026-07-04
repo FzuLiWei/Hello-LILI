@@ -1,9 +1,10 @@
 .netlify/
 node_modules/
 scratch/
+songs/
 
 # Temporary media outputs produced during local compression.
 *.compressed.tmp.mp4
 
 # Raw downloaded subtitle sidecars are not used by the runtime.
-songs/**/*.vtt
+*.vtt

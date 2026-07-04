@@ -9,6 +9,7 @@ Compressed local media packaging for GitHub and Netlify
 - Publish the compressed local-media song player build through GitHub and Netlify.
 - Keep every deployable MP4 under `songs/` below 10 MB for Netlify reliability.
 - Do not publish `songs/` through Netlify; production should load video files from GitHub raw URLs while Netlify serves the app shell and subtitle files.
+- Current `main` should not track `songs/`; local media files remain on disk for local preview and are ignored by Git. Production video URLs are pinned to media commit `77cfa628291d531c2e5d9c28dc5ad2906e8ded5c`.
 - Preserve full-size local source media only in ignored backup folders such as `scratch/`.
 
 ## Recently Completed
@@ -26,7 +27,7 @@ Compressed local media packaging for GitHub and Netlify
 - Added `scripts/check-media-size.js`; current local media validation reports 54 MP4 files, 288.46 MB total, no files above the 9 MB warning threshold, and no files above the 10 MB Netlify safety limit.
 - After Netlify rejected the first pushed media deploy for commit `3b23f92`, recompressed the 9 MP4 files above 9 MB so the largest deployable video is now 8.87 MB.
 - After Netlify still rejected the 288 MB direct media deploy for commit `497fca6`, added `.netlifyignore` and changed the player so Netlify production maps `songs/...` paths to GitHub raw media URLs.
-- Cleaned `.gitignore` so compressed `songs/` media can be committed while `.netlify/`, `node_modules/`, `scratch/`, and temporary compression outputs stay ignored.
+- After Netlify also rejected `77cfa62`, pinned production video URLs to that media commit and removed `songs/` from the current Git tree while keeping local files ignored for local preview.
 
 ## Known Issues
 
@@ -39,6 +40,6 @@ Compressed local media packaging for GitHub and Netlify
 
 ## Next Step
 
-1. Commit and push the GitHub-raw media routing update.
+1. Commit and push the current-tree media removal update.
 2. Wait for the matching Netlify production deploy, and verify production HTTP 200 plus visible video playback/subtitles.
 3. After this media publish is verified, restore the parent-assistant homepage as the main entry and keep the song player as a separate route or tab.
